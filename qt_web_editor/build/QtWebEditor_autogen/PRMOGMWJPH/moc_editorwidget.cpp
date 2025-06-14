@@ -40,9 +40,14 @@ template <> constexpr inline auto EditorWidget::qt_create_metaobjectdata<qt_meta
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "EditorWidget",
-        "filePathChanged",
+        "fileModified",
         "",
+        "modified",
+        "filePathChanged",
         "filePath",
+        "fileNameChanged",
+        "fileName",
+        "contentChanged",
         "updateLineNumberAreaWidth",
         "newBlockCount",
         "highlightCurrentLine",
@@ -53,22 +58,32 @@ template <> constexpr inline auto EditorWidget::qt_create_metaobjectdata<qt_meta
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'filePathChanged'
-        QtMocHelpers::SignalData<void(const QString &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 3 },
+        // Signal 'fileModified'
+        QtMocHelpers::SignalData<void(bool)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Bool, 3 },
         }}),
+        // Signal 'filePathChanged'
+        QtMocHelpers::SignalData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 5 },
+        }}),
+        // Signal 'fileNameChanged'
+        QtMocHelpers::SignalData<void(const QString &)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Signal 'contentChanged'
+        QtMocHelpers::SignalData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'updateLineNumberAreaWidth'
-        QtMocHelpers::SlotData<void(int)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 5 },
+        QtMocHelpers::SlotData<void(int)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 10 },
         }}),
         // Slot 'highlightCurrentLine'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'updateLineNumberArea'
-        QtMocHelpers::SlotData<void(const QRect &, int)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QRect, 8 }, { QMetaType::Int, 9 },
+        QtMocHelpers::SlotData<void(const QRect &, int)>(12, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QRect, 13 }, { QMetaType::Int, 14 },
         }}),
         // Slot 'updateExtraSelections'
-        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -92,16 +107,25 @@ void EditorWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     auto *_t = static_cast<EditorWidget *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->filePathChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 1: _t->updateLineNumberAreaWidth((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 2: _t->highlightCurrentLine(); break;
-        case 3: _t->updateLineNumberArea((*reinterpret_cast< std::add_pointer_t<QRect>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 4: _t->updateExtraSelections(); break;
+        case 0: _t->fileModified((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 1: _t->filePathChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->fileNameChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->contentChanged(); break;
+        case 4: _t->updateLineNumberAreaWidth((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->highlightCurrentLine(); break;
+        case 6: _t->updateLineNumberArea((*reinterpret_cast< std::add_pointer_t<QRect>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 7: _t->updateExtraSelections(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (EditorWidget::*)(const QString & )>(_a, &EditorWidget::filePathChanged, 0))
+        if (QtMocHelpers::indexOfMethod<void (EditorWidget::*)(bool )>(_a, &EditorWidget::fileModified, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (EditorWidget::*)(const QString & )>(_a, &EditorWidget::filePathChanged, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (EditorWidget::*)(const QString & )>(_a, &EditorWidget::fileNameChanged, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (EditorWidget::*)()>(_a, &EditorWidget::contentChanged, 3))
             return;
     }
 }
@@ -125,21 +149,39 @@ int EditorWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
 }
 
 // SIGNAL 0
-void EditorWidget::filePathChanged(const QString & _t1)
+void EditorWidget::fileModified(bool _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
+}
+
+// SIGNAL 1
+void EditorWidget::filePathChanged(const QString & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
+}
+
+// SIGNAL 2
+void EditorWidget::fileNameChanged(const QString & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1);
+}
+
+// SIGNAL 3
+void EditorWidget::contentChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
 }
 QT_WARNING_POP

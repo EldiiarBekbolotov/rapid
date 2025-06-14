@@ -1035,6 +1035,8 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/include/QtGui/qfontdatabase.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QPointer \
   /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTimer \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h \
   /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/PRMOGMWJPH/moc_filebrowser.cpp \
   /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/PRMOGMWJPH/../../../src/core/filebrowser.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTreeView \
@@ -1103,19 +1105,75 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: \
   /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/PRMOGMWJPH/../../../src/core/mainwindow.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QTabWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QSplitter \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qsplitter.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QMenuBar \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qmenubar.h \
-  /opt/homebrew/include/QtWidgets/qmenu.h \
+  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView \
+  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h \
+  /opt/homebrew/include/QtGui/QPageLayout \
+  /opt/homebrew/include/QtGui/qpagelayout.h \
+  /opt/homebrew/include/QtGui/qpagesize.h \
+  /opt/homebrew/include/QtGui/qpageranges.h \
+  /opt/homebrew/include/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginepage.h \
+  /opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h \
+  /opt/homebrew/include/QtWebEngineCore/qtwebenginecore-config.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h \
+  /opt/homebrew/include/QtNetwork/qtnetwork-config.h \
+  /opt/homebrew/include/QtNetwork/qsslcertificate.h \
+  /opt/homebrew/include/QtNetwork/qtnetworkglobal.h \
+  /opt/homebrew/include/QtNetwork/qtnetworkexports.h \
+  /opt/homebrew/include/QtCore/qcryptographichash.h \
+  /opt/homebrew/include/QtNetwork/qssl.h \
+  /opt/homebrew/include/QtCore/QFlags \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginedownloadrequest.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginequotarequest.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebengineframe.h \
+  /opt/homebrew/include/QtQml/qqmlregistration.h \
+  /opt/homebrew/include/QtQmlIntegration/qqmlintegration.h \
+  /opt/homebrew/include/QtQml/qjsvalue.h \
+  /opt/homebrew/include/QtQml/qtqmlglobal.h \
+  /opt/homebrew/include/QtQml/qtqml-config.h \
+  /opt/homebrew/include/QtQml/qtqmlexports.h \
+  /opt/homebrew/include/QtCore/QString /opt/homebrew/include/QtCore/QUrl \
+  /opt/homebrew/include/QtCore/QWeakPointer \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginepermission.h \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h \
+  /opt/homebrew/include/QtCore/QJsonValue \
+  /opt/homebrew/include/QtCore/qjsonvalue.h \
+  /opt/homebrew/include/QtCore/qcborvalue.h \
+  /opt/homebrew/include/QtCore/qcborcommon.h \
+  /opt/homebrew/include/QtCore/quuid.h \
+  /opt/homebrew/include/QtCore/qjsondocument.h \
+  /opt/homebrew/include/QtCore/qjsonparseerror.h \
+  /opt/homebrew/include/QtWebChannel/qwebchannelglobal.h \
+  /opt/homebrew/include/QtWebChannel/qtwebchannelexports.h \
+  /opt/homebrew/lib/QtWebEngineCore.framework/Headers/QWebEngineSettings \
+  /opt/homebrew/lib/QtWebEngineCore.framework/Headers/qwebenginesettings.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QSplitter \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qsplitter.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QTabWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QToolBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QAction \
+  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
+  /opt/homebrew/include/QtGui/qpicture.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QStringList \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths \
   /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QKeySequence \
+  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/PRMOGMWJPH/moc_settings.cpp \
   /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp \
   /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/VSCBVMNR7M/../../../src/utils/syntaxhighlighter.h \
@@ -1125,4 +1183,6 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression \
-  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h
+  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QVector \
+  /opt/homebrew/lib/QtCore.framework/Headers/qvector.h

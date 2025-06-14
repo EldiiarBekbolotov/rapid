@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../../src/core/mainwindow.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -61,7 +62,14 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "openFileInEditor",
         "filePath",
         "updateRecentFilesMenu",
-        "recentFiles"
+        "recentFiles",
+        "runInBrowser",
+        "runInDefaultBrowser",
+        "runInSpecificBrowser",
+        "browserPath",
+        "showBrowserSelectionDialog",
+        "toggleMenuBar",
+        "toggleToolBar"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -111,6 +119,20 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void(const QStringList &)>(22, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QStringList, 23 },
         }}),
+        // Slot 'runInBrowser'
+        QtMocHelpers::SlotData<void()>(24, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'runInDefaultBrowser'
+        QtMocHelpers::SlotData<void()>(25, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'runInSpecificBrowser'
+        QtMocHelpers::SlotData<void(const QString &)>(26, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 27 },
+        }}),
+        // Slot 'showBrowserSelectionDialog'
+        QtMocHelpers::SlotData<void()>(28, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'toggleMenuBar'
+        QtMocHelpers::SlotData<void()>(29, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'toggleToolBar'
+        QtMocHelpers::SlotData<void()>(30, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -151,6 +173,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 14: _t->toggleFullScreen(); break;
         case 15: _t->openFileInEditor((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 16: _t->updateRecentFilesMenu((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 17: _t->runInBrowser(); break;
+        case 18: _t->runInDefaultBrowser(); break;
+        case 19: _t->runInSpecificBrowser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 20: _t->showBrowserSelectionDialog(); break;
+        case 21: _t->toggleMenuBar(); break;
+        case 22: _t->toggleToolBar(); break;
         default: ;
         }
     }
@@ -175,14 +203,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 17)
+        if (_id < 23)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 17;
+        _id -= 23;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 17)
+        if (_id < 23)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 17;
+        _id -= 23;
     }
     return _id;
 }

@@ -984,4 +984,23 @@ CMakeFiles/QtWebEditor.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QSettings \
-  /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h
+  /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /opt/homebrew/include/QtWidgets/qdialog.h \
+  /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/include/QtGui/qaction.h \
+  /opt/homebrew/include/QtGui/qkeysequence.h \
+  /opt/homebrew/include/QtGui/qicon.h \
+  /opt/homebrew/include/QtGui/qpalette.h \
+  /opt/homebrew/include/QtGui/qbrush.h \
+  /opt/homebrew/include/QtGui/qfont.h \
+  /opt/homebrew/include/QtGui/qfontmetrics.h \
+  /opt/homebrew/include/QtGui/qfontinfo.h \
+  /opt/homebrew/include/QtGui/qfontvariableaxis.h \
+  /opt/homebrew/include/QtWidgets/qsizepolicy.h \
+  /opt/homebrew/include/QtWidgets/qdialogbuttonbox.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QFontDatabase \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontdatabase.h

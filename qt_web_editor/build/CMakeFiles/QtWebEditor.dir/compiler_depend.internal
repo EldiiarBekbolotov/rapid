@@ -826,6 +826,10 @@
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/main.cpp
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.cpp
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.h
+ /opt/homebrew/Cellar/qt/6.9.0/include/QtQmlIntegration/qqmlintegration.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QDebug
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QFlags
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QJsonValue
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QList
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QPointer
@@ -837,6 +841,12 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QSizeF
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStandardPaths
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStringList
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTemporaryFile
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTimer
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QUrl
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QVector
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QWeakPointer
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20iterator.h
@@ -862,6 +872,8 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearraylist.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearrayview.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcalendar.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborcommon.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborvalue.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qchar.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcompare.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcompare_impl.h
@@ -876,6 +888,7 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication_platform.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreevent.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcryptographichash.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdatastream.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdatetime.h
@@ -905,6 +918,9 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterator.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsondocument.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonparseerror.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonvalue.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qline.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlist.h
@@ -967,9 +983,11 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtcoreglobal.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtdeprecationdefinitions.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtemporaryfile.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtextstream.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimer.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimezone.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtnoop.h
@@ -983,15 +1001,21 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtypes.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qurl.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/quuid.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvariant.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvector.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QAction
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QCloseEvent
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QContextMenuEvent
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFileSystemModel
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFont
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QIcon
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QKeySequence
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QPageLayout
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QSyntaxHighlighter
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QTextCharFormat
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QTransform
@@ -1017,9 +1041,13 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qinputdevice.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qinputmethod.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagelayout.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpageranges.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagesize.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpen.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpicture.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpixmap.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h
@@ -1045,13 +1073,41 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qvector2d.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qvectornd.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qssl.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qsslcertificate.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qjsvalue.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qqmlregistration.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqml-config.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlexports.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlglobal.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/QWebChannel
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qtwebchannelexports.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannel.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannelglobal.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/QWebEngineSettings
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecore-config.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecoreglobal.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineclientcertificateselection.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginedownloadrequest.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineframe.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepage.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepermission.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginequotarequest.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginesettings.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/QWebEngineView
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qtwebenginewidgetsglobal.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qwebengineview.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QApplication
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QDockWidget
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenu
- /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenuBar
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QPlainTextEdit
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QSplitter
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QStatusBar
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QStyleFactory
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QTabWidget
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QToolBar
@@ -1064,14 +1120,15 @@
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qapplication.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qdockwidget.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qframe.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmenu.h
- /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmenubar.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qplaintextedit.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qslider.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsplitter.h
+ /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstatusbar.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstylefactory.h
  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h
@@ -2118,23 +2175,79 @@
  /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake
  /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake
  /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in
+ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
  /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake
  /opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
  /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake
  /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake
  /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake
  /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake
  /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in
  /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake
  /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake
+ /opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake
  /opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake
  /opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake
  /opt/homebrew/share/cmake/Modules/CheckIncludeFileCXX.cmake
  /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake
  /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake
  /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake
  /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake
  /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake
+ /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake
  /opt/homebrew/share/cmake/Modules/FindCups.cmake
  /opt/homebrew/share/cmake/Modules/FindOpenGL.cmake
  /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake
@@ -2144,15 +2257,19 @@
  /opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake
  /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake
  /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake
+ /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake
+ /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake
  /opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake
  /opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake
  /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake
+ /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake
  /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake
  /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake
  /opt/homebrew/share/cmake/Modules/MacroAddFileDependencies.cmake
  /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake
  /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake
  /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake
+ /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake
  /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake
  /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake
  /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake
@@ -3018,11 +3135,16 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/PRMOGMWJPH/moc_settings.cpp
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.h
  /Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp
+ /opt/homebrew/include/QtCore/QFlags
+ /opt/homebrew/include/QtCore/QJsonValue
  /opt/homebrew/include/QtCore/QList
  /opt/homebrew/include/QtCore/QObject
  /opt/homebrew/include/QtCore/QRect
  /opt/homebrew/include/QtCore/QSize
  /opt/homebrew/include/QtCore/QSizeF
+ /opt/homebrew/include/QtCore/QString
+ /opt/homebrew/include/QtCore/QUrl
+ /opt/homebrew/include/QtCore/QWeakPointer
  /opt/homebrew/include/QtCore/q17memory.h
  /opt/homebrew/include/QtCore/q20algorithm.h
  /opt/homebrew/include/QtCore/q20functional.h
@@ -3050,6 +3172,8 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtCore/qbytearraylist.h
  /opt/homebrew/include/QtCore/qbytearrayview.h
  /opt/homebrew/include/QtCore/qcalendar.h
+ /opt/homebrew/include/QtCore/qcborcommon.h
+ /opt/homebrew/include/QtCore/qcborvalue.h
  /opt/homebrew/include/QtCore/qchar.h
  /opt/homebrew/include/QtCore/qcompare.h
  /opt/homebrew/include/QtCore/qcompare_impl.h
@@ -3064,6 +3188,7 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtCore/qcoreapplication.h
  /opt/homebrew/include/QtCore/qcoreapplication_platform.h
  /opt/homebrew/include/QtCore/qcoreevent.h
+ /opt/homebrew/include/QtCore/qcryptographichash.h
  /opt/homebrew/include/QtCore/qdarwinhelpers.h
  /opt/homebrew/include/QtCore/qdatastream.h
  /opt/homebrew/include/QtCore/qdatetime.h
@@ -3093,6 +3218,9 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtCore/qitemselectionmodel.h
  /opt/homebrew/include/QtCore/qiterable.h
  /opt/homebrew/include/QtCore/qiterator.h
+ /opt/homebrew/include/QtCore/qjsondocument.h
+ /opt/homebrew/include/QtCore/qjsonparseerror.h
+ /opt/homebrew/include/QtCore/qjsonvalue.h
  /opt/homebrew/include/QtCore/qlatin1stringview.h
  /opt/homebrew/include/QtCore/qline.h
  /opt/homebrew/include/QtCore/qlist.h
@@ -3170,11 +3298,13 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtCore/qtypes.h
  /opt/homebrew/include/QtCore/qurl.h
  /opt/homebrew/include/QtCore/qutf8stringview.h
+ /opt/homebrew/include/QtCore/quuid.h
  /opt/homebrew/include/QtCore/qvariant.h
  /opt/homebrew/include/QtCore/qvarlengtharray.h
  /opt/homebrew/include/QtCore/qversiontagging.h
  /opt/homebrew/include/QtCore/qxptype_traits.h
  /opt/homebrew/include/QtCore/qyieldcpu.h
+ /opt/homebrew/include/QtGui/QPageLayout
  /opt/homebrew/include/QtGui/QTransform
  /opt/homebrew/include/QtGui/qabstracttextdocumentlayout.h
  /opt/homebrew/include/QtGui/qaction.h
@@ -3197,9 +3327,13 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtGui/qinputdevice.h
  /opt/homebrew/include/QtGui/qinputmethod.h
  /opt/homebrew/include/QtGui/qkeysequence.h
+ /opt/homebrew/include/QtGui/qpagelayout.h
+ /opt/homebrew/include/QtGui/qpageranges.h
+ /opt/homebrew/include/QtGui/qpagesize.h
  /opt/homebrew/include/QtGui/qpaintdevice.h
  /opt/homebrew/include/QtGui/qpalette.h
  /opt/homebrew/include/QtGui/qpen.h
+ /opt/homebrew/include/QtGui/qpicture.h
  /opt/homebrew/include/QtGui/qpixelformat.h
  /opt/homebrew/include/QtGui/qpixmap.h
  /opt/homebrew/include/QtGui/qpointingdevice.h
@@ -3224,13 +3358,34 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtGui/qvector2d.h
  /opt/homebrew/include/QtGui/qvectornd.h
  /opt/homebrew/include/QtGui/qwindowdefs.h
+ /opt/homebrew/include/QtNetwork/qssl.h
+ /opt/homebrew/include/QtNetwork/qsslcertificate.h
+ /opt/homebrew/include/QtNetwork/qtnetwork-config.h
+ /opt/homebrew/include/QtNetwork/qtnetworkexports.h
+ /opt/homebrew/include/QtNetwork/qtnetworkglobal.h
+ /opt/homebrew/include/QtQml/qjsvalue.h
+ /opt/homebrew/include/QtQml/qqmlregistration.h
+ /opt/homebrew/include/QtQml/qtqml-config.h
+ /opt/homebrew/include/QtQml/qtqmlexports.h
+ /opt/homebrew/include/QtQml/qtqmlglobal.h
+ /opt/homebrew/include/QtQmlIntegration/qqmlintegration.h
+ /opt/homebrew/include/QtWebChannel/qtwebchannelexports.h
+ /opt/homebrew/include/QtWebChannel/qwebchannelglobal.h
+ /opt/homebrew/include/QtWebEngineCore/qtwebenginecore-config.h
+ /opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h
+ /opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginedownloadrequest.h
+ /opt/homebrew/include/QtWebEngineCore/qwebengineframe.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginepage.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginepermission.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginequotarequest.h
+ /opt/homebrew/include/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h
  /opt/homebrew/include/QtWidgets/qabstractitemview.h
  /opt/homebrew/include/QtWidgets/qabstractscrollarea.h
  /opt/homebrew/include/QtWidgets/qabstractslider.h
  /opt/homebrew/include/QtWidgets/qabstractspinbox.h
  /opt/homebrew/include/QtWidgets/qframe.h
- /opt/homebrew/include/QtWidgets/qmenu.h
  /opt/homebrew/include/QtWidgets/qrubberband.h
  /opt/homebrew/include/QtWidgets/qsizepolicy.h
  /opt/homebrew/include/QtWidgets/qslider.h
@@ -3243,6 +3398,7 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtWidgets/qtwidgetsexports.h
  /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h
  /opt/homebrew/include/QtWidgets/qwidget.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDebug
  /opt/homebrew/lib/QtCore.framework/Headers/QObject
  /opt/homebrew/lib/QtCore.framework/Headers/QPointer
  /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression
@@ -3250,6 +3406,11 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/QSettings
  /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths
  /opt/homebrew/lib/QtCore.framework/Headers/QString
+ /opt/homebrew/lib/QtCore.framework/Headers/QStringList
+ /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile
+ /opt/homebrew/lib/QtCore.framework/Headers/QTimer
+ /opt/homebrew/lib/QtCore.framework/Headers/QVector
+ /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h
  /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h
  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h
@@ -3257,36 +3418,51 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qvector.h
+ /opt/homebrew/lib/QtGui.framework/Headers/QAction
+ /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent
  /opt/homebrew/lib/QtGui.framework/Headers/QContextMenuEvent
  /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel
  /opt/homebrew/lib/QtGui.framework/Headers/QFont
  /opt/homebrew/lib/QtGui.framework/Headers/QIcon
+ /opt/homebrew/lib/QtGui.framework/Headers/QKeySequence
  /opt/homebrew/lib/QtGui.framework/Headers/QSyntaxHighlighter
  /opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat
+ /opt/homebrew/lib/QtGui.framework/Headers/qaction.h
  /opt/homebrew/lib/QtGui.framework/Headers/qevent.h
  /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h
  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h
  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h
+ /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h
  /opt/homebrew/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
  /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h
+ /opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel
+ /opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h
+ /opt/homebrew/lib/QtWebEngineCore.framework/Headers/QWebEngineSettings
+ /opt/homebrew/lib/QtWebEngineCore.framework/Headers/qwebenginesettings.h
+ /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView
+ /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication
- /opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel
  /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow
  /opt/homebrew/lib/QtWidgets.framework/Headers/QMenu
- /opt/homebrew/lib/QtWidgets.framework/Headers/QMenuBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QPlainTextEdit
  /opt/homebrew/lib/QtWidgets.framework/Headers/QSplitter
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory
  /opt/homebrew/lib/QtWidgets.framework/Headers/QTabWidget
  /opt/homebrew/lib/QtWidgets.framework/Headers/QToolBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QTreeView
  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qmenu.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/qmenubar.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qplaintextedit.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qsplitter.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qstylefactory.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h
@@ -4139,6 +4315,16 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/application.h
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/mainwindow.h
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/settings.h
+ /opt/homebrew/include/QtCore/QFlags
+ /opt/homebrew/include/QtCore/QJsonValue
+ /opt/homebrew/include/QtCore/QList
+ /opt/homebrew/include/QtCore/QObject
+ /opt/homebrew/include/QtCore/QRect
+ /opt/homebrew/include/QtCore/QSize
+ /opt/homebrew/include/QtCore/QSizeF
+ /opt/homebrew/include/QtCore/QString
+ /opt/homebrew/include/QtCore/QUrl
+ /opt/homebrew/include/QtCore/QWeakPointer
  /opt/homebrew/include/QtCore/q17memory.h
  /opt/homebrew/include/QtCore/q20functional.h
  /opt/homebrew/include/QtCore/q20iterator.h
@@ -4164,6 +4350,8 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/include/QtCore/qbytearraylist.h
  /opt/homebrew/include/QtCore/qbytearrayview.h
  /opt/homebrew/include/QtCore/qcalendar.h
+ /opt/homebrew/include/QtCore/qcborcommon.h
+ /opt/homebrew/include/QtCore/qcborvalue.h
  /opt/homebrew/include/QtCore/qchar.h
  /opt/homebrew/include/QtCore/qcompare.h
  /opt/homebrew/include/QtCore/qcompare_impl.h
@@ -4178,6 +4366,7 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/include/QtCore/qcoreapplication.h
  /opt/homebrew/include/QtCore/qcoreapplication_platform.h
  /opt/homebrew/include/QtCore/qcoreevent.h
+ /opt/homebrew/include/QtCore/qcryptographichash.h
  /opt/homebrew/include/QtCore/qdarwinhelpers.h
  /opt/homebrew/include/QtCore/qdatastream.h
  /opt/homebrew/include/QtCore/qdatetime.h
@@ -4207,6 +4396,9 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/include/QtCore/qitemselectionmodel.h
  /opt/homebrew/include/QtCore/qiterable.h
  /opt/homebrew/include/QtCore/qiterator.h
+ /opt/homebrew/include/QtCore/qjsondocument.h
+ /opt/homebrew/include/QtCore/qjsonparseerror.h
+ /opt/homebrew/include/QtCore/qjsonvalue.h
  /opt/homebrew/include/QtCore/qlatin1stringview.h
  /opt/homebrew/include/QtCore/qline.h
  /opt/homebrew/include/QtCore/qlist.h
@@ -4280,17 +4472,22 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/include/QtCore/qtversionchecks.h
  /opt/homebrew/include/QtCore/qtypeinfo.h
  /opt/homebrew/include/QtCore/qtypes.h
+ /opt/homebrew/include/QtCore/qurl.h
  /opt/homebrew/include/QtCore/qutf8stringview.h
+ /opt/homebrew/include/QtCore/quuid.h
  /opt/homebrew/include/QtCore/qvariant.h
  /opt/homebrew/include/QtCore/qvarlengtharray.h
  /opt/homebrew/include/QtCore/qversiontagging.h
  /opt/homebrew/include/QtCore/qxptype_traits.h
  /opt/homebrew/include/QtCore/qyieldcpu.h
+ /opt/homebrew/include/QtGui/QPageLayout
+ /opt/homebrew/include/QtGui/QTransform
  /opt/homebrew/include/QtGui/qaction.h
  /opt/homebrew/include/QtGui/qbitmap.h
  /opt/homebrew/include/QtGui/qbrush.h
  /opt/homebrew/include/QtGui/qcolor.h
  /opt/homebrew/include/QtGui/qcursor.h
+ /opt/homebrew/include/QtGui/qeventpoint.h
  /opt/homebrew/include/QtGui/qfont.h
  /opt/homebrew/include/QtGui/qfontinfo.h
  /opt/homebrew/include/QtGui/qfontmetrics.h
@@ -4299,22 +4496,55 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/include/QtGui/qguiapplication_platform.h
  /opt/homebrew/include/QtGui/qicon.h
  /opt/homebrew/include/QtGui/qimage.h
+ /opt/homebrew/include/QtGui/qinputdevice.h
  /opt/homebrew/include/QtGui/qinputmethod.h
  /opt/homebrew/include/QtGui/qkeysequence.h
+ /opt/homebrew/include/QtGui/qpagelayout.h
+ /opt/homebrew/include/QtGui/qpageranges.h
+ /opt/homebrew/include/QtGui/qpagesize.h
  /opt/homebrew/include/QtGui/qpaintdevice.h
  /opt/homebrew/include/QtGui/qpalette.h
+ /opt/homebrew/include/QtGui/qpicture.h
  /opt/homebrew/include/QtGui/qpixelformat.h
  /opt/homebrew/include/QtGui/qpixmap.h
+ /opt/homebrew/include/QtGui/qpointingdevice.h
  /opt/homebrew/include/QtGui/qpolygon.h
  /opt/homebrew/include/QtGui/qregion.h
  /opt/homebrew/include/QtGui/qrgb.h
  /opt/homebrew/include/QtGui/qrgba64.h
+ /opt/homebrew/include/QtGui/qscreen.h
+ /opt/homebrew/include/QtGui/qscreen_platform.h
+ /opt/homebrew/include/QtGui/qtextdocument.h
  /opt/homebrew/include/QtGui/qtgui-config.h
  /opt/homebrew/include/QtGui/qtguiexports.h
  /opt/homebrew/include/QtGui/qtguiglobal.h
  /opt/homebrew/include/QtGui/qtransform.h
  /opt/homebrew/include/QtGui/qvalidator.h
+ /opt/homebrew/include/QtGui/qvector2d.h
+ /opt/homebrew/include/QtGui/qvectornd.h
  /opt/homebrew/include/QtGui/qwindowdefs.h
+ /opt/homebrew/include/QtNetwork/qssl.h
+ /opt/homebrew/include/QtNetwork/qsslcertificate.h
+ /opt/homebrew/include/QtNetwork/qtnetwork-config.h
+ /opt/homebrew/include/QtNetwork/qtnetworkexports.h
+ /opt/homebrew/include/QtNetwork/qtnetworkglobal.h
+ /opt/homebrew/include/QtQml/qjsvalue.h
+ /opt/homebrew/include/QtQml/qqmlregistration.h
+ /opt/homebrew/include/QtQml/qtqml-config.h
+ /opt/homebrew/include/QtQml/qtqmlexports.h
+ /opt/homebrew/include/QtQml/qtqmlglobal.h
+ /opt/homebrew/include/QtQmlIntegration/qqmlintegration.h
+ /opt/homebrew/include/QtWebChannel/qtwebchannelexports.h
+ /opt/homebrew/include/QtWebChannel/qwebchannelglobal.h
+ /opt/homebrew/include/QtWebEngineCore/qtwebenginecore-config.h
+ /opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h
+ /opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginedownloadrequest.h
+ /opt/homebrew/include/QtWebEngineCore/qwebengineframe.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginepage.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginepermission.h
+ /opt/homebrew/include/QtWebEngineCore/qwebenginequotarequest.h
+ /opt/homebrew/include/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h
  /opt/homebrew/include/QtWidgets/qabstractitemview.h
  /opt/homebrew/include/QtWidgets/qabstractscrollarea.h
@@ -4323,7 +4553,6 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/include/QtWidgets/qdialog.h
  /opt/homebrew/include/QtWidgets/qdialogbuttonbox.h
  /opt/homebrew/include/QtWidgets/qframe.h
- /opt/homebrew/include/QtWidgets/qmenu.h
  /opt/homebrew/include/QtWidgets/qrubberband.h
  /opt/homebrew/include/QtWidgets/qsizepolicy.h
  /opt/homebrew/include/QtWidgets/qslider.h
@@ -4335,6 +4564,7 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/include/QtWidgets/qtwidgetsexports.h
  /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h
  /opt/homebrew/include/QtWidgets/qwidget.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDebug
  /opt/homebrew/lib/QtCore.framework/Headers/QDir
  /opt/homebrew/lib/QtCore.framework/Headers/QFile
  /opt/homebrew/lib/QtCore.framework/Headers/QObject
@@ -4342,6 +4572,9 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/QSettings
  /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths
  /opt/homebrew/lib/QtCore.framework/Headers/QString
+ /opt/homebrew/lib/QtCore.framework/Headers/QStringList
+ /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile
+ /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h
  /opt/homebrew/lib/QtCore.framework/Headers/qfile.h
  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h
@@ -4349,31 +4582,43 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h
+ /opt/homebrew/lib/QtGui.framework/Headers/QAction
+ /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent
  /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel
  /opt/homebrew/lib/QtGui.framework/Headers/QFont
  /opt/homebrew/lib/QtGui.framework/Headers/QIcon
+ /opt/homebrew/lib/QtGui.framework/Headers/QKeySequence
+ /opt/homebrew/lib/QtGui.framework/Headers/qaction.h
+ /opt/homebrew/lib/QtGui.framework/Headers/qevent.h
  /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h
  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h
  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h
+ /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h
+ /opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel
+ /opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h
+ /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView
+ /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication
- /opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel
  /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow
  /opt/homebrew/lib/QtWidgets.framework/Headers/QMenu
- /opt/homebrew/lib/QtWidgets.framework/Headers/QMenuBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox
  /opt/homebrew/lib/QtWidgets.framework/Headers/QSplitter
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QStyle
  /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory
  /opt/homebrew/lib/QtWidgets.framework/Headers/QTabWidget
  /opt/homebrew/lib/QtWidgets.framework/Headers/QToolBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QTreeView
  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qmenu.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/qmenubar.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qsplitter.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qstylefactory.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h
@@ -5444,6 +5689,8 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/QString
  /opt/homebrew/lib/QtCore.framework/Headers/QStringConverter
  /opt/homebrew/lib/QtCore.framework/Headers/QTextStream
+ /opt/homebrew/lib/QtCore.framework/Headers/QTimer
+ /opt/homebrew/lib/QtCore.framework/Headers/QVector
  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
  /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h
  /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h
@@ -5453,6 +5700,8 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter.h
  /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qvector.h
  /opt/homebrew/lib/QtGui.framework/Headers/QFont
  /opt/homebrew/lib/QtGui.framework/Headers/QIcon
  /opt/homebrew/lib/QtGui.framework/Headers/QPainter
@@ -7410,6 +7659,7 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/mainwindow.h
  /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/settings.h
  /opt/homebrew/include/QtCore/QFlags
+ /opt/homebrew/include/QtCore/QJsonValue
  /opt/homebrew/include/QtCore/QList
  /opt/homebrew/include/QtCore/QObject
  /opt/homebrew/include/QtCore/QRect
@@ -7443,6 +7693,8 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
  /opt/homebrew/include/QtCore/qbytearraylist.h
  /opt/homebrew/include/QtCore/qbytearrayview.h
  /opt/homebrew/include/QtCore/qcalendar.h
+ /opt/homebrew/include/QtCore/qcborcommon.h
+ /opt/homebrew/include/QtCore/qcborvalue.h
  /opt/homebrew/include/QtCore/qchar.h
  /opt/homebrew/include/QtCore/qcompare.h
  /opt/homebrew/include/QtCore/qcompare_impl.h
@@ -7487,6 +7739,9 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
  /opt/homebrew/include/QtCore/qitemselectionmodel.h
  /opt/homebrew/include/QtCore/qiterable.h
  /opt/homebrew/include/QtCore/qiterator.h
+ /opt/homebrew/include/QtCore/qjsondocument.h
+ /opt/homebrew/include/QtCore/qjsonparseerror.h
+ /opt/homebrew/include/QtCore/qjsonvalue.h
  /opt/homebrew/include/QtCore/qlatin1stringview.h
  /opt/homebrew/include/QtCore/qline.h
  /opt/homebrew/include/QtCore/qlist.h
@@ -7562,6 +7817,7 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
  /opt/homebrew/include/QtCore/qtypes.h
  /opt/homebrew/include/QtCore/qurl.h
  /opt/homebrew/include/QtCore/qutf8stringview.h
+ /opt/homebrew/include/QtCore/quuid.h
  /opt/homebrew/include/QtCore/qvariant.h
  /opt/homebrew/include/QtCore/qvarlengtharray.h
  /opt/homebrew/include/QtCore/qversiontagging.h
@@ -7631,6 +7887,8 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
  /opt/homebrew/include/QtQml/qtqmlexports.h
  /opt/homebrew/include/QtQml/qtqmlglobal.h
  /opt/homebrew/include/QtQmlIntegration/qqmlintegration.h
+ /opt/homebrew/include/QtWebChannel/qtwebchannelexports.h
+ /opt/homebrew/include/QtWebChannel/qwebchannelglobal.h
  /opt/homebrew/include/QtWebEngineCore/qtwebenginecore-config.h
  /opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h
  /opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h
@@ -7666,42 +7924,62 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
  /opt/homebrew/include/QtWidgets/qtwidgetsexports.h
  /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h
  /opt/homebrew/include/QtWidgets/qwidget.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDebug
  /opt/homebrew/lib/QtCore.framework/Headers/QDir
  /opt/homebrew/lib/QtCore.framework/Headers/QFile
  /opt/homebrew/lib/QtCore.framework/Headers/QFileInfo
+ /opt/homebrew/lib/QtCore.framework/Headers/QMap
  /opt/homebrew/lib/QtCore.framework/Headers/QObject
  /opt/homebrew/lib/QtCore.framework/Headers/QPointer
+ /opt/homebrew/lib/QtCore.framework/Headers/QProcess
  /opt/homebrew/lib/QtCore.framework/Headers/QScopedPointer
  /opt/homebrew/lib/QtCore.framework/Headers/QSettings
  /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths
  /opt/homebrew/lib/QtCore.framework/Headers/QString
+ /opt/homebrew/lib/QtCore.framework/Headers/QStringList
+ /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile
+ /opt/homebrew/lib/QtCore.framework/Headers/QTimer
+ /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h
  /opt/homebrew/lib/QtCore.framework/Headers/qfile.h
  /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qmap.h
  /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qprocess.h
  /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h
  /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h
- /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h
+ /opt/homebrew/lib/QtGui.framework/Headers/QAction
  /opt/homebrew/lib/QtGui.framework/Headers/QActionGroup
  /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent
+ /opt/homebrew/lib/QtGui.framework/Headers/QDesktopServices
  /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel
  /opt/homebrew/lib/QtGui.framework/Headers/QFont
  /opt/homebrew/lib/QtGui.framework/Headers/QIcon
+ /opt/homebrew/lib/QtGui.framework/Headers/QKeySequence
  /opt/homebrew/lib/QtGui.framework/Headers/QShortcut
+ /opt/homebrew/lib/QtGui.framework/Headers/qaction.h
  /opt/homebrew/lib/QtGui.framework/Headers/qactiongroup.h
+ /opt/homebrew/lib/QtGui.framework/Headers/qdesktopservices.h
  /opt/homebrew/lib/QtGui.framework/Headers/qevent.h
  /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h
  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h
  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h
+ /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h
  /opt/homebrew/lib/QtGui.framework/Headers/qshortcut.h
+ /opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel
+ /opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h
+ /opt/homebrew/lib/QtWebEngineCore.framework/Headers/QWebEngineSettings
+ /opt/homebrew/lib/QtWebEngineCore.framework/Headers/qwebenginesettings.h
  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView
  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication
  /opt/homebrew/lib/QtWidgets.framework/Headers/QButtonGroup
  /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog
  /opt/homebrew/lib/QtWidgets.framework/Headers/QDialogButtonBox
- /opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget
  /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog
  /opt/homebrew/lib/QtWidgets.framework/Headers/QFontDialog
  /opt/homebrew/lib/QtWidgets.framework/Headers/QGroupBox
@@ -7727,7 +8005,6 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
  /opt/homebrew/lib/QtWidgets.framework/Headers/qbuttongroup.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qfontdialog.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qgroupbox.h
@@ -9728,14 +10005,23 @@ CMakeFiles/QtWebEditor.dir/src/main.cpp.o
  /opt/homebrew/include/QtCore/qversiontagging.h
  /opt/homebrew/include/QtCore/qxptype_traits.h
  /opt/homebrew/include/QtCore/qyieldcpu.h
+ /opt/homebrew/include/QtGui/qaction.h
  /opt/homebrew/include/QtGui/qbitmap.h
+ /opt/homebrew/include/QtGui/qbrush.h
  /opt/homebrew/include/QtGui/qcolor.h
  /opt/homebrew/include/QtGui/qcursor.h
+ /opt/homebrew/include/QtGui/qfont.h
+ /opt/homebrew/include/QtGui/qfontinfo.h
+ /opt/homebrew/include/QtGui/qfontmetrics.h
+ /opt/homebrew/include/QtGui/qfontvariableaxis.h
  /opt/homebrew/include/QtGui/qguiapplication.h
  /opt/homebrew/include/QtGui/qguiapplication_platform.h
+ /opt/homebrew/include/QtGui/qicon.h
  /opt/homebrew/include/QtGui/qimage.h
  /opt/homebrew/include/QtGui/qinputmethod.h
+ /opt/homebrew/include/QtGui/qkeysequence.h
  /opt/homebrew/include/QtGui/qpaintdevice.h
+ /opt/homebrew/include/QtGui/qpalette.h
  /opt/homebrew/include/QtGui/qpixelformat.h
  /opt/homebrew/include/QtGui/qpixmap.h
  /opt/homebrew/include/QtGui/qpolygon.h
@@ -9747,24 +10033,34 @@ CMakeFiles/QtWebEditor.dir/src/main.cpp.o
  /opt/homebrew/include/QtGui/qtguiglobal.h
  /opt/homebrew/include/QtGui/qtransform.h
  /opt/homebrew/include/QtGui/qwindowdefs.h
+ /opt/homebrew/include/QtWidgets/qdialog.h
+ /opt/homebrew/include/QtWidgets/qdialogbuttonbox.h
+ /opt/homebrew/include/QtWidgets/qsizepolicy.h
  /opt/homebrew/include/QtWidgets/qtwidgets-config.h
  /opt/homebrew/include/QtWidgets/qtwidgetsexports.h
  /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h
+ /opt/homebrew/include/QtWidgets/qwidget.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDebug
  /opt/homebrew/lib/QtCore.framework/Headers/QObject
  /opt/homebrew/lib/QtCore.framework/Headers/QScopedPointer
  /opt/homebrew/lib/QtCore.framework/Headers/QSettings
  /opt/homebrew/lib/QtCore.framework/Headers/QString
+ /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h
  /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h
  /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
  /opt/homebrew/lib/QtGui.framework/Headers/QFont
+ /opt/homebrew/lib/QtGui.framework/Headers/QFontDatabase
  /opt/homebrew/lib/QtGui.framework/Headers/QIcon
  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h
+ /opt/homebrew/lib/QtGui.framework/Headers/qfontdatabase.h
  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox
  /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory
  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qstylefactory.h
 
 CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o
@@ -10761,8 +11057,12 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o
  /opt/homebrew/include/QtGui/qvector2d.h
  /opt/homebrew/include/QtGui/qvectornd.h
  /opt/homebrew/include/QtGui/qwindowdefs.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDebug
  /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression
+ /opt/homebrew/lib/QtCore.framework/Headers/QVector
+ /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qvector.h
  /opt/homebrew/lib/QtGui.framework/Headers/QSyntaxHighlighter
  /opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat
  /opt/homebrew/lib/QtGui.framework/Headers/qsyntaxhighlighter.h

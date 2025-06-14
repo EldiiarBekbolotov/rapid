@@ -825,6 +825,10 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/main.cpp \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.cpp \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.h \
+  /opt/homebrew/Cellar/qt/6.9.0/include/QtQmlIntegration/qqmlintegration.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QDebug \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QFlags \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QJsonValue \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QList \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QPointer \
@@ -836,6 +840,12 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QSizeF \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStandardPaths \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStringList \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTemporaryFile \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTimer \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QUrl \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QVector \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QWeakPointer \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
@@ -861,6 +871,8 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearraylist.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearrayview.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcalendar.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborcommon.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborvalue.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qchar.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcompare.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcompare_impl.h \
@@ -875,6 +887,7 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication_platform.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreevent.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcryptographichash.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdatetime.h \
@@ -904,6 +917,9 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsondocument.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonparseerror.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonvalue.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlist.h \
@@ -966,9 +982,11 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtcoreglobal.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtdeprecationdefinitions.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtemporaryfile.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimezone.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
@@ -982,15 +1000,21 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qurl.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/quuid.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvector.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QAction \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QCloseEvent \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QContextMenuEvent \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFileSystemModel \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFont \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QIcon \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QKeySequence \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QPageLayout \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QSyntaxHighlighter \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QTextCharFormat \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QTransform \
@@ -1016,9 +1040,13 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qinputdevice.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qinputmethod.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagelayout.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpageranges.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagesize.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpen.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h \
@@ -1044,13 +1072,41 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qvector2d.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qvectornd.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qssl.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qsslcertificate.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qjsvalue.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qqmlregistration.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqml-config.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlexports.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlglobal.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/QWebChannel \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qtwebchannelexports.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannel.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannelglobal.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/QWebEngineSettings \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecore-config.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecoreglobal.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineclientcertificateselection.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginedownloadrequest.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineframe.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepage.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepermission.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginequotarequest.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginesettings.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/QWebEngineView \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qtwebenginewidgetsglobal.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qwebengineview.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QApplication \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QDockWidget \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenu \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenuBar \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QPlainTextEdit \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QSplitter \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QStatusBar \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QStyleFactory \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QTabWidget \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QToolBar \
@@ -1063,14 +1119,15 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qapplication.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qdockwidget.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmenu.h \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmenubar.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qplaintextedit.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsplitter.h \
+  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstatusbar.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstylefactory.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
@@ -2117,23 +2174,79 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake \
   /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
   /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in \
+  /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp \
   /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in \
   /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake \
+  /opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake \
   /opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake \
   /opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake \
   /opt/homebrew/share/cmake/Modules/CheckIncludeFileCXX.cmake \
   /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+  /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/FindCups.cmake \
   /opt/homebrew/share/cmake/Modules/FindOpenGL.cmake \
   /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake \
@@ -2143,15 +2256,19 @@ QtWebEditor_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
+  /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake \
+  /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake \
+  /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake \
   /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake \
   /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake \
   /opt/homebrew/share/cmake/Modules/MacroAddFileDependencies.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake \
+  /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake \
@@ -3015,11 +3132,16 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   QtWebEditor_autogen/PRMOGMWJPH/moc_settings.cpp \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.h \
   QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp \
+  /opt/homebrew/include/QtCore/QFlags \
+  /opt/homebrew/include/QtCore/QJsonValue \
   /opt/homebrew/include/QtCore/QList \
   /opt/homebrew/include/QtCore/QObject \
   /opt/homebrew/include/QtCore/QRect \
   /opt/homebrew/include/QtCore/QSize \
   /opt/homebrew/include/QtCore/QSizeF \
+  /opt/homebrew/include/QtCore/QString \
+  /opt/homebrew/include/QtCore/QUrl \
+  /opt/homebrew/include/QtCore/QWeakPointer \
   /opt/homebrew/include/QtCore/q17memory.h \
   /opt/homebrew/include/QtCore/q20algorithm.h \
   /opt/homebrew/include/QtCore/q20functional.h \
@@ -3047,6 +3169,8 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/include/QtCore/qbytearraylist.h \
   /opt/homebrew/include/QtCore/qbytearrayview.h \
   /opt/homebrew/include/QtCore/qcalendar.h \
+  /opt/homebrew/include/QtCore/qcborcommon.h \
+  /opt/homebrew/include/QtCore/qcborvalue.h \
   /opt/homebrew/include/QtCore/qchar.h \
   /opt/homebrew/include/QtCore/qcompare.h \
   /opt/homebrew/include/QtCore/qcompare_impl.h \
@@ -3061,6 +3185,7 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/include/QtCore/qcoreapplication.h \
   /opt/homebrew/include/QtCore/qcoreapplication_platform.h \
   /opt/homebrew/include/QtCore/qcoreevent.h \
+  /opt/homebrew/include/QtCore/qcryptographichash.h \
   /opt/homebrew/include/QtCore/qdarwinhelpers.h \
   /opt/homebrew/include/QtCore/qdatastream.h \
   /opt/homebrew/include/QtCore/qdatetime.h \
@@ -3090,6 +3215,9 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/include/QtCore/qitemselectionmodel.h \
   /opt/homebrew/include/QtCore/qiterable.h \
   /opt/homebrew/include/QtCore/qiterator.h \
+  /opt/homebrew/include/QtCore/qjsondocument.h \
+  /opt/homebrew/include/QtCore/qjsonparseerror.h \
+  /opt/homebrew/include/QtCore/qjsonvalue.h \
   /opt/homebrew/include/QtCore/qlatin1stringview.h \
   /opt/homebrew/include/QtCore/qline.h \
   /opt/homebrew/include/QtCore/qlist.h \
@@ -3167,11 +3295,13 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/include/QtCore/qtypes.h \
   /opt/homebrew/include/QtCore/qurl.h \
   /opt/homebrew/include/QtCore/qutf8stringview.h \
+  /opt/homebrew/include/QtCore/quuid.h \
   /opt/homebrew/include/QtCore/qvariant.h \
   /opt/homebrew/include/QtCore/qvarlengtharray.h \
   /opt/homebrew/include/QtCore/qversiontagging.h \
   /opt/homebrew/include/QtCore/qxptype_traits.h \
   /opt/homebrew/include/QtCore/qyieldcpu.h \
+  /opt/homebrew/include/QtGui/QPageLayout \
   /opt/homebrew/include/QtGui/QTransform \
   /opt/homebrew/include/QtGui/qabstracttextdocumentlayout.h \
   /opt/homebrew/include/QtGui/qaction.h \
@@ -3194,9 +3324,13 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/include/QtGui/qinputdevice.h \
   /opt/homebrew/include/QtGui/qinputmethod.h \
   /opt/homebrew/include/QtGui/qkeysequence.h \
+  /opt/homebrew/include/QtGui/qpagelayout.h \
+  /opt/homebrew/include/QtGui/qpageranges.h \
+  /opt/homebrew/include/QtGui/qpagesize.h \
   /opt/homebrew/include/QtGui/qpaintdevice.h \
   /opt/homebrew/include/QtGui/qpalette.h \
   /opt/homebrew/include/QtGui/qpen.h \
+  /opt/homebrew/include/QtGui/qpicture.h \
   /opt/homebrew/include/QtGui/qpixelformat.h \
   /opt/homebrew/include/QtGui/qpixmap.h \
   /opt/homebrew/include/QtGui/qpointingdevice.h \
@@ -3221,13 +3355,34 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/include/QtGui/qvector2d.h \
   /opt/homebrew/include/QtGui/qvectornd.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/include/QtNetwork/qssl.h \
+  /opt/homebrew/include/QtNetwork/qsslcertificate.h \
+  /opt/homebrew/include/QtNetwork/qtnetwork-config.h \
+  /opt/homebrew/include/QtNetwork/qtnetworkexports.h \
+  /opt/homebrew/include/QtNetwork/qtnetworkglobal.h \
+  /opt/homebrew/include/QtQml/qjsvalue.h \
+  /opt/homebrew/include/QtQml/qqmlregistration.h \
+  /opt/homebrew/include/QtQml/qtqml-config.h \
+  /opt/homebrew/include/QtQml/qtqmlexports.h \
+  /opt/homebrew/include/QtQml/qtqmlglobal.h \
+  /opt/homebrew/include/QtQmlIntegration/qqmlintegration.h \
+  /opt/homebrew/include/QtWebChannel/qtwebchannelexports.h \
+  /opt/homebrew/include/QtWebChannel/qwebchannelglobal.h \
+  /opt/homebrew/include/QtWebEngineCore/qtwebenginecore-config.h \
+  /opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginedownloadrequest.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebengineframe.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginepage.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginepermission.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginequotarequest.h \
+  /opt/homebrew/include/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractitemview.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
   /opt/homebrew/include/QtWidgets/qabstractslider.h \
   /opt/homebrew/include/QtWidgets/qabstractspinbox.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
-  /opt/homebrew/include/QtWidgets/qmenu.h \
   /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
   /opt/homebrew/include/QtWidgets/qslider.h \
@@ -3240,6 +3395,7 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QPointer \
   /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression \
@@ -3247,6 +3403,11 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/lib/QtCore.framework/Headers/QSettings \
   /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/QStringList \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTimer \
+  /opt/homebrew/lib/QtCore.framework/Headers/QVector \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
@@ -3254,36 +3415,51 @@ CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o: QtWebEdit
   /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QAction \
+  /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent \
   /opt/homebrew/lib/QtGui.framework/Headers/QContextMenuEvent \
   /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel \
   /opt/homebrew/lib/QtGui.framework/Headers/QFont \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \
+  /opt/homebrew/lib/QtGui.framework/Headers/QKeySequence \
   /opt/homebrew/lib/QtGui.framework/Headers/QSyntaxHighlighter \
   /opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat \
+  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qsyntaxhighlighter.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h \
+  /opt/homebrew/lib/QtWebEngineCore.framework/Headers/QWebEngineSettings \
+  /opt/homebrew/lib/QtWebEngineCore.framework/Headers/qwebenginesettings.h \
+  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView \
+  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMenu \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QMenuBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPlainTextEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QSplitter \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTabWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QToolBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTreeView \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmenu.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qmenubar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qplaintextedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qsplitter.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstylefactory.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h \
@@ -4135,6 +4311,16 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/application.h \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/mainwindow.h \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/settings.h \
+  /opt/homebrew/include/QtCore/QFlags \
+  /opt/homebrew/include/QtCore/QJsonValue \
+  /opt/homebrew/include/QtCore/QList \
+  /opt/homebrew/include/QtCore/QObject \
+  /opt/homebrew/include/QtCore/QRect \
+  /opt/homebrew/include/QtCore/QSize \
+  /opt/homebrew/include/QtCore/QSizeF \
+  /opt/homebrew/include/QtCore/QString \
+  /opt/homebrew/include/QtCore/QUrl \
+  /opt/homebrew/include/QtCore/QWeakPointer \
   /opt/homebrew/include/QtCore/q17memory.h \
   /opt/homebrew/include/QtCore/q20functional.h \
   /opt/homebrew/include/QtCore/q20iterator.h \
@@ -4160,6 +4346,8 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/include/QtCore/qbytearraylist.h \
   /opt/homebrew/include/QtCore/qbytearrayview.h \
   /opt/homebrew/include/QtCore/qcalendar.h \
+  /opt/homebrew/include/QtCore/qcborcommon.h \
+  /opt/homebrew/include/QtCore/qcborvalue.h \
   /opt/homebrew/include/QtCore/qchar.h \
   /opt/homebrew/include/QtCore/qcompare.h \
   /opt/homebrew/include/QtCore/qcompare_impl.h \
@@ -4174,6 +4362,7 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/include/QtCore/qcoreapplication.h \
   /opt/homebrew/include/QtCore/qcoreapplication_platform.h \
   /opt/homebrew/include/QtCore/qcoreevent.h \
+  /opt/homebrew/include/QtCore/qcryptographichash.h \
   /opt/homebrew/include/QtCore/qdarwinhelpers.h \
   /opt/homebrew/include/QtCore/qdatastream.h \
   /opt/homebrew/include/QtCore/qdatetime.h \
@@ -4203,6 +4392,9 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/include/QtCore/qitemselectionmodel.h \
   /opt/homebrew/include/QtCore/qiterable.h \
   /opt/homebrew/include/QtCore/qiterator.h \
+  /opt/homebrew/include/QtCore/qjsondocument.h \
+  /opt/homebrew/include/QtCore/qjsonparseerror.h \
+  /opt/homebrew/include/QtCore/qjsonvalue.h \
   /opt/homebrew/include/QtCore/qlatin1stringview.h \
   /opt/homebrew/include/QtCore/qline.h \
   /opt/homebrew/include/QtCore/qlist.h \
@@ -4276,17 +4468,22 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/include/QtCore/qtversionchecks.h \
   /opt/homebrew/include/QtCore/qtypeinfo.h \
   /opt/homebrew/include/QtCore/qtypes.h \
+  /opt/homebrew/include/QtCore/qurl.h \
   /opt/homebrew/include/QtCore/qutf8stringview.h \
+  /opt/homebrew/include/QtCore/quuid.h \
   /opt/homebrew/include/QtCore/qvariant.h \
   /opt/homebrew/include/QtCore/qvarlengtharray.h \
   /opt/homebrew/include/QtCore/qversiontagging.h \
   /opt/homebrew/include/QtCore/qxptype_traits.h \
   /opt/homebrew/include/QtCore/qyieldcpu.h \
+  /opt/homebrew/include/QtGui/QPageLayout \
+  /opt/homebrew/include/QtGui/QTransform \
   /opt/homebrew/include/QtGui/qaction.h \
   /opt/homebrew/include/QtGui/qbitmap.h \
   /opt/homebrew/include/QtGui/qbrush.h \
   /opt/homebrew/include/QtGui/qcolor.h \
   /opt/homebrew/include/QtGui/qcursor.h \
+  /opt/homebrew/include/QtGui/qeventpoint.h \
   /opt/homebrew/include/QtGui/qfont.h \
   /opt/homebrew/include/QtGui/qfontinfo.h \
   /opt/homebrew/include/QtGui/qfontmetrics.h \
@@ -4295,22 +4492,55 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/include/QtGui/qguiapplication_platform.h \
   /opt/homebrew/include/QtGui/qicon.h \
   /opt/homebrew/include/QtGui/qimage.h \
+  /opt/homebrew/include/QtGui/qinputdevice.h \
   /opt/homebrew/include/QtGui/qinputmethod.h \
   /opt/homebrew/include/QtGui/qkeysequence.h \
+  /opt/homebrew/include/QtGui/qpagelayout.h \
+  /opt/homebrew/include/QtGui/qpageranges.h \
+  /opt/homebrew/include/QtGui/qpagesize.h \
   /opt/homebrew/include/QtGui/qpaintdevice.h \
   /opt/homebrew/include/QtGui/qpalette.h \
+  /opt/homebrew/include/QtGui/qpicture.h \
   /opt/homebrew/include/QtGui/qpixelformat.h \
   /opt/homebrew/include/QtGui/qpixmap.h \
+  /opt/homebrew/include/QtGui/qpointingdevice.h \
   /opt/homebrew/include/QtGui/qpolygon.h \
   /opt/homebrew/include/QtGui/qregion.h \
   /opt/homebrew/include/QtGui/qrgb.h \
   /opt/homebrew/include/QtGui/qrgba64.h \
+  /opt/homebrew/include/QtGui/qscreen.h \
+  /opt/homebrew/include/QtGui/qscreen_platform.h \
+  /opt/homebrew/include/QtGui/qtextdocument.h \
   /opt/homebrew/include/QtGui/qtgui-config.h \
   /opt/homebrew/include/QtGui/qtguiexports.h \
   /opt/homebrew/include/QtGui/qtguiglobal.h \
   /opt/homebrew/include/QtGui/qtransform.h \
   /opt/homebrew/include/QtGui/qvalidator.h \
+  /opt/homebrew/include/QtGui/qvector2d.h \
+  /opt/homebrew/include/QtGui/qvectornd.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/include/QtNetwork/qssl.h \
+  /opt/homebrew/include/QtNetwork/qsslcertificate.h \
+  /opt/homebrew/include/QtNetwork/qtnetwork-config.h \
+  /opt/homebrew/include/QtNetwork/qtnetworkexports.h \
+  /opt/homebrew/include/QtNetwork/qtnetworkglobal.h \
+  /opt/homebrew/include/QtQml/qjsvalue.h \
+  /opt/homebrew/include/QtQml/qqmlregistration.h \
+  /opt/homebrew/include/QtQml/qtqml-config.h \
+  /opt/homebrew/include/QtQml/qtqmlexports.h \
+  /opt/homebrew/include/QtQml/qtqmlglobal.h \
+  /opt/homebrew/include/QtQmlIntegration/qqmlintegration.h \
+  /opt/homebrew/include/QtWebChannel/qtwebchannelexports.h \
+  /opt/homebrew/include/QtWebChannel/qwebchannelglobal.h \
+  /opt/homebrew/include/QtWebEngineCore/qtwebenginecore-config.h \
+  /opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginedownloadrequest.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebengineframe.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginepage.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginepermission.h \
+  /opt/homebrew/include/QtWebEngineCore/qwebenginequotarequest.h \
+  /opt/homebrew/include/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractitemview.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
@@ -4319,7 +4549,6 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/include/QtWidgets/qdialog.h \
   /opt/homebrew/include/QtWidgets/qdialogbuttonbox.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
-  /opt/homebrew/include/QtWidgets/qmenu.h \
   /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
   /opt/homebrew/include/QtWidgets/qslider.h \
@@ -4331,6 +4560,7 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
   /opt/homebrew/lib/QtCore.framework/Headers/QDir \
   /opt/homebrew/lib/QtCore.framework/Headers/QFile \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
@@ -4338,6 +4568,9 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/lib/QtCore.framework/Headers/QSettings \
   /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/QStringList \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
@@ -4345,31 +4578,43 @@ CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o: /Users/eldiiar/rapid/rapi
   /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QAction \
+  /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent \
   /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel \
   /opt/homebrew/lib/QtGui.framework/Headers/QFont \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \
+  /opt/homebrew/lib/QtGui.framework/Headers/QKeySequence \
+  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h \
+  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView \
+  /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMenu \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QMenuBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QSplitter \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStyle \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTabWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QToolBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTreeView \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmenu.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qmenubar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qsplitter.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstylefactory.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
@@ -5439,6 +5684,8 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o: /Users/eldiiar/rapid/rap
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/QStringConverter \
   /opt/homebrew/lib/QtCore.framework/Headers/QTextStream \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTimer \
+  /opt/homebrew/lib/QtCore.framework/Headers/QVector \
   /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h \
@@ -5448,6 +5695,8 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o: /Users/eldiiar/rapid/rap
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QFont \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \
   /opt/homebrew/lib/QtGui.framework/Headers/QPainter \
@@ -7403,6 +7652,7 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o: /Users/eldiiar/rapid/rapid
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/mainwindow.h \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/settings.h \
   /opt/homebrew/include/QtCore/QFlags \
+  /opt/homebrew/include/QtCore/QJsonValue \
   /opt/homebrew/include/QtCore/QList \
   /opt/homebrew/include/QtCore/QObject \
   /opt/homebrew/include/QtCore/QRect \
@@ -7436,6 +7686,8 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o: /Users/eldiiar/rapid/rapid
   /opt/homebrew/include/QtCore/qbytearraylist.h \
   /opt/homebrew/include/QtCore/qbytearrayview.h \
   /opt/homebrew/include/QtCore/qcalendar.h \
+  /opt/homebrew/include/QtCore/qcborcommon.h \
+  /opt/homebrew/include/QtCore/qcborvalue.h \
   /opt/homebrew/include/QtCore/qchar.h \
   /opt/homebrew/include/QtCore/qcompare.h \
   /opt/homebrew/include/QtCore/qcompare_impl.h \
@@ -7480,6 +7732,9 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o: /Users/eldiiar/rapid/rapid
   /opt/homebrew/include/QtCore/qitemselectionmodel.h \
   /opt/homebrew/include/QtCore/qiterable.h \
   /opt/homebrew/include/QtCore/qiterator.h \
+  /opt/homebrew/include/QtCore/qjsondocument.h \
+  /opt/homebrew/include/QtCore/qjsonparseerror.h \
+  /opt/homebrew/include/QtCore/qjsonvalue.h \
   /opt/homebrew/include/QtCore/qlatin1stringview.h \
   /opt/homebrew/include/QtCore/qline.h \
   /opt/homebrew/include/QtCore/qlist.h \
@@ -7555,6 +7810,7 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o: /Users/eldiiar/rapid/rapid
   /opt/homebrew/include/QtCore/qtypes.h \
   /opt/homebrew/include/QtCore/qurl.h \
   /opt/homebrew/include/QtCore/qutf8stringview.h \
+  /opt/homebrew/include/QtCore/quuid.h \
   /opt/homebrew/include/QtCore/qvariant.h \
   /opt/homebrew/include/QtCore/qvarlengtharray.h \
   /opt/homebrew/include/QtCore/qversiontagging.h \
@@ -7624,6 +7880,8 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o: /Users/eldiiar/rapid/rapid
   /opt/homebrew/include/QtQml/qtqmlexports.h \
   /opt/homebrew/include/QtQml/qtqmlglobal.h \
   /opt/homebrew/include/QtQmlIntegration/qqmlintegration.h \
+  /opt/homebrew/include/QtWebChannel/qtwebchannelexports.h \
+  /opt/homebrew/include/QtWebChannel/qwebchannelglobal.h \
   /opt/homebrew/include/QtWebEngineCore/qtwebenginecore-config.h \
   /opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h \
   /opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h \
@@ -7659,42 +7917,62 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o: /Users/eldiiar/rapid/rapid
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
   /opt/homebrew/lib/QtCore.framework/Headers/QDir \
   /opt/homebrew/lib/QtCore.framework/Headers/QFile \
   /opt/homebrew/lib/QtCore.framework/Headers/QFileInfo \
+  /opt/homebrew/lib/QtCore.framework/Headers/QMap \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QPointer \
+  /opt/homebrew/lib/QtCore.framework/Headers/QProcess \
   /opt/homebrew/lib/QtCore.framework/Headers/QScopedPointer \
   /opt/homebrew/lib/QtCore.framework/Headers/QSettings \
   /opt/homebrew/lib/QtCore.framework/Headers/QStandardPaths \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/QStringList \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTimer \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qmap.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qprocess.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstandardpaths.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QAction \
   /opt/homebrew/lib/QtGui.framework/Headers/QActionGroup \
   /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent \
+  /opt/homebrew/lib/QtGui.framework/Headers/QDesktopServices \
   /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel \
   /opt/homebrew/lib/QtGui.framework/Headers/QFont \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \
+  /opt/homebrew/lib/QtGui.framework/Headers/QKeySequence \
   /opt/homebrew/lib/QtGui.framework/Headers/QShortcut \
+  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qactiongroup.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qdesktopservices.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qshortcut.h \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel \
+  /opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h \
+  /opt/homebrew/lib/QtWebEngineCore.framework/Headers/QWebEngineSettings \
+  /opt/homebrew/lib/QtWebEngineCore.framework/Headers/qwebenginesettings.h \
   /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView \
   /opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QButtonGroup \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialogButtonBox \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFontDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QGroupBox \
@@ -7720,7 +7998,6 @@ CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o: /Users/eldiiar/rapid/rapid
   /opt/homebrew/lib/QtWidgets.framework/Headers/qbuttongroup.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qfontdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qgroupbox.h \
@@ -9719,14 +9996,23 @@ CMakeFiles/QtWebEditor.dir/src/main.cpp.o: /Users/eldiiar/rapid/rapid/qt_web_edi
   /opt/homebrew/include/QtCore/qversiontagging.h \
   /opt/homebrew/include/QtCore/qxptype_traits.h \
   /opt/homebrew/include/QtCore/qyieldcpu.h \
+  /opt/homebrew/include/QtGui/qaction.h \
   /opt/homebrew/include/QtGui/qbitmap.h \
+  /opt/homebrew/include/QtGui/qbrush.h \
   /opt/homebrew/include/QtGui/qcolor.h \
   /opt/homebrew/include/QtGui/qcursor.h \
+  /opt/homebrew/include/QtGui/qfont.h \
+  /opt/homebrew/include/QtGui/qfontinfo.h \
+  /opt/homebrew/include/QtGui/qfontmetrics.h \
+  /opt/homebrew/include/QtGui/qfontvariableaxis.h \
   /opt/homebrew/include/QtGui/qguiapplication.h \
   /opt/homebrew/include/QtGui/qguiapplication_platform.h \
+  /opt/homebrew/include/QtGui/qicon.h \
   /opt/homebrew/include/QtGui/qimage.h \
   /opt/homebrew/include/QtGui/qinputmethod.h \
+  /opt/homebrew/include/QtGui/qkeysequence.h \
   /opt/homebrew/include/QtGui/qpaintdevice.h \
+  /opt/homebrew/include/QtGui/qpalette.h \
   /opt/homebrew/include/QtGui/qpixelformat.h \
   /opt/homebrew/include/QtGui/qpixmap.h \
   /opt/homebrew/include/QtGui/qpolygon.h \
@@ -9738,24 +10024,34 @@ CMakeFiles/QtWebEditor.dir/src/main.cpp.o: /Users/eldiiar/rapid/rapid/qt_web_edi
   /opt/homebrew/include/QtGui/qtguiglobal.h \
   /opt/homebrew/include/QtGui/qtransform.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/include/QtWidgets/qdialog.h \
+  /opt/homebrew/include/QtWidgets/qdialogbuttonbox.h \
+  /opt/homebrew/include/QtWidgets/qsizepolicy.h \
   /opt/homebrew/include/QtWidgets/qtwidgets-config.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
+  /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QScopedPointer \
   /opt/homebrew/lib/QtCore.framework/Headers/QSettings \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QFont \
+  /opt/homebrew/lib/QtGui.framework/Headers/QFontDatabase \
   /opt/homebrew/lib/QtGui.framework/Headers/QIcon \
   /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontdatabase.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstylefactory.h
 
 CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.cpp \
@@ -10751,8 +11047,12 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
   /opt/homebrew/include/QtGui/qvector2d.h \
   /opt/homebrew/include/QtGui/qvectornd.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
   /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression \
+  /opt/homebrew/lib/QtCore.framework/Headers/QVector \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QSyntaxHighlighter \
   /opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat \
   /opt/homebrew/lib/QtGui.framework/Headers/qsyntaxhighlighter.h \
@@ -10763,15 +11063,11 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtGui.framework/Headers/QPalette:
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h:
-
 /opt/homebrew/lib/QtWidgets.framework/Headers/qradiobutton.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h:
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h:
+/opt/homebrew/lib/QtWidgets.framework/Headers/qmenubar.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qfontdialog.h:
 
@@ -10785,13 +11081,9 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QTabBar:
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar:
-
 /opt/homebrew/lib/QtWidgets.framework/Headers/QRadioButton:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/QLabel:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout:
 
@@ -10803,11 +11095,11 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QButtonGroup:
 
-/opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h:
-
 /opt/homebrew/lib/QtGui.framework/Headers/qactiongroup.h:
 
-/opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent:
+/opt/homebrew/lib/QtCore.framework/Headers/qmap.h:
+
+/opt/homebrew/include/QtWidgets/qmenu.h:
 
 /opt/homebrew/include/QtWidgets/qlayoutitem.h:
 
@@ -10816,42 +11108,6 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 /opt/homebrew/include/QtWidgets/qboxlayout.h:
 
 /opt/homebrew/include/QtWidgets/qabstractbutton.h:
-
-/opt/homebrew/include/QtWebEngineCore/qwebenginequotarequest.h:
-
-/opt/homebrew/include/QtWebEngineCore/qwebenginepermission.h:
-
-/opt/homebrew/include/QtWebEngineCore/qwebengineframe.h:
-
-/opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h:
-
-/opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h:
-
-/opt/homebrew/include/QtQmlIntegration/qqmlintegration.h:
-
-/opt/homebrew/include/QtQml/qtqmlglobal.h:
-
-/opt/homebrew/include/QtQml/qtqml-config.h:
-
-/opt/homebrew/include/QtQml/qqmlregistration.h:
-
-/opt/homebrew/include/QtQml/qjsvalue.h:
-
-/opt/homebrew/include/QtNetwork/qtnetworkglobal.h:
-
-/opt/homebrew/include/QtNetwork/qtnetworkexports.h:
-
-/opt/homebrew/include/QtNetwork/qssl.h:
-
-/opt/homebrew/include/QtGui/qpagesize.h:
-
-/opt/homebrew/include/QtGui/qpageranges.h:
-
-/opt/homebrew/include/QtGui/qpagelayout.h:
-
-/opt/homebrew/include/QtCore/QWeakPointer:
-
-/opt/homebrew/include/QtCore/QFlags:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qinputdialog.h:
 
@@ -10879,8 +11135,6 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtCore.framework/Headers/QStringConverter:
 
-/opt/homebrew/lib/QtCore.framework/Headers/QDebug:
-
 /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QStyle:
@@ -10901,11 +11155,13 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h:
 
+/opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h:
+
 /opt/homebrew/lib/QtWidgets.framework/Headers/qsplitter.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qplaintextedit.h:
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/qmenubar.h:
+/opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h:
 
@@ -10915,13 +11171,23 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory:
 
+/opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar:
+
 /opt/homebrew/lib/QtWidgets.framework/Headers/QSplitter:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QPlainTextEdit:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow:
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/QDockWidget:
+/opt/homebrew/lib/QtWidgets.framework/Headers/QLabel:
+
+/opt/homebrew/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h:
+
+/opt/homebrew/lib/QtWebEngineCore.framework/Headers/QWebEngineSettings:
+
+/opt/homebrew/lib/QtWebChannel.framework/Headers/qwebchannel.h:
+
+/opt/homebrew/lib/QtWebChannel.framework/Headers/QWebChannel:
 
 /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h:
 
@@ -10933,11 +11199,21 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtGui.framework/Headers/qevent.h:
 
-/opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat:
+/opt/homebrew/lib/QtGui.framework/Headers/QKeySequence:
 
 /opt/homebrew/lib/QtGui.framework/Headers/QIcon:
 
 /opt/homebrew/lib/QtGui.framework/Headers/QContextMenuEvent:
+
+/opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent:
+
+/opt/homebrew/lib/QtGui.framework/Headers/QAction:
+
+/opt/homebrew/lib/QtCore.framework/Headers/qvector.h:
+
+/opt/homebrew/lib/QtCore.framework/Headers/qtimer.h:
+
+/opt/homebrew/lib/QtCore.framework/Headers/qtemporaryfile.h:
 
 /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h:
 
@@ -10949,6 +11225,14 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/lib/QtCore.framework/Headers/qobject.h:
 
+/opt/homebrew/lib/QtCore.framework/Headers/QVector:
+
+/opt/homebrew/lib/QtCore.framework/Headers/QTimer:
+
+/opt/homebrew/lib/QtCore.framework/Headers/QTemporaryFile:
+
+/opt/homebrew/lib/QtCore.framework/Headers/QStringList:
+
 /opt/homebrew/lib/QtCore.framework/Headers/QString:
 
 /opt/homebrew/lib/QtCore.framework/Headers/QSettings:
@@ -10956,6 +11240,8 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 /opt/homebrew/lib/QtCore.framework/Headers/QPointer:
 
 /opt/homebrew/lib/QtCore.framework/Headers/QObject:
+
+/opt/homebrew/lib/QtCore.framework/Headers/QDebug:
 
 /opt/homebrew/include/QtWidgets/qwidget.h:
 
@@ -10973,8 +11259,6 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/include/QtWidgets/qslider.h:
 
-/opt/homebrew/include/QtWidgets/qmenu.h:
-
 /opt/homebrew/include/QtWidgets/qframe.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qmenu.h:
@@ -10989,141 +11273,217 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h:
 
+/opt/homebrew/include/QtWebEngineCore/qwebenginequotarequest.h:
+
+/opt/homebrew/include/QtWebEngineCore/qwebenginepermission.h:
+
+/opt/homebrew/include/QtWebEngineCore/qwebengineframe.h:
+
+/opt/homebrew/include/QtWebEngineCore/qwebengineclientcertificateselection.h:
+
+/opt/homebrew/include/QtWebEngineCore/qtwebenginecoreglobal.h:
+
+/opt/homebrew/include/QtWebChannel/qtwebchannelexports.h:
+
+/opt/homebrew/include/QtQmlIntegration/qqmlintegration.h:
+
+/opt/homebrew/include/QtQml/qtqmlglobal.h:
+
+/opt/homebrew/include/QtQml/qtqml-config.h:
+
+/opt/homebrew/include/QtQml/qqmlregistration.h:
+
+/opt/homebrew/include/QtQml/qjsvalue.h:
+
+/opt/homebrew/include/QtNetwork/qtnetworkglobal.h:
+
+/opt/homebrew/include/QtNetwork/qtnetworkexports.h:
+
+/opt/homebrew/include/QtNetwork/qssl.h:
+
 /opt/homebrew/include/QtGui/qwindowdefs.h:
 
 /opt/homebrew/include/QtGui/qvectornd.h:
 
+/opt/homebrew/include/QtGui/qvalidator.h:
+
+/opt/homebrew/include/QtGui/qtransform.h:
+
 /opt/homebrew/include/QtGui/qtguiglobal.h:
+
+/opt/homebrew/include/QtGui/qtguiexports.h:
 
 /opt/homebrew/include/QtGui/qtgui-config.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/copy_backward.h:
+/opt/homebrew/lib/QtGui.framework/Headers/qfontdatabase.h:
 
-/opt/homebrew/include/QtGui/qtextoption.h:
+/opt/homebrew/include/QtGui/qtextobject.h:
 
-/opt/homebrew/include/QtGui/qtextformat.h:
+/opt/homebrew/include/QtGui/qtextlayout.h:
+
+/opt/homebrew/include/QtGui/qtextdocument.h:
+
+/opt/homebrew/include/QtGui/qtextcursor.h:
 
 /opt/homebrew/include/QtGui/qscreen_platform.h:
 
+/opt/homebrew/include/QtGui/qscreen.h:
+
 /opt/homebrew/include/QtGui/qrgba64.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/compare:
+/opt/homebrew/include/QtGui/qrgb.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
+/opt/homebrew/include/QtGui/qregion.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/initializer_list:
+/opt/homebrew/include/QtGui/qpixelformat.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6SensorsQuickpluginTargets.cmake:
+/opt/homebrew/include/QtGui/qpalette.h:
 
-/opt/homebrew/include/QtGui/qpointingdevice.h:
+/opt/homebrew/include/QtGui/qpagesize.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h:
+/opt/homebrew/include/QtGui/qpageranges.h:
 
-/opt/homebrew/include/QtCore/qcontiguouscache.h:
+/opt/homebrew/include/QtGui/qpagelayout.h:
 
-/opt/homebrew/include/QtGui/qpaintdevice.h:
+/opt/homebrew/include/QtGui/qkeysequence.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h:
+/opt/homebrew/include/QtGui/qinputmethod.h:
 
-/opt/homebrew/include/QtGui/qinputdevice.h:
+/opt/homebrew/include/QtGui/qimage.h:
 
 /opt/homebrew/include/QtGui/qicon.h:
 
+/opt/homebrew/include/QtGui/qguiapplication_platform.h:
+
+/opt/homebrew/include/QtGui/qguiapplication.h:
+
+/opt/homebrew/include/QtGui/qfontvariableaxis.h:
+
+/opt/homebrew/include/QtGui/qfontmetrics.h:
+
+/opt/homebrew/include/QtGui/qfontinfo.h:
+
 /opt/homebrew/include/QtGui/qfont.h:
+
+/opt/homebrew/include/QtGui/qevent.h:
 
 /opt/homebrew/include/QtGui/qcolor.h:
 
-/opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateTargets.cmake:
+/opt/homebrew/include/QtGui/qbrush.h:
 
-/opt/homebrew/include/QtCore/qversiontagging.h:
+/opt/homebrew/include/QtGui/qabstracttextdocumentlayout.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/add_rvalue_reference.h:
+/opt/homebrew/include/QtCore/qyieldcpu.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/inner_product.h:
+/opt/homebrew/include/QtCore/qxptype_traits.h:
 
-/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake:
-
-/opt/homebrew/include/QtCore/qvariant.h:
+/opt/homebrew/include/QtCore/qvarlengtharray.h:
 
 /opt/homebrew/include/QtCore/qurl.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtextlayout.h:
+/opt/homebrew/include/QtCore/qttypetraits.h:
 
-/opt/homebrew/include/QtCore/qtypeinfo.h:
+/opt/homebrew/include/QtCore/qttranslation.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/in_place.h:
+/opt/homebrew/include/QtCore/qtmochelpers.h:
 
-/opt/homebrew/include/QtCore/qtpreprocessorsupport.h:
+/opt/homebrew/include/QtCore/qtmocconstants.h:
+
+/opt/homebrew/include/QtCore/qtformat_impl.h:
 
 /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter.h:
 
 /opt/homebrew/include/QtCore/qtextstream.h:
 
+/opt/homebrew/include/QtCore/qtdeprecationmarkers.h:
+
+/opt/homebrew/include/QtCore/qtdeprecationdefinitions.h:
+
 /opt/homebrew/include/QtCore/qtcoreglobal.h:
+
+/opt/homebrew/include/QtCore/qtcore-config.h:
 
 /opt/homebrew/include/QtCore/qtconfigmacros.h:
 
 /opt/homebrew/include/QtCore/qtclasshelpermacros.h:
 
+/opt/homebrew/include/QtCore/qtaggedpointer.h:
+
+/opt/homebrew/include/QtCore/qsystemdetection.h:
+
 /opt/homebrew/include/QtCore/qswap.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineTargets.cmake:
+/opt/homebrew/include/QtCore/qstringtokenizer.h:
 
-/opt/homebrew/include/QtCore/qstringview.h:
+/opt/homebrew/include/QtCore/qstringmatcher.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginAdditionalTargetInfo.cmake:
+/opt/homebrew/include/QtCore/qstringliteral.h:
 
-/opt/homebrew/include/QtCore/qstringlist.h:
+/opt/homebrew/include/QtCore/qstringconverter_base.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_callable.h:
+/opt/homebrew/include/QtCore/qstringconverter.h:
 
-/opt/homebrew/include/QtCore/qstring.h:
+/opt/homebrew/include/QtCore/qstringbuilder.h:
+
+/opt/homebrew/include/QtCore/qstringalgorithms.h:
 
 /opt/homebrew/include/QtCore/qstdlibdetection.h:
-
-/opt/homebrew/include/QtCore/qnumeric.h:
-
-/opt/homebrew/include/QtCore/qsize.h:
 
 /opt/homebrew/include/QtWebEngineCore/qwebenginedownloadrequest.h:
 
 /opt/homebrew/include/QtCore/qsharedpointer.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qfile.h:
+/opt/homebrew/include/QtCore/qshareddata.h:
 
-/opt/homebrew/include/QtCore/qscopeguard.h:
+/opt/homebrew/include/QtGui/qeventpoint.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
-
-/opt/homebrew/include/QtCore/qscopedpointer.h:
+/opt/homebrew/include/QtCore/qset.h:
 
 /opt/homebrew/include/QtCore/qregularexpression.h:
 
+/opt/homebrew/include/QtCore/qrect.h:
+
+/opt/homebrew/include/QtCore/qprocessordetection.h:
+
 /opt/homebrew/include/QtCore/qpoint.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/iter_move.h:
-
-/opt/homebrew/include/QtCore/qobjectdefs_impl.h:
+/opt/homebrew/include/QtCore/qobject_impl.h:
 
 /opt/homebrew/include/QtCore/qobject.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpluginspluginTargets-release.cmake:
+/opt/homebrew/include/QtCore/qsize.h:
 
-/opt/homebrew/include/QtCore/qminmax.h:
+/opt/homebrew/include/QtCore/qnumeric.h:
+
+/opt/homebrew/include/QtCore/qnativeinterface.h:
+
+/opt/homebrew/include/QtCore/qnamespace.h:
 
 /opt/homebrew/include/QtCore/qmetatype.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QRegularExpression:
+/opt/homebrew/include/QtCore/qmetacontainer.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
+/opt/homebrew/include/QtCore/qmap.h:
 
-/opt/homebrew/include/QtCore/qmath.h:
+/opt/homebrew/include/QtCore/qmalloc.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:
+/opt/homebrew/include/QtCore/qlogging.h:
 
-/opt/homebrew/include/QtCore/qmargins.h:
+/opt/homebrew/include/QtCore/qlocale.h:
+
+/opt/homebrew/include/QtCore/qlist.h:
+
+/opt/homebrew/include/QtCore/qline.h:
 
 /opt/homebrew/include/QtCore/qlatin1stringview.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/pthread/sched.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QList:
+
+/opt/homebrew/include/QtCore/qjsonvalue.h:
 
 /opt/homebrew/include/QtCore/qiterable.h:
 
@@ -11155,9 +11515,13 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/include/QtCore/qconstructormacros.h:
 
-/opt/homebrew/include/QtCore/qttranslation.h:
-
 /opt/homebrew/include/QtCore/qcompare.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iterator:
+
+/Users/eldiiar/rapid/rapid/qt_web_editor/src/core/settings.h:
+
+/opt/homebrew/include/QtCore/qcborvalue.h:
 
 /opt/homebrew/include/QtCore/qbytearrayview.h:
 
@@ -11170,8 +11534,6 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbopenwnnpluginConfig.cmake:
 
 /opt/homebrew/include/QtCore/qarraydataops.h:
-
-/opt/homebrew/include/QtCore/qanystringview.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginTargets-release.cmake:
 
@@ -11195,6 +11557,14 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 
 /opt/homebrew/include/QtCore/q17memory.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_errno_t.h:
+
+/opt/homebrew/include/QtCore/QUrl:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets-release.cmake:
+
+/opt/homebrew/include/QtCore/QString:
+
 /opt/homebrew/include/QtCore/QSize:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
@@ -11204,6 +11574,8 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: /Users/eldiiar/rap
 /opt/homebrew/include/QtCore/QObject:
 
 /opt/homebrew/include/QtCore/QList:
+
+/opt/homebrew/include/QtCore/QJsonValue:
 
 QtWebEditor_autogen/PRMOGMWJPH/moc_settings.cpp:
 
@@ -11223,8 +11595,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_rsize_t.h:
 
-/opt/homebrew/include/QtCore/qline.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_ptrdiff_t.h:
@@ -11235,13 +11605,11 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_header_macro.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineTargets-release.cmake:
-
 /opt/homebrew/include/QtCore/qstringfwd.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_string.h:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineTargets-release.cmake:
 
-/opt/homebrew/include/QtGui/qimage.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_string.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/in_in_out_result.h:
 
@@ -11250,8 +11618,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/sfinae_helpers.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h:
 
 /opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
 
@@ -11301,10 +11667,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__debug_utils/randomize_range.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/projected.h:
 
 /opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:
@@ -11345,6 +11707,10 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
+/opt/homebrew/include/QtCore/qscopedpointer.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
+
 /opt/homebrew/include/QtGui/QPageLayout:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
@@ -11372,8 +11738,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/sched.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h:
 
@@ -11427,6 +11791,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:
 
+/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print:
@@ -11449,8 +11815,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd:
 
-/opt/homebrew/include/QtCore/qxptype_traits.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/advance.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list:
@@ -11463,15 +11827,11 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ctime:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdlib:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/popcount.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint:
-
-/opt/homebrew/include/QtCore/qvarlengtharray.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
 
@@ -11497,10 +11857,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__verbose_abort:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dcorepluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/include/QtCore/qtversionchecks.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__variant/monostate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/weak_result_type.h:
@@ -11517,6 +11873,10 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h:
 
+/opt/homebrew/include/QtCore/qmargins.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/is_pointer_in_range.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/integer_sequence.h:
@@ -11531,9 +11891,9 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/exception_guard.h:
 
-/opt/homebrew/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderConfigVersionImpl.cmake:
-
 /opt/homebrew/include/QtCore/qtresource.h:
+
+/opt/homebrew/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderConfigVersionImpl.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/declval.h:
 
@@ -11551,9 +11911,9 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/unwrap_ref.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_specialization.h:
-
 /opt/homebrew/include/QtCore/qoverload.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_specialization.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/error_functions.h:
 
@@ -11615,12 +11975,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_primary_template.h:
 
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pod.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_object.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h:
@@ -11675,8 +12029,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/extent.h:
 
-/opt/homebrew/include/QtGui/qtextlayout.h:
-
 /opt/homebrew/include/QtCore/qtnoop.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/datasizeof.h:
@@ -11705,6 +12057,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_pointer.h:
 
+/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:
+
 /opt/homebrew/include/QtCore/qiterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_const.h:
@@ -11721,6 +12075,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree:
 
+/opt/homebrew/include/QtCore/qcborcommon.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support/pthread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/id.h:
@@ -11732,10 +12088,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/system_error.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_category.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/errc.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/constexpr_c_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/char_traits.h:
 
@@ -11754,6 +12106,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
 /opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateConfig.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/empty.h:
 
@@ -11783,6 +12137,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargets.cmake:
 
+/opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
+
 /opt/homebrew/include/QtCore/qelapsedtimer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h:
@@ -11809,6 +12165,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_construct_at.h:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qtwebenginewidgetsglobal.h:
+
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/out_ptr.h:
@@ -11816,8 +12174,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/noexcept_move_assign_container.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/inout_ptr.h:
-
-/opt/homebrew/include/QtGui/qabstracttextdocumentlayout.h:
 
 /opt/homebrew/include/QtWidgets/qlayout.h:
 
@@ -11830,8 +12186,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/compressed_pair.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/auto_ptr.h:
-
-/opt/homebrew/include/QtCore/qstringliteral.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator_destructor.h:
 
@@ -11849,8 +12203,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/remainder.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/modulo.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/min_max.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivially_lexicographically_comparable.h:
@@ -11858,8 +12210,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/hypot.h:
-
-/opt/homebrew/include/QtGui/qguiapplication_platform.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/gamma.h:
 
@@ -11870,6 +12220,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/copysign.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/abs.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvector.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h:
 
@@ -11983,8 +12335,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/reference_wrapper.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/align.h:
@@ -12022,6 +12372,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/indic_conjunct_break_table.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_integral.h:
+
+/opt/homebrew/lib/QtWebEngineCore.framework/Headers/qwebenginesettings.h:
 
 /opt/homebrew/include/QtWidgets/qrubberband.h:
 
@@ -12063,19 +12415,9 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_application.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_enum.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_char.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/in_out_result.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargets-release.cmake:
-
-/opt/homebrew/include/QtCore/qutf8stringview.h:
 
 QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
@@ -12088,6 +12430,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/nested_exception.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception_ptr.h:
+
+/opt/homebrew/lib/QtCore.framework/Headers/QMap:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception.h:
 
@@ -12110,6 +12454,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6QmlMetaPrivate/Qt6QmlMetaPrivateConfig.cmake:
 
 /opt/homebrew/include/QtCore/qcoreevent.h:
+
+/opt/homebrew/include/QtCore/QFlags:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h:
 
@@ -12136,6 +12482,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/derived_from.h:
 
 /Users/eldiiar/rapid/rapid/qt_web_editor/CMakeLists.txt:
+
+/opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/equality_comparable.h:
 
@@ -12209,8 +12557,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/countr.h:
 
-/opt/homebrew/include/QtCore/qstringconverter.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/countl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/set_symmetric_difference.h:
@@ -12232,6 +12578,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_base.h:
+
+/opt/homebrew/include/QtWebChannel/qwebchannelglobal.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlocale.h:
 
@@ -12285,6 +12633,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/builtin_new_allocator.h:
 
+/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_stdio.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h:
@@ -12297,17 +12647,9 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove.h:
 
-/opt/homebrew/include/QtCore/qtmochelpers.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_upper_bound.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
-
-/opt/homebrew/include/QtGui/qtextcursor.h:
-
-/opt/homebrew/lib/cmake/Qt6QmlMetaPrivate/Qt6QmlMetaPrivateConfigVersion.cmake:
-
-/opt/homebrew/include/QtGui/qbitmap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_cv.h:
 
@@ -12324,12 +12666,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__atomic/check_memory_order.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:
-
-/opt/homebrew/lib/cmake/Qt6CorePrivate/Qt6CorePrivateConfig.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:
 
@@ -12401,11 +12737,13 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap_until.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/string_view:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagelayout.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
 
@@ -12443,10 +12781,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy.h:
 
-/opt/homebrew/share/cmake/Modules/FindCups.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp_ref_type.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/all_of.h:
@@ -12483,7 +12817,9 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h:
 
-/opt/homebrew/include/QtGui/qtransform.h:
+/opt/homebrew/include/QtGui/qinputdevice.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h:
 
@@ -12539,7 +12875,7 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake:
 
-/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake:
+/opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake:
 
 /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake:
 
@@ -12550,6 +12886,14 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake:
 
 /opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
+
+/opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h:
+
+/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:
 
 /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
@@ -12567,6 +12911,76 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/share/cmake/Modules/FindOpenGL.cmake:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp_ref_type.h:
+
+/opt/homebrew/share/cmake/Modules/FindCups.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ctime:
+
+/opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/machine/endian.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake:
+
+/opt/homebrew/lib/cmake/Qt6QmlModelsPrivate/Qt6QmlModelsPrivateConfigVersion.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/Qt6Targets.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QDebugMessageServiceFactoryPluginTargets-release.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/constexpr_c_functions.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
+
+/opt/homebrew/include/QtCore/qanystringview.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlPublicCMakeHelpers.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
+
+/opt/homebrew/include/QtQml/qtqmlexports.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/istream_iterator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/machine/_mcontext.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_arg.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/byte.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake:
+
 /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/settings.cpp:
 
 /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake:
@@ -12579,15 +12993,35 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:
 
+/opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in:
+
 /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake:
 
 /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:
+
+/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginTargets.cmake:
+
+/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h:
 
 /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake:
+
+/opt/homebrew/include/QtCore/qvariant.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/add_rvalue_reference.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/inner_product.h:
+
+/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsPrivateDependencies.cmake:
 
@@ -12598,8 +13032,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsPrivateConfig.cmake:
-
-/opt/homebrew/include/QtGui/qvalidator.h:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake:
 
@@ -12617,8 +13049,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h:
 
-/opt/homebrew/include/QtGui/qscreen.h:
-
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
@@ -12626,6 +13056,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6DeclarativeOpcuapluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfig.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
 
@@ -12677,8 +13109,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsAdditionalTargetInfo.cmake:
 
-/opt/homebrew/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateConfigVersionImpl.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/formatter.h:
 
 /opt/homebrew/lib/cmake/Qt6QmlAssetDownloaderPrivate/Qt6QmlAssetDownloaderPrivateConfig.cmake:
@@ -12703,9 +13133,9 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfigVersionImpl.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h:
-
 /opt/homebrew/include/QtGui/qcursor.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h:
 
 /opt/homebrew/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfigVersion.cmake:
 
@@ -12735,8 +13165,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateConfig.cmake:
 
-/opt/homebrew/include/QtCore/qstringmatcher.h:
-
 /opt/homebrew/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6WebChannel/Qt6WebChannelDependencies.cmake:
@@ -12758,6 +13186,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6QuickWidgetsPrivate/Qt6QuickWidgetsPrivateDependencies.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStringList:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineAdditionalTargetInfo.cmake:
 
@@ -12786,6 +13216,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/tuple_element.h:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecore-config.h:
 
 /opt/homebrew/lib/cmake/Qt6QuickTools/Qt6QuickToolsVersionlessTargets.cmake:
 
@@ -12828,6 +13260,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
 
 /opt/homebrew/lib/cmake/Qt6QmlWorkerScriptPrivate/Qt6QmlWorkerScriptPrivateVersionlessAliasTargets.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qsslcertificate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_specialization.h:
 
@@ -12881,6 +13315,10 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6QmlTools/Qt6QmlToolsVersionlessTargets.cmake:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QAction:
+
+/opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake:
+
 /opt/homebrew/include/QtCore/qflags.h:
 
 /opt/homebrew/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfig.cmake:
@@ -12894,12 +13332,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6QmlPrivate/Qt6QmlPrivateDependencies.cmake:
 
 /opt/homebrew/lib/cmake/Qt6QmlPrivate/Qt6QmlPrivateConfigVersionImpl.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfig.cmake:
-
-/opt/homebrew/include/QtCore/qrefcount.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginTargets-release.cmake:
 
@@ -12965,6 +13397,10 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsPrivateAdditionalTargetInfo.cmake:
 
+/opt/homebrew/include/QtGui/qbitmap.h:
+
+/opt/homebrew/lib/cmake/Qt6QmlMetaPrivate/Qt6QmlMetaPrivateConfigVersion.cmake:
+
 /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:
 
 /opt/homebrew/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargets-release.cmake:
@@ -12988,8 +13424,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/make_heap.h:
 
 /opt/homebrew/lib/cmake/Qt6QmlIntegrationPrivate/Qt6QmlIntegrationPrivateDependencies.cmake:
-
-/opt/homebrew/include/QtCore/qtformat_impl.h:
 
 /opt/homebrew/lib/cmake/Qt6QmlIntegrationPrivate/Qt6QmlIntegrationPrivateConfigVersionImpl.cmake:
 
@@ -13061,8 +13495,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlDependencies.cmake:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsplitter.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlConfigVersionImpl.cmake:
@@ -13093,10 +13525,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginTargets.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginAdditionalTargetInfo.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginConfig.cmake:
 
 /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake:
@@ -13108,10 +13536,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginAdditionalTargetInfo.cmake:
 
@@ -13139,11 +13563,7 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QDebugMessageServiceFactoryPluginConfig.cmake:
 
-/opt/homebrew/include/QtCore/qyieldcpu.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6sharedimagepluginTargets.cmake:
 
@@ -13158,6 +13578,10 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickwindowTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickwindowAdditionalTargetInfo.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qshareddata.h:
+
+/opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qpointer.h:
 
@@ -13176,10 +13600,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaAdditionalTargetInfo.cmake:
-
-/opt/homebrew/include/QtGui/qeventpoint.h:
-
-/opt/homebrew/include/QtCore/qset.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioTargets-release.cmake:
 
@@ -13231,6 +13651,10 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dcorepluginConfig.cmake:
 
+/opt/homebrew/include/QtCore/qtversionchecks.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dcorepluginAdditionalTargetInfo.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3danimationpluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
@@ -13243,8 +13667,6 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3danimationpluginConfig.cmake:
 
-/opt/homebrew/include/QtGui/qbrush.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/errno.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebviewquickpluginTargets-release.cmake:
@@ -13256,6 +13678,10 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6QmlMeta/Qt6QmlMetaVersionlessAliasTargets.cmake:
+
+/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbthaipluginTargets.cmake:
 
@@ -13273,6 +13699,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set:
 
+/opt/homebrew/include/QtCore/qjsonparseerror.h:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbstylespluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateConfigVersionImpl.cmake:
@@ -13282,6 +13710,8 @@ QtWebEditor_autogen/PRMOGMWJPH/moc_editorwidget.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbstylespluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbsettingspluginTargets.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstatusbar.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbsettingspluginTargets-release.cmake:
 
@@ -13293,7 +13723,9 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbsettingspluginConfig.cmake:
 
-/opt/homebrew/include/QtCore/qstringtokenizer.h:
+/opt/homebrew/include/QtCore/qminmax.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpluginspluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_member_pointer.h:
 
@@ -13310,12 +13742,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpinyinpluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpinyinpluginConfig.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/tuple:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpinyinpluginAdditionalTargetInfo.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/binary_negate.h:
 
@@ -13383,6 +13809,10 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelineblendtreespluginConfig.cmake:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/pair.h:
+
+/opt/homebrew/include/QtCore/qcryptographichash.h:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2pluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateConfig.cmake:
@@ -13403,8 +13833,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickscene2dpluginTargets.cmake:
 
-/opt/homebrew/include/QtCore/qstringbuilder.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickscene2dpluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/no_destroy.h:
@@ -13416,8 +13844,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20utility.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/include/QtGui/qtextobject.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_volatile.h:
 
@@ -13481,15 +13907,19 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargets.cmake:
 
-/opt/homebrew/include/QtGui/qguiapplication.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_valid_expansion.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/shared_ptr.h:
+
+/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:
+
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginConfig.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QDebug:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple:
 
@@ -13507,6 +13937,10 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargets.cmake:
 
+/opt/homebrew/include/QtCore/qutf8stringview.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargets-release.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginAdditionalTargetInfo.cmake:
@@ -13515,17 +13949,13 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3stylepluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginTargets.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h:
-
-/opt/homebrew/include/QtGui/qvector2d.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
 
 /opt/homebrew/lib/QtCore.framework/Headers/QUrl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/unary_negate.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QVector:
 
 /opt/homebrew/lib/cmake/Qt6QmlPrivate/Qt6QmlPrivateAdditionalTargetInfo.cmake:
 
@@ -13573,23 +14003,17 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginConfig.cmake:
 
+/opt/homebrew/Cellar/qt/6.9.0/include/QtQmlIntegration/qqmlintegration.h:
+
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginAdditionalTargetInfo.cmake:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h:
-
-/opt/homebrew/include/QtGui/qfontdatabase.h:
-
-/opt/homebrew/include/QtCore/qlocale.h:
 
 /opt/homebrew/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbbuiltinstylespluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelpersimplpluginConfig.cmake:
-
-/opt/homebrew/include/QtCore/qnamespace.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/execution:
 
@@ -13625,31 +14049,41 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginAdditionalTargetInfo.cmake:
 
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
+/opt/homebrew/include/QtCore/qstringview.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h:
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginConfig.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineTargets.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/tuple_like_no_subrange.h:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/auto_ptr.h:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginTargets.cmake:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtextcursor.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineConfig.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginConfig.cmake:
+
+/opt/homebrew/include/QtCore/qchar.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginAdditionalTargetInfo.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/function.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateAdditionalTargetInfo.cmake:
 
 /opt/homebrew/include/QtGui/qpicture.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginTargets-release.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:
+/opt/homebrew/include/QtCore/qshareddata_impl.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginAdditionalTargetInfo.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginConfig.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstylepluginConfig.cmake:
 
@@ -13657,23 +14091,45 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Config.cmake:
 
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginTargets-release.cmake:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/common_reference_with.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginConfig.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginTargets.cmake:
+/opt/homebrew/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginAdditionalTargetInfo.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/upper_bound.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginTargets-release.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_class.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_unsigned_integer.h:
 
-/opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateVersionlessAliasTargets.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginConfig.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginAdditionalTargetInfo.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cerrno:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginAdditionalTargetInfo.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/math.h:
+
+/opt/homebrew/lib/cmake/Qt6QuickWidgets/Qt6QuickWidgetsVersionlessAliasTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dphysicspluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dphysicspluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dphysicspluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dphysicspluginAdditionalTargetInfo.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_time_t.h:
 
@@ -13683,19 +14139,39 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets-release.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/optional:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginConfig.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginTargets.cmake:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stdbool.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlInspectorServiceFactoryPluginTargets-release.cmake:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/ranges_fill_n.h:
 
-/opt/homebrew/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateConfig.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3deffectpluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlPlugins.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginAdditionalTargetInfo.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickscene3dpluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlsettingspluginTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlsettingspluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargets-release.cmake:
+
+/opt/homebrew/lib/QtGui.framework/Headers/qaction.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestylepluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginAdditionalTargetInfo.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/find_end.h:
 
@@ -13719,6 +14195,12 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginConfig.cmake:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/memory.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/parser_std_format_spec.h:
+
+/opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_ino_t.h:
@@ -13728,6 +14210,8 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QScopedPointer:
 
@@ -13751,8 +14235,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/include/QtCore/qtcore-config.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginAdditionalTargetInfo.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/arm/_types.h:
@@ -13772,8 +14254,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsAdditionalTargetInfo.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/piecewise_construct.h:
 
@@ -13795,21 +14275,17 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateTargets.cmake:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborcommon.h:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_integral.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6SensorsQuickpluginTargets-release.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets-release.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickTestpluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateConfig.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/function.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QDialogButtonBox:
 
@@ -13822,10 +14298,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginTargets-release.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cerrno:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/make_32_64_or_128_bit.h:
 
@@ -13847,23 +14319,15 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qshareddata.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_posix_availability.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdirlisting.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6GraphspluginTargets.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_zero.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6DeclarativeOpcuapluginAdditionalTargetInfo.cmake:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_arg.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/byte.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake:
 
@@ -13885,23 +14349,23 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateConfigVersion.cmake:
 
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlInspectorServiceFactoryPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateConfig.cmake:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/partition_copy.h:
 
 /opt/homebrew/lib/cmake/Qt6PrintSupport/Qt6PrintSupportVersionlessAliasTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginTargets.cmake:
-
 /opt/homebrew/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginTargets-release.cmake:
 
 /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginAdditionalTargetInfo.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
-
-/opt/homebrew/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryNmeaPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginTargets.cmake:
 
@@ -13921,8 +14385,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Positioning/Qt6PositioningTargets.cmake:
 
-/opt/homebrew/include/QtCore/qnativeinterface.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginConfig.cmake:
@@ -13938,6 +14400,10 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginTargets-release.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QJsonValue:
+
+/opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Positioning/Qt6PositioningPlugins.cmake:
 
@@ -13961,12 +14427,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Positioning/Qt6PositioningAdditionalTargetInfo.cmake:
 
-/opt/homebrew/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfig.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/semiregular.h:
-
-/opt/homebrew/lib/cmake/Qt6OpenGLPrivate/Qt6OpenGLPrivateConfigVersion.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginTargets.cmake:
 
 /opt/homebrew/include/QtCore/qpair.h:
@@ -13987,6 +14447,12 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6OpenGL/Qt6OpenGLAdditionalTargetInfo.cmake:
 
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginConfig.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_class.h:
+
+/opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateVersionlessAliasTargets.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioConfig.cmake:
@@ -13996,6 +14462,10 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6OpenGLPrivate/Qt6OpenGLPrivateConfigVersionImpl.cmake:
 
@@ -14008,6 +14478,8 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginConfig.cmake:
+
+/opt/homebrew/include/QtCore/quuid.h:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargets.cmake:
 
@@ -14040,12 +14512,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/include/QtCore/qbasictimer.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpluginspluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkTargets-release.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_reference.h:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlInspectorServiceFactoryPluginTargets.cmake:
 
@@ -14085,10 +14551,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-release.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/include/QtCore/qchar.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake:
@@ -14100,6 +14562,8 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets-release.cmake:
+
+/opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfig.cmake:
 
@@ -14140,6 +14604,8 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-release.cmake:
 
@@ -14185,8 +14651,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-release.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginConfig.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_fd_def.h:
@@ -14221,19 +14685,11 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3deffectpluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlPlugins.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginConfig.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstylepluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-release.cmake:
-
-/opt/homebrew/include/QtGui/qregion.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
@@ -14257,9 +14713,15 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/errno.h:
 
-/opt/homebrew/include/QtCore/qshareddata_impl.h:
+/opt/homebrew/include/QtGui/qpaintdevice.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginConfig.cmake:
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h:
+
+/opt/homebrew/include/QtCore/qcontiguouscache.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_char.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
 
@@ -14297,9 +14759,9 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h:
+/opt/homebrew/lib/cmake/Qt6OpenGLPrivate/Qt6OpenGLPrivateConfigVersion.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfig.cmake:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/semiregular.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h:
 
@@ -14368,10 +14830,6 @@ QtWebEditor_autogen/VSCBVMNR7M/moc_syntaxhighlighter.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginTargets.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/format:
-
-/opt/homebrew/include/QtGui/qrawfont.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
 
@@ -14497,10 +14955,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6QmlModelsPrivate/Qt6QmlModelsPrivateConfigVersion.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/Qt6Targets.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_lock_free.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/remove_volatile.h:
@@ -14527,21 +14981,15 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicSbomHelpers.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dextraspluginConfig.cmake:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2iosstyleimplpluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
 
-/opt/homebrew/include/QtCore/qarraydatapointer.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/numeric:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
 /opt/homebrew/include/QtCore/qcontainerinfo.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6GraphspluginAdditionalTargetInfo.cmake:
 
@@ -14558,10 +15006,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qbrush.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginConfig.cmake:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h:
-
-/opt/homebrew/include/QtGui/qaction.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/decay.h:
 
@@ -14587,10 +15031,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/common_type.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtextedit.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginConfig.cmake:
@@ -14600,6 +15040,16 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dextraspluginConfig.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h:
 
@@ -14611,19 +15061,25 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbbuiltinstylespluginTargets.cmake:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QPageLayout:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogs2quickimplpluginTargets.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qplaintextedit.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmenubar.h:
-
 /opt/homebrew/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsPrivateVersionlessAliasTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestylepluginTargets.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
+
+/opt/homebrew/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryNmeaPluginAdditionalTargetInfo.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginTargets.cmake:
 
@@ -14647,9 +15103,9 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtoolbar.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h:
+/opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginAdditionalTargetInfo.cmake:
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h:
 
@@ -14661,17 +15117,95 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QPlainTextEdit:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3stylepluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfigVersionImpl.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/different_from.h:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenuBar:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginTargets.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenu:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsAdditionalTargetInfo.cmake:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pod.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qwebengineview.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/is_permutation.h:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qeventpoint.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepermission.h:
+
+/opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepage.h:
+
+/opt/homebrew/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfig.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineframe.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_implicitly_default_constructible.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/tuple.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginedownloadrequest.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_reference.h:
+
+/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineclientcertificateselection.h:
+
+/opt/homebrew/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateConfigVersionImpl.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/sfinae_helpers.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/add_cv.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qtwebchannelexports.h:
+
+/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginTargets-release.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/check_memory_order.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlglobal.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginequotarequest.h:
+
+/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h:
+
+/opt/homebrew/include/QtCore/qarraydatapointer.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/numeric:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:
+
+/opt/homebrew/lib/cmake/Qt6CorePrivate/Qt6CorePrivateConfig.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qssl.h:
 
 /opt/homebrew/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets.cmake:
 
@@ -14709,8 +15243,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qscreen_platform.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginTargets-release.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QTreeView:
@@ -14743,19 +15275,21 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginConfig.cmake:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpicture.h:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargets.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/inout_ptr.h:
-
-/opt/homebrew/include/QtGui/qpixmap.h:
-
-/opt/homebrew/include/QtGui/qinputmethod.h:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/errc.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagesize.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpageranges.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/errno.h:
 
@@ -14783,6 +15317,8 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets-release.cmake:
 
+/opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6GraphspluginConfig.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qfontmetrics.h:
@@ -14794,8 +15330,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstyleimplpluginConfig.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qfilesystemmodel.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginAdditionalTargetInfo.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/copy_cv.h:
 
@@ -14809,25 +15343,27 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QSyntaxHighlighter:
 
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlDependencies.cmake:
+
+/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h:
+
+/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QKeySequence:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__assert:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFont:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/binder1st.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/is_permutation.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stdbool.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/ranges_fill_n.h:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QContextMenuEvent:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfig.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/derived_from.h:
 
@@ -14848,6 +15384,12 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvariant.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QApplication:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/quuid.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h:
 
@@ -14879,7 +15421,11 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h:
 
-/opt/homebrew/include/QtCore/qrect.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/result_of.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/bit:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimer.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginTargets-release.cmake:
 
@@ -14887,11 +15433,17 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtcore-config.h:
 
+/opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginAdditionalTargetInfo.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QCloseEvent:
+
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtconfiginclude.h:
 
 /opt/homebrew/lib/cmake/Qt6QmlPrivate/Qt6QmlPrivateTargets.cmake:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/qdockwidget.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h:
 
@@ -14907,9 +15459,9 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qsystemdetection.h:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake:
-
 /opt/homebrew/lib/cmake/Qt6QmlModels/Qt6QmlModelsConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qfunctionaltools_impl.h:
 
@@ -14955,8 +15507,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qstringconverter_base.h:
 
-/opt/homebrew/lib/cmake/Qt6QmlMeta/Qt6QmlMetaVersionlessAliasTargets.cmake:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qstringbuilder.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/_types/_uint64_t.h:
@@ -14994,6 +15544,8 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QMenu:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtemporaryfile.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/ranges_upper_bound.h:
 
@@ -15071,6 +15623,8 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qobject_impl.h:
 
+/opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
+
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qnamespace.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qminmax.h:
@@ -15101,7 +15655,9 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6CorePrivate/Qt6CorePrivateTargets.cmake:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_enum.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonvalue.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/relation.h:
 
@@ -15121,6 +15677,12 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qfiledevice.h:
 
+/opt/homebrew/include/QtGui/qvector2d.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginTargets.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h:
+
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qeventloop.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginAdditionalTargetInfo.cmake:
@@ -15132,12 +15694,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/decay.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qendian.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/formatter_output.h:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qconstructormacros.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pstl.h:
 
@@ -15151,7 +15707,19 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdatastream.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcryptographichash.h:
+
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication_platform.h:
+
+/opt/homebrew/include/QtGui/qaction.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h:
 
@@ -15165,13 +15733,33 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h:
 
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/formatter_output.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qconstructormacros.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h:
 
-/opt/homebrew/include/QtCore/qtaggedpointer.h:
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qqmlregistration.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/modulo.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/front_insert_iterator.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QStatusBar:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__debug_utils/randomize_range.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborvalue.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
 
@@ -15183,6 +15771,18 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcalendar.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/traits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/iota.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/_types/_locale_t.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginConfig.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTemporaryFile:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/QWebEngineSettings:
+
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearraylist.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:
@@ -15193,19 +15793,9 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearray.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/out_ptr.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h:
-
-/opt/homebrew/include/QtGui/qpalette.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QApplication:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/lazy.h:
 
@@ -15214,6 +15804,16 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbhangulpluginTargets-release.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qatomic.h:
+
+/opt/homebrew/include/QtGui/qpointingdevice.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/compare:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/initializer_list:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6SensorsQuickpluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/climits:
 
@@ -15233,9 +15833,21 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QWeakPointer:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iosfwd:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3stylepluginTargets-release.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/different_from.h:
+
+/opt/homebrew/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfigVersionImpl.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString:
 
@@ -15245,21 +15857,19 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/memory_resource.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h:
+/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkTargets-release.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/pthread/sched.h:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QList:
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginTargets-release.cmake:
+/opt/homebrew/include/QtGui/qtextformat.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QFlags:
 
 /Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.cpp:
 
 /opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iterator:
-
-/Users/eldiiar/rapid/rapid/qt_web_editor/src/core/settings.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:
 
@@ -15272,6 +15882,10 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/conjunction.h:
 
 /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/filebrowser.cpp:
+
+/opt/homebrew/include/QtCore/qscopeguard.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qfile.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h:
 
@@ -15289,8 +15903,6 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/size_t.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginConfig.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ios:
 
 QtWebEditor_autogen/moc_predefs.h:
@@ -15301,9 +15913,11 @@ QtWebEditor_autogen/moc_predefs.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-release.cmake:
 
-/opt/homebrew/include/QtGui/qtguiexports.h:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtextobject.h:
+
+/opt/homebrew/include/QtGui/qfontdatabase.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/regular.h:
 
@@ -15322,10 +15936,6 @@ QtWebEditor_autogen/moc_predefs.h:
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg___gnuc_va_list.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_implicitly_default_constructible.h:
-
-/opt/homebrew/include/QtCore/QString:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/xlocale/_wchar.h:
 
@@ -15371,17 +15981,11 @@ QtWebEditor_autogen/moc_predefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
 
-/opt/homebrew/include/QtCore/qcryptographichash.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/pair.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/destruct_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/format_error.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_wint_t.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:
 
@@ -15392,6 +15996,12 @@ QtWebEditor_autogen/moc_predefs.h:
 /opt/homebrew/include/QtCore/qtenvironmentvariables.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_locationTargets-release.cmake:
+
+/opt/homebrew/include/QtCore/qmath.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QRegularExpression:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/limits:
 
@@ -15420,12 +16030,6 @@ QtWebEditor_autogen/moc_predefs.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_pid_t.h:
 
 /opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_segment_if.h:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qchar.h:
-
-/opt/homebrew/include/QtCore/qtconfiginclude.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_offsetof.h:
 
@@ -15497,8 +16101,6 @@ QtWebEditor_autogen/moc_predefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
 
-/opt/homebrew/include/QtCore/qstringalgorithms.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_fd_set.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/set_symmetric_difference.h:
@@ -15510,14 +16112,6 @@ QtWebEditor_autogen/moc_predefs.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_u_int32_t.h:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qeventpoint.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/memory.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/parser_std_format_spec.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/memory_resource.h:
 
@@ -15532,10 +16126,6 @@ QtWebEditor_autogen/moc_predefs.h:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__variant/monostate.h:
-
-/opt/homebrew/include/QtCore/QUrl:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_errno_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_clock_t.h:
 
@@ -15560,8 +16150,6 @@ QtWebEditor_autogen/moc_predefs.h:
 QtWebEditor_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/machine/endian.h:
 
 /opt/homebrew/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateTargets.cmake:
 
@@ -15621,10 +16209,6 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/pthread/pthread_impl.h:
 
-/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/iota.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__atomic/fence.h:
@@ -15633,17 +16217,17 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QSplitter:
 
-/opt/homebrew/lib/cmake/Qt6QuickWidgets/Qt6QuickWidgetsVersionlessAliasTargets.cmake:
+/opt/homebrew/include/QtCore/QWeakPointer:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/math.h:
+/opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/malloc/_ptrcheck.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/machine/types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/execution:
 
-/opt/homebrew/include/QtCore/qtmetamacros.h:
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannelglobal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h:
 
@@ -15655,12 +16239,6 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_const.h:
 
-/opt/homebrew/include/QtQml/qtqmlexports.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/istream_iterator.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/machine/_mcontext.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__assertion_handler:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicGitHelpers.cmake:
@@ -15671,8 +16249,6 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
-/opt/homebrew/include/QtCore/qlogging.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef:
@@ -15682,6 +16258,10 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/vector:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pointer.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/tuple:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/back_insert_iterator.h:
 
@@ -15694,6 +16274,10 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/string:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qanystringview.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginAdditionalTargetInfo.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/semiregular.h:
 
@@ -15733,6 +16317,10 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/ranges_copy.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginesettings.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__configuration/compiler.h:
@@ -15751,7 +16339,13 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/deque:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlsettingspluginTargets-release.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineConfig.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/tuple_like_no_subrange.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/auto_ptr.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtextcursor.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/ranges_construct_at.h:
 
@@ -15760,6 +16354,12 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/wait.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlTargets-release.cmake:
+
+/opt/homebrew/include/QtCore/qrefcount.h:
+
+/opt/homebrew/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6OpenGLPrivate/Qt6OpenGLPrivateAdditionalTargetInfo.cmake:
 
@@ -15777,11 +16377,13 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/move.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginAdditionalTargetInfo.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_union.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginTargets.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/optional:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginConfig.cmake:
 
@@ -15803,13 +16405,23 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
+/opt/homebrew/include/QtCore/qjsondocument.h:
+
 /opt/homebrew/lib/cmake/Qt6WebChannel/Qt6WebChannelConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/istream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake:
+
+/opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/algorithm:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QUrl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__verbose_abort:
 
@@ -15820,6 +16432,8 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/swap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/malloc/_malloc.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QPointer:
 
@@ -15832,8 +16446,6 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/extended_grapheme_cluster_table.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/forward_like.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dphysicspluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-release.cmake:
 
@@ -15849,8 +16461,6 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
 
-/opt/homebrew/include/QtCore/qlist.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/remove_reference.h:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginDependencies.cmake:
@@ -15865,11 +16475,11 @@ QtWebEditor_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/auto_cast.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/arm/_mcontext.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/from_range.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsAdditionalTargetInfo.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/arm/_mcontext.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6SensorsQuickpluginConfig.cmake:
 
@@ -15898,10 +16508,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/move.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlogging.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars_result.h:
-
-/opt/homebrew/include/QtGui/qpen.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/machine/_types.h:
 
@@ -15943,8 +16549,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/type_identity.h:
 
-/opt/homebrew/include/QtCore/qprocessordetection.h:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/empty.h:
@@ -15958,8 +16562,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
-
-/opt/homebrew/include/QtCore/qstringconverter_base.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/view_interface.h:
 
@@ -16003,11 +16605,13 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/declval.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/QWebEngineView:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/format_arg.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_implicitly_default_constructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
 
@@ -16065,8 +16669,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/wctype.h:
 
-/opt/homebrew/include/QtGui/qrgb.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/appleapiopts.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
@@ -16076,8 +16678,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_mbstate_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h:
-
-/opt/homebrew/include/QtCore/qtdeprecationdefinitions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/_ctermid.h:
 
@@ -16127,13 +16727,15 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets-release.cmake:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/__xlocale.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/QWebChannel:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h:
 
 /opt/homebrew/lib/cmake/Qt6QmlModels/Qt6QmlModelsTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfig.cmake:
 
@@ -16157,21 +16759,11 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginTargets-release.cmake:
 
-/opt/homebrew/include/QtGui/qfontvariableaxis.h:
-
-/opt/homebrew/include/QtCore/qmalloc.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/tag_types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/front_insert_iterator.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstyleimplpluginAdditionalTargetInfo.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/add_cv.h:
 
 /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel:
 
@@ -16203,17 +16795,11 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/tuple_like_ext.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/result_of.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/bit:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/sstream.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/unique.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/sfinae_helpers.h:
 
 /opt/homebrew/lib/QtCore.framework/Headers/QScopedPointer:
 
@@ -16227,10 +16813,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterator.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/check_memory_order.h:
-
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
@@ -16238,8 +16820,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/enable_insertable.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/tuple.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/unwrap_ref.h:
 
@@ -16268,6 +16848,8 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/movable_box.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecoreglobal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/concepts.h:
 
@@ -16313,6 +16895,10 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h:
 
+/opt/homebrew/include/QtCore/qtmetamacros.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginTargets.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QToolBar:
@@ -16326,12 +16912,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QmlPublicCMakeHelpers.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/desugars_to.h:
-
-/opt/homebrew/include/QtCore/qtcoreexports.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake:
 
@@ -16367,8 +16947,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/nl_types.h:
 
-/opt/homebrew/include/QtCore/qtdeprecationmarkers.h:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
@@ -16397,11 +16975,11 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/default_sentinel.h:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTimer:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/time_point.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/shared_ptr.h:
 
 /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/editorwidget.cpp:
 
@@ -16420,6 +16998,14 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/_xlocale.h:
+
+/opt/homebrew/include/QtCore/qtpreprocessorsupport.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/in_place.h:
+
+/opt/homebrew/include/QtGui/qpixmap.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/inout_ptr.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:
 
@@ -16449,9 +17035,13 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/variant:
 
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpinyinpluginAdditionalTargetInfo.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelpersimplpluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/rank.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannel.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_blksize_t.h:
 
@@ -16473,6 +17063,10 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_string.h:
 
+/opt/homebrew/include/QtCore/qstringlist.h:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginAdditionalTargetInfo.cmake:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/align.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__math/abs.h:
@@ -16487,6 +17081,12 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__locale:
 
+/opt/homebrew/include/QtCore/qtconfiginclude.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_segment_if.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qchar.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_output.h:
 
 /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake:
@@ -16498,6 +17098,8 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/alloca.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonparseerror.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/iterator_operations.h:
 
@@ -16561,8 +17163,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__bit/countr.h:
 
-/opt/homebrew/include/QtCore/qmap.h:
-
 /opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h:
@@ -16588,10 +17188,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string_view.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusTargets-release.cmake:
 
@@ -16625,11 +17221,17 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
+/opt/homebrew/include/QtGui/qrawfont.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/format:
+
 /opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateConfigVersion.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/not_fn.h:
+
+/opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstylepluginTargets-release.cmake:
 
@@ -16664,10 +17266,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /opt/homebrew/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersion.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/iota.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/invoke.h:
 
@@ -16727,6 +17325,10 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h:
 
+/opt/homebrew/include/QtGui/qpen.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars_result.h:
+
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtdeprecationdefinitions.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtclasshelpermacros.h:
@@ -16735,15 +17337,15 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFileSystemModel:
 
-/opt/homebrew/include/QtCore/qttypetraits.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/upper_bound.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dphysicspluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/_types/_ssize_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h:
+
+/opt/homebrew/include/QtCore/qversiontagging.h:
+
+/opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/Availability.h:
 
@@ -16773,8 +17375,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /opt/homebrew/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessAliasTargets.cmake:
 
-/opt/homebrew/include/QtCore/qobject_impl.h:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginTargets.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimezone.h:
@@ -16793,15 +17393,9 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/conjunction.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginTargets.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/ranges_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/predicate.h:
 
@@ -16827,7 +17421,7 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlexports.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/copy_n.h:
 
@@ -16867,6 +17461,10 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
 
+/opt/homebrew/include/QtGui/qtextoption.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/copy_backward.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/movable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/steady_clock.h:
@@ -16877,11 +17475,7 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateAdditionalTargetInfo.cmake:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h:
-
-/opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/time_point.h:
 
@@ -16899,6 +17493,8 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/empty.h:
 
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginConfig.cmake:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/convertible_to.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__compare/three_way_comparable.h:
@@ -16909,7 +17505,11 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_polymorphic.h:
 
+/opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__bit/blsr.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqml-config.h:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfig.cmake:
 
@@ -16922,6 +17522,10 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_signed_integer.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlAdditionalTargetInfo.cmake:
+
+/opt/homebrew/include/QtCore/qtypeinfo.h:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtextlayout.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/rotate_copy.h:
 
@@ -16941,17 +17545,11 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__atomic/atomic_base.h:
 
-/opt/homebrew/include/QtCore/qshareddata.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/_types/_locale_t.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickwindowConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/istream.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
 
@@ -16970,12 +17568,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__atomic/atomic.h:
 
 /opt/homebrew/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderAdditionalTargetInfo.cmake:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_unsigned_integer.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h:
 
@@ -17029,8 +17621,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qfileinfo.h:
 
-/opt/homebrew/include/QtCore/qmetacontainer.h:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/stable_partition.h:
@@ -17052,8 +17642,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
 /opt/homebrew/Cellar/qt/6.9.0/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
-
-/opt/homebrew/include/QtCore/qsystemdetection.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__undef_macros:
 
@@ -17107,6 +17695,8 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/set_union.h:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h:
@@ -17121,8 +17711,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/include/QtCore/qtmocconstants.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__compare/compare_three_way.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/format_string.h:
@@ -17130,6 +17718,10 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qstring.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/ranges_transform.h:
+
+/opt/homebrew/include/QtCore/qstring.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_callable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/allocation_guard.h:
 
@@ -17165,13 +17757,9 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Concurrent/Qt6ConcurrentAdditionalTargetInfo.cmake:
 
-/opt/homebrew/include/QtGui/qtextdocument.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/xlocale/_stdlib.h:
 
@@ -17187,21 +17775,17 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h:
 
-/opt/homebrew/include/QtGui/qfontmetrics.h:
+/opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_constructible.h:
+
+/opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/inner_product.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/_abort.h:
 
-/opt/homebrew/include/QtGui/qevent.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickscene3dpluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlsettingspluginTargets.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
 
@@ -17237,9 +17821,9 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_wctype.h:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake:
+/opt/homebrew/lib/QtGui.framework/Headers/QFontDatabase:
 
-/opt/homebrew/include/QtGui/qkeysequence.h:
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h:
 
@@ -17255,7 +17839,9 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/hash.h:
 
-/opt/homebrew/include/QtGui/qfontinfo.h:
+/opt/homebrew/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/hash.h:
 
@@ -17264,6 +17850,8 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
+
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsondocument.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_type.h:
 
@@ -17274,6 +17862,8 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QQuickProfilerAdapterFactoryPluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Positioning/Qt6PositioningDependencies.cmake:
 
@@ -17301,12 +17891,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/iter_swap.h:
 
-/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dphysicspluginTargets.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/_types/_wctype_t.h:
@@ -17319,6 +17903,8 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/unreachable.h:
 
+/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/search_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_object.h:
@@ -17326,8 +17912,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 /opt/homebrew/bin/cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/find_segment_if.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QDebugMessageServiceFactoryPluginTargets-release.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:
 
@@ -17387,6 +17971,8 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/mismatch.h:
 
+/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qjsvalue.h:
+
 /opt/homebrew/include/QtCore/qcontainertools_impl.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickwindowTargets.cmake:
@@ -17417,8 +18003,6 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/path.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/__xlocale.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/forward_like.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_xlocale.h:
@@ -17443,13 +18027,17 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreTargets-release.cmake:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/execution:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/concepts.h:
+
+/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/allocator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h:
+
+/opt/homebrew/include/QtCore/qobjectdefs_impl.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/iter_move.h:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsmodelspluginTargets-release.cmake:
 
@@ -17489,13 +18077,13 @@ QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/copy.h:
 
-/opt/homebrew/include/QtGui/qpixelformat.h:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginConfig.cmake:
-
 /opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
+
+/opt/homebrew/include/QtCore/qtcoreexports.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/desugars_to.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/ios.h:
 

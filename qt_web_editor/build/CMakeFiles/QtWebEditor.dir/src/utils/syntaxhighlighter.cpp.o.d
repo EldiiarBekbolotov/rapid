@@ -996,4 +996,8 @@ CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/QTextCharFormat \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression \
-  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h
+  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QVector \
+  /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h

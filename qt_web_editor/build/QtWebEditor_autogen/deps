@@ -823,6 +823,10 @@ QtWebEditor_autogen/timestamp: \
 	/Users/eldiiar/rapid/rapid/qt_web_editor/src/main.cpp \
 	/Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.cpp \
 	/Users/eldiiar/rapid/rapid/qt_web_editor/src/utils/syntaxhighlighter.h \
+	/opt/homebrew/Cellar/qt/6.9.0/include/QtQmlIntegration/qqmlintegration.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QDebug \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QFlags \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QJsonValue \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QList \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QPointer \
@@ -834,6 +838,12 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QSizeF \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStandardPaths \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStringList \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTemporaryFile \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QTimer \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QUrl \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QVector \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QWeakPointer \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
@@ -859,6 +869,8 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearraylist.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearrayview.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcalendar.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborcommon.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcborvalue.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qchar.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcompare.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcompare_impl.h \
@@ -873,6 +885,7 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreapplication_platform.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcoreevent.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcryptographichash.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qdatetime.h \
@@ -902,6 +915,9 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsondocument.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonparseerror.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qjsonvalue.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qline.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlist.h \
@@ -964,9 +980,11 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtcoreglobal.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtdeprecationdefinitions.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtemporaryfile.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtimezone.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
@@ -980,15 +998,21 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qurl.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/quuid.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qvector.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QAction \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QCloseEvent \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QContextMenuEvent \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFileSystemModel \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QFont \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QIcon \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QKeySequence \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QPageLayout \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QSyntaxHighlighter \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QTextCharFormat \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/QTransform \
@@ -1014,9 +1038,13 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qinputdevice.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qinputmethod.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagelayout.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpageranges.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpagesize.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpen.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h \
@@ -1042,13 +1070,41 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qvector2d.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qvectornd.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qssl.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qsslcertificate.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qjsvalue.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qqmlregistration.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqml-config.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlexports.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtQml.framework/Versions/A/Headers/qtqmlglobal.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/QWebChannel \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qtwebchannelexports.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannel.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebChannel.framework/Versions/A/Headers/qwebchannelglobal.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/QWebEngineSettings \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecore-config.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecoreglobal.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineclientcertificateselection.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginedownloadrequest.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineframe.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepage.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginepermission.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginequotarequest.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebenginesettings.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/QWebEngineView \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qtwebenginewidgetsglobal.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWebEngineWidgets.framework/Versions/A/Headers/qwebengineview.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QApplication \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QDockWidget \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenu \
-	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMenuBar \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QPlainTextEdit \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QSplitter \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QStatusBar \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QStyleFactory \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QTabWidget \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QToolBar \
@@ -1061,14 +1117,15 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qapplication.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qdockwidget.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmenu.h \
-	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmenubar.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qplaintextedit.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsplitter.h \
+	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstatusbar.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstylefactory.h \
 	/opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
@@ -2114,23 +2171,79 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake \
 	/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in \
+	/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp \
 	/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in \
 	/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake \
+	/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckIncludeFileCXX.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+	/opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/FindCups.cmake \
 	/opt/homebrew/share/cmake/Modules/FindOpenGL.cmake \
 	/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake \
@@ -2140,15 +2253,19 @@ QtWebEditor_autogen/timestamp: \
 	/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
+	/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake \
+	/opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake \
+	/opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake \
 	/opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake \
 	/opt/homebrew/share/cmake/Modules/MacroAddFileDependencies.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake \
+	/opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake \

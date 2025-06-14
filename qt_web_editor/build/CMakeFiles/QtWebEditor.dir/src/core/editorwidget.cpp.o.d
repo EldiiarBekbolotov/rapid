@@ -1011,6 +1011,8 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o: \
   /opt/homebrew/include/QtGui/qfontdatabase.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QPointer \
   /opt/homebrew/lib/QtCore.framework/Headers/qpointer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTimer \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/../utils/syntaxhighlighter.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QSyntaxHighlighter \
   /opt/homebrew/lib/QtGui.framework/Headers/qsyntaxhighlighter.h \
@@ -1019,6 +1021,8 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QRegularExpression \
   /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QVector \
+  /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
   /Users/eldiiar/rapid/rapid/qt_web_editor/src/core/application.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
@@ -1036,12 +1040,6 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QSettings \
   /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QPainter \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpainter.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QTextBlock \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextobject.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QTextStream \
-  /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QFileInfo \
   /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
   /opt/homebrew/include/QtCore/qfile.h \
@@ -1081,6 +1079,12 @@ CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o: \
   /opt/homebrew/include/QtCore/qdatetime.h \
   /opt/homebrew/include/QtCore/qcalendar.h \
   /opt/homebrew/include/QtCore/qtimezone.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QPainter \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpainter.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QTextBlock \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextobject.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTextStream \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /opt/homebrew/include/QtWidgets/qdialog.h \
