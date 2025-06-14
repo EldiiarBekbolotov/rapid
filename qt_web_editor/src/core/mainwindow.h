@@ -3,20 +3,33 @@
 
 #include <QMainWindow>
 #include <QFileSystemModel>
-#include <QTabWidget>
-#include <QSplitter>
-#include <QFont>
-#include <QString>
-#include <QMenu>
-#include <QMenuBar>
+#include <QWebEngineView>
+#include <QWebChannel>
+#include <QWebEngineSettings>
 #include <QDockWidget>
+#include <QSplitter>
+#include <QTabWidget>
 #include <QToolBar>
+#include <QMenu>
+#include <QAction>
 #include <QTreeView>
+#include <QStatusBar>
+#include <QLabel>
+#include <QSettings>
+#include <QCloseEvent>
+#include <QTemporaryFile>
+#include <QStringList>
 #include <QStandardPaths>
+#include <QKeySequence>
+#include <QDebug>
 
+// Forward declarations
 class EditorWidget;
-class QToolBar;
-class QAction;
+class QLabel;
+class QWebEngineView;
+
+// Forward declarations
+class EditorWidget;
 class QLabel;
 class QWebEngineView;
 
@@ -26,7 +39,11 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow() override;
+    ~MainWindow();
+    
+    // Disable copy constructor and assignment operator
+    MainWindow(const MainWindow&) = delete;
+    MainWindow& operator=(const MainWindow&) = delete;
 
 protected:
     void closeEvent(QCloseEvent *event) override;
@@ -49,6 +66,12 @@ private slots:
     void toggleFullScreen();
     void openFileInEditor(const QString &filePath);
     void updateRecentFilesMenu(const QStringList &recentFiles);
+    void runInBrowser();
+    void runInDefaultBrowser();
+    void runInSpecificBrowser(const QString &browserPath);
+    void showBrowserSelectionDialog();
+    void toggleMenuBar();
+    void toggleToolBar();
 
 private:
     void setupActions();
@@ -66,6 +89,7 @@ private:
     QFileSystemModel *m_fileSystemModel = nullptr;
     QTreeView *m_fileBrowser = nullptr;
     QWebEngineView *m_webView = nullptr;
+    QWebChannel m_webChannel;
     
     // Actions
     QAction *m_newFileAction = nullptr;
@@ -86,19 +110,23 @@ private:
     QAction *m_decreaseFontSizeAction = nullptr;
     QAction *m_resetFontSizeAction = nullptr;
     QAction *m_aboutAction = nullptr;
+    QAction *m_runAction = nullptr;
     QList<QAction*> m_recentFileActions;
     
     // State
     QString m_currentFolder;
     bool m_isPreviewVisible = true;
     bool m_isFileBrowserVisible = true;
+    QLabel *m_statusLabel = nullptr;
+    bool m_isFullScreen = false;
     bool m_wasMenuBarVisible = true;
+    QStringList m_tempFiles;
     bool m_wasStatusBarVisible = true;
+    bool m_wasToolBarVisible = true;
     
     // Theme and font
     QMenu *m_themeMenu = nullptr;
     QMenu *m_fontMenu = nullptr;
-    QLabel *m_statusLabel = nullptr;
     
     // Private methods
     void setupConnections();

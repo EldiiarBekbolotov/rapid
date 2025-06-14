@@ -3,8 +3,10 @@
 
 #include <QPlainTextEdit>
 #include <QPointer>
+#include <QTimer>
 
 class QSyntaxHighlighter;
+class SyntaxHighlighter;
 
 class EditorWidget : public QPlainTextEdit
 {
@@ -30,7 +32,10 @@ public:
     void setSyntaxForFile(const QString &filePath);
 
 signals:
+    void fileModified(bool modified);
     void filePathChanged(const QString &filePath);
+    void fileNameChanged(const QString &fileName);
+    void contentChanged();
 
 public slots:
     void updateLineNumberAreaWidth(int newBlockCount);
@@ -46,9 +51,10 @@ private:
     class LineNumberArea;
     
     LineNumberArea *m_lineNumberArea;
-    QPointer<QSyntaxHighlighter> m_highlighter;
+    QPointer<SyntaxHighlighter> m_highlighter;
     QString m_filePath;
     QString m_fileName;
+    QTimer *m_updateTimer;
     
     void setupEditor();
     void setupConnections();

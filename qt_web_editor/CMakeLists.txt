@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.16)
 project(QtWebEditor VERSION 1.0.0 LANGUAGES CXX)
 
 # Set application properties
-set(APP_NAME "Qt Web Editor")
+set(APP_NAME "Rapid")
 set(APP_DESCRIPTION "A lightweight web development text editor")
-set(APP_ORGANIZATION "QtWebEditor")
-set(APP_DOMAIN "qtwebeditor.org")
+set(APP_ORGANIZATION "Rapid")
+set(APP_DOMAIN "eldiiarbekbolotov.github.io/rapid")
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)

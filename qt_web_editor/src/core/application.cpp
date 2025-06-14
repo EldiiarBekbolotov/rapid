@@ -13,9 +13,9 @@ Application *Application::s_instance = nullptr;
 Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
     , m_settings(new Settings(this))
-    , m_applicationName("Qt Web Editor")
-    , m_organizationName("QtWebEditor")
-    , m_organizationDomain("qtwebeditor.org")
+    , m_applicationName("Rapid")
+    , m_organizationName("Rapid")
+    , m_organizationDomain("eldiiarbekbolotov.github.io/rapid")
 {
     s_instance = this;
     

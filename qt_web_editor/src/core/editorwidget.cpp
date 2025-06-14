@@ -3,6 +3,8 @@
 #include "application.h"
 #include "settings.h"
 
+#include <QFileInfo>
+
 #include <QPainter>
 #include <QTextBlock>
 #include <QTextStream>
@@ -17,6 +19,7 @@
 EditorWidget::EditorWidget(QWidget *parent)
     : QPlainTextEdit(parent)
     , m_lineNumberArea(new LineNumberArea(this))
+    , m_updateTimer(new QTimer(this))
 {
     setupEditor();
     setupConnections();
@@ -33,6 +36,18 @@ EditorWidget::EditorWidget(QWidget *parent)
     // Set up line number area
     updateLineNumberAreaWidth(0);
     highlightCurrentLine();
+    
+    // Set up auto-update timer for preview
+    m_updateTimer->setSingleShot(true);
+    m_updateTimer->setInterval(500); // 500ms delay after typing stops
+    connect(m_updateTimer, &QTimer::timeout, this, [this]() {
+        emit contentChanged();
+    });
+    
+    // Connect text changes to the timer
+    connect(document(), &QTextDocument::contentsChanged, this, [this]() {
+        m_updateTimer->start();
+    });
 }
 
 EditorWidget::~EditorWidget()
@@ -164,14 +179,31 @@ void EditorWidget::setFilePath(const QString &filePath)
 
 void EditorWidget::setSyntaxForFile(const QString &filePath)
 {
-    // Syntax highlighting is disabled for now
-    Q_UNUSED(filePath);
-    
     // Remove existing highlighter if any
     if (m_highlighter) {
         m_highlighter->deleteLater();
         m_highlighter = nullptr;
     }
+    
+    if (filePath.isEmpty()) {
+        return;
+    }
+    
+    // Create a new syntax highlighter
+    m_highlighter = new SyntaxHighlighter(document());
+    
+    // Set the appropriate language based on file extension
+    QFileInfo fileInfo(filePath);
+    QString suffix = fileInfo.suffix().toLower();
+    
+    if (suffix == "html" || suffix == "htm") {
+        m_highlighter->setLanguage("html");
+    } else if (suffix == "css") {
+        m_highlighter->setLanguage("css");
+    } else if (suffix == "js") {
+        m_highlighter->setLanguage("javascript");
+    }
+    // Add more file extensions as needed
 }
 
 void EditorWidget::updateLineNumberAreaWidth(int /* newBlockCount */)

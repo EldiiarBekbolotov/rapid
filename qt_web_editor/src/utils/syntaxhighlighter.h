@@ -4,6 +4,7 @@
 #include <QSyntaxHighlighter>
 #include <QTextCharFormat>
 #include <QRegularExpression>
+#include <QVector>
 
 class SyntaxHighlighter : public QSyntaxHighlighter
 {
@@ -12,100 +13,50 @@ class SyntaxHighlighter : public QSyntaxHighlighter
 public:
     explicit SyntaxHighlighter(QTextDocument *parent = nullptr);
     
+    // Set the document language (html, css, javascript)
+    void setLanguage(const QString &language);
+    
 protected:
+    // Highlight the given text block
+    void highlightBlock(const QString &text) override;
+    
+    // Structure for syntax highlighting rules
     struct HighlightingRule
     {
         QRegularExpression pattern;
         QTextCharFormat format;
     };
     
-    QVector<HighlightingRule> highlightingRules;
+    // Add a highlighting rule
+    void addRule(const QString &pattern, const QTextCharFormat &format);
     
-    QTextCharFormat keywordFormat;
-    QTextCharFormat classFormat;
-    QTextCharFormat singleLineCommentFormat;
-    QTextCharFormat multiLineCommentFormat;
-    QTextCharFormat quotationFormat;
-    QTextCharFormat functionFormat;
-    QTextCharFormat numberFormat;
-    QTextCharFormat tagFormat;
-    QTextCharFormat attributeFormat;
-    QTextCharFormat valueFormat;
+    // Add multiple keywords with the same format
+    void addKeywords(const QStringList &keywords, const QTextCharFormat &format);
     
-    QRegularExpression commentStartExpression;
-    QRegularExpression commentEndExpression;
+    // Language-specific rule setup
+    void setupHtmlRules();
+    void setupCssRules();
+    void setupJsRules();
     
-    virtual void highlightBlock(const QString &text) override;
-    virtual void setupRules();
+    // Text formats for different syntax elements
+    QTextCharFormat m_keywordFormat;
+    QTextCharFormat m_tagFormat;
+    QTextCharFormat m_attributeFormat;
+    QTextCharFormat m_valueFormat;
+    QTextCharFormat m_commentFormat;
+    QTextCharFormat m_stringFormat;
+    QTextCharFormat m_numberFormat;
+    QTextCharFormat m_functionFormat;
     
-private:
-    void setupFormats();
-};
-
-class HtmlSyntaxHighlighter : public SyntaxHighlighter
-{
-    Q_OBJECT
+    // List of highlighting rules
+    QVector<HighlightingRule> m_rules;
     
-public:
-    explicit HtmlSyntaxHighlighter(QTextDocument *parent = nullptr);
+    // For multi-line comments
+    QRegularExpression m_commentStartExpression;
+    QRegularExpression m_commentEndExpression;
     
-protected:
-    void setupRules() override;
-};
-
-class CssSyntaxHighlighter : public SyntaxHighlighter
-{
-    Q_OBJECT
-    
-public:
-    explicit CssSyntaxHighlighter(QTextDocument *parent = nullptr);
-    
-protected:
-    void setupRules() override;
-};
-
-class JsSyntaxHighlighter : public SyntaxHighlighter
-{
-    Q_OBJECT
-    
-public:
-    explicit JsSyntaxHighlighter(QTextDocument *parent = nullptr);
-    
-protected:
-    void setupRules() override;
-};
-
-class JsonSyntaxHighlighter : public SyntaxHighlighter
-{
-    Q_OBJECT
-    
-public:
-    explicit JsonSyntaxHighlighter(QTextDocument *parent = nullptr);
-    
-protected:
-    void setupRules() override;
-};
-
-class XmlSyntaxHighlighter : public SyntaxHighlighter
-{
-    Q_OBJECT
-    
-public:
-    explicit XmlSyntaxHighlighter(QTextDocument *parent = nullptr);
-    
-protected:
-    void setupRules() override;
-};
-
-class MarkdownSyntaxHighlighter : public SyntaxHighlighter
-{
-    Q_OBJECT
-    
-public:
-    explicit MarkdownSyntaxHighlighter(QTextDocument *parent = nullptr);
-    
-protected:
-    void setupRules() override;
+    // Current language
+    QString m_language;
 };
 
 #endif // SYNTAXHIGHLIGHTER_H

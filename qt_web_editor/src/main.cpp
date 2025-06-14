@@ -10,9 +10,10 @@ int main(int argc, char *argv[]) {
         Application app(argc, argv);
         
         // Set application metadata
-        app.setApplicationName("Qt Web Editor");
+        app.setApplicationName("Rapid");
         app.setApplicationVersion("1.0.0");
-        app.setOrganizationName("QtWebEditor");
+        app.setOrganizationName("Rapid");
+        app.setWindowIcon(QIcon(":/icons/app-icon.svg"));
         
         // Log available fonts for debugging
         qDebug() << "Available font families:" << QFontDatabase::families();

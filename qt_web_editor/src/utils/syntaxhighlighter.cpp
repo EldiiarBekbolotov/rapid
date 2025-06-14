@@ -1,127 +1,68 @@
 #include "syntaxhighlighter.h"
+#include <QDebug>
 #include <QRegularExpression>
 
 SyntaxHighlighter::SyntaxHighlighter(QTextDocument *parent)
     : QSyntaxHighlighter(parent)
 {
-    setupFormats();
-    setupRules();
+    // Setup text formats
+    m_keywordFormat.setForeground(Qt::darkBlue);
+    m_keywordFormat.setFontWeight(QFont::Bold);
+
+    m_tagFormat.setForeground(Qt::darkBlue);
+    m_tagFormat.setFontWeight(QFont::Bold);
+
+    m_attributeFormat.setForeground(Qt::darkRed);
+    m_valueFormat.setForeground(Qt::darkGreen);
     
-    // Initialize comment expressions
-    commentStartExpression = QRegularExpression("/\\*");
-    commentEndExpression = QRegularExpression("\\*/");
+    m_commentFormat.setForeground(Qt::darkGreen);
+    m_commentFormat.setFontItalic(true);
+    
+    m_stringFormat.setForeground(Qt::darkGreen);
+    m_numberFormat.setForeground(Qt::darkMagenta);
+    m_functionFormat.setForeground(Qt::blue);
+    m_functionFormat.setFontItalic(true);
 }
 
-void SyntaxHighlighter::setupFormats()
+void SyntaxHighlighter::setLanguage(const QString &language)
 {
-    // Keyword format
-    keywordFormat.setForeground(Qt::darkBlue);
-    keywordFormat.setFontWeight(QFont::Bold);
-
-    // Class format
-    classFormat.setFontWeight(QFont::Bold);
-    classFormat.setForeground(Qt::darkMagenta);
-
-    // Single-line comment
-    singleLineCommentFormat.setForeground(Qt::darkGreen);
-    singleLineCommentFormat.setFontItalic(true);
-
-    // Multi-line comment
-    multiLineCommentFormat.setForeground(Qt::darkGreen);
-    multiLineCommentFormat.setFontItalic(true);
-
-    // Quotation
-    quotationFormat.setForeground(Qt::darkGreen);
-
-    // Function/method
-    functionFormat.setFontItalic(true);
-    functionFormat.setForeground(Qt::blue);
-
-    // Numbers
-    numberFormat.setForeground(Qt::darkMagenta);
-
-    // HTML/XML tags
-    tagFormat.setForeground(Qt::darkBlue);
-    tagFormat.setFontWeight(QFont::Bold);
-}
-
-void SyntaxHighlighter::setupRules()
-{
-    // Default implementation - can be overridden by derived classes
-    // This is a basic set of rules for C++ like syntax
+    m_language = language.toLower();
+    m_rules.clear();
     
-    // Keywords
-    QStringList keywordPatterns;
-    keywordPatterns << "\\bchar\\b" << "\\bclass\\b" << "\\bconst\\b"
-                    << "\\bdouble\\b" << "\\benum\\b" << "\\bexplicit\\b"
-                    << "\\bfriend\\b" << "\\binline\\b" << "\\bint\\b"
-                    << "\\blong\\b" << "\\bnamespace\\b" << "\\boperator\\b"
-                    << "\\bprivate\\b" << "\\bprotected\\b" << "\\bpublic\\b"
-                    << "\\bshort\\b" << "\\bsignals\\b" << "\\bsigned\\b"
-                    << "\\bslots\\b" << "\\bstatic\\b" << "\\bstruct\\b"
-                    << "\\btemplate\\b" << "\\btypedef\\b" << "\\btypename\\b"
-                    << "\\bunion\\b" << "\\bunsigned\\b" << "\\bvirtual\\b"
-                    << "\\bvoid\\b" << "\\bvolatile\\b" << "\\bbool\\b";
-
-    for (const QString &pattern : keywordPatterns) {
-        HighlightingRule rule;
-        rule.pattern = QRegularExpression(pattern);
-        rule.format = keywordFormat;
-        highlightingRules.append(rule);
+    if (m_language == "html") {
+        setupHtmlRules();
+    } else if (m_language == "css") {
+        setupCssRules();
+    } else if (m_language == "javascript" || m_language == "js") {
+        setupJsRules();
     }
-
-    // Class names
-    HighlightingRule classRule;
-    classRule.pattern = QRegularExpression("\\bQ[A-Za-z]+\\b");
-    classRule.format = classFormat;
-    highlightingRules.append(classRule);
-
-    // Single line comments
-    HighlightingRule singleLineCommentRule;
-    singleLineCommentRule.pattern = QRegularExpression("//[^\n]*");
-    singleLineCommentRule.format = singleLineCommentFormat;
-    highlightingRules.append(singleLineCommentRule);
-
-    // Multi-line comments
-    commentStartExpression = QRegularExpression("/\\*");
-    commentEndExpression = QRegularExpression("\\*/");
-
-    // Quotations
-    HighlightingRule stringRule;
-    stringRule.pattern = QRegularExpression("\"[^\n\"]*\"");
-    stringRule.format = quotationFormat;
-    highlightingRules.append(stringRule);
-
-    // Numbers
-    HighlightingRule numberRule;
-    numberRule.pattern = QRegularExpression("\\b[0-9]+\\b");
-    numberRule.format = numberFormat;
-    highlightingRules.append(numberRule);
+    
+    rehighlight();
 }
 
 void SyntaxHighlighter::highlightBlock(const QString &text)
 {
-    // Apply syntax highlighting to the given text block
-    for (const HighlightingRule &rule : std::as_const(highlightingRules)) {
-        QRegularExpressionMatchIterator matchIterator = rule.pattern.globalMatch(text);
-        while (matchIterator.hasNext()) {
-            QRegularExpressionMatch match = matchIterator.next();
+    // Apply syntax highlighting rules
+    for (const HighlightingRule &rule : qAsConst(m_rules)) {
+        QRegularExpressionMatchIterator it = rule.pattern.globalMatch(text);
+        while (it.hasNext()) {
+            QRegularExpressionMatch match = it.next();
             setFormat(match.capturedStart(), match.capturedLength(), rule.format);
         }
     }
-
+    
     // Handle multi-line comments
     setCurrentBlockState(0);
-
+    
     int startIndex = 0;
     if (previousBlockState() != 1) {
-        startIndex = text.indexOf(commentStartExpression);
+        startIndex = text.indexOf(m_commentStartExpression);
     }
-
+    
     while (startIndex >= 0) {
-        QRegularExpressionMatch match = commentEndExpression.match(text, startIndex);
+        QRegularExpressionMatch match = m_commentEndExpression.match(text, startIndex);
         int endIndex = match.capturedStart();
-        int commentLength = 0;
+        int commentLength;
         
         if (endIndex == -1) {
             setCurrentBlockState(1);
@@ -130,38 +71,109 @@ void SyntaxHighlighter::highlightBlock(const QString &text)
             commentLength = endIndex - startIndex + match.capturedLength();
         }
         
-        setFormat(startIndex, commentLength, multiLineCommentFormat);
-        startIndex = text.indexOf(commentStartExpression, startIndex + commentLength);
+        setFormat(startIndex, commentLength, m_commentFormat);
+        startIndex = text.indexOf(m_commentStartExpression, startIndex + commentLength);
     }
 }
 
-// Minimal implementations for syntax highlighters
-HtmlSyntaxHighlighter::HtmlSyntaxHighlighter(QTextDocument *parent)
-    : SyntaxHighlighter(parent) {}
+void SyntaxHighlighter::addRule(const QString &pattern, const QTextCharFormat &format)
+{
+    HighlightingRule rule;
+    rule.pattern = QRegularExpression(pattern);
+    rule.format = format;
+    m_rules.append(rule);
+}
 
-void HtmlSyntaxHighlighter::setupRules() {}
+void SyntaxHighlighter::addKeywords(const QStringList &keywords, const QTextCharFormat &format)
+{
+    for (const QString &keyword : keywords) {
+        addRule(QStringLiteral("\\b%1\\b").arg(keyword), format);
+    }
+}
 
-CssSyntaxHighlighter::CssSyntaxHighlighter(QTextDocument *parent)
-    : SyntaxHighlighter(parent) {}
+void SyntaxHighlighter::setupHtmlRules()
+{
+    // HTML tags
+    addRule(QStringLiteral("<\\/?[a-zA-Z0-9_:-]+"), m_tagFormat);
+    
+    // HTML attributes
+    addRule(QStringLiteral("\\b[a-zA-Z0-9_:-]+(?=\\s*=\")"), m_attributeFormat);
+    addRule(QStringLiteral("\\b[a-zA-Z0-9_:-]+(?=\\s*=')"), m_attributeFormat);
+    addRule(QStringLiteral("\\b[a-zA-Z0-9_:-]+(?=\\s*=[^'\"])"), m_attributeFormat);
+    
+    // Attribute values
+    addRule(QStringLiteral("\"[^\"]*\""), m_valueFormat);
+    addRule(QStringLiteral("'[^']*'"), m_valueFormat);
+    
+    // Comments
+    m_commentStartExpression = QRegularExpression("<!--");
+    m_commentEndExpression = QRegularExpression("-->");
+    
+    // Special characters
+    addRule("&[a-zA-Z0-9]+;", m_valueFormat);
+    
+    // DOCTYPE
+    addRule("<!DOCTYPE[^>]*>", m_keywordFormat);
+}
 
-void CssSyntaxHighlighter::setupRules() {}
+void SyntaxHighlighter::setupCssRules()
+{
+    // CSS properties
+    addRule(QStringLiteral("\\b[a-zA-Z-]+\\s*:"), m_attributeFormat);
+    
+    // CSS selectors
+    addRule(QStringLiteral("\\b([a-zA-Z0-9_][a-zA-Z0-9_>-]*)\\s*{"), m_tagFormat);
+    
+    // CSS values
+    addRule(QStringLiteral("#[0-9a-fA-F]+"), m_valueFormat); // Hex colors
+    addRule(QStringLiteral("\\b[0-9]+(\\.[0-9]+)?(px|em|%|in|cm|mm|pt|pc|ex|ch|rem|vh|vw|vmin|vmax)?\\b"), m_numberFormat);
+    addRule(QStringLiteral("\\b(url|rgb|rgba|hsl|hsla|linear-gradient|radial-gradient)\\s*\\("), m_functionFormat);
+    
+    // CSS at-rules
+    addRule(QStringLiteral("@\\w+"), m_keywordFormat);
+    
+    // CSS pseudo-classes and pseudo-elements
+    addRule(QStringLiteral("(:|::)\\w[\\w-]*(?=\\s*[^{]*(?:{|$))"), m_functionFormat);
+    
+    // Comments
+    m_commentStartExpression = QRegularExpression(QStringLiteral("/\\*"));
+    m_commentEndExpression = QRegularExpression(QStringLiteral("\\*/"));
+    
+    // Strings
+    addRule(QStringLiteral("\"[^\"]*\""), m_stringFormat);
+    addRule(QStringLiteral("'[^']*'"), m_stringFormat);
+}
 
-JsSyntaxHighlighter::JsSyntaxHighlighter(QTextDocument *parent)
-    : SyntaxHighlighter(parent) {}
-
-void JsSyntaxHighlighter::setupRules() {}
-
-JsonSyntaxHighlighter::JsonSyntaxHighlighter(QTextDocument *parent)
-    : SyntaxHighlighter(parent) {}
-
-void JsonSyntaxHighlighter::setupRules() {}
-
-XmlSyntaxHighlighter::XmlSyntaxHighlighter(QTextDocument *parent)
-    : SyntaxHighlighter(parent) {}
-
-void XmlSyntaxHighlighter::setupRules() {}
-
-MarkdownSyntaxHighlighter::MarkdownSyntaxHighlighter(QTextDocument *parent)
-    : SyntaxHighlighter(parent) {}
-
-void MarkdownSyntaxHighlighter::setupRules() {}
+void SyntaxHighlighter::setupJsRules()
+{
+    // JavaScript keywords
+    QStringList keywords = {
+        "break", "case", "catch", "class", "const", "continue",
+        "debugger", "default", "delete", "do", "else", "export",
+        "extends", "finally", "for", "function", "if", "import",
+        "in", "instanceof", "new", "return", "super", "switch",
+        "this", "throw", "try", "typeof", "var", "void",
+        "while", "with", "yield"
+    };
+    addKeywords(keywords, m_keywordFormat);
+    
+    // JavaScript literals
+    QStringList literals = {"true", "false", "null", "undefined", "NaN", "Infinity"};
+    addKeywords(literals, m_valueFormat);
+    
+    // Functions
+    addRule(QStringLiteral("\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*\\("), m_functionFormat);
+    
+    // Numbers
+    addRule(QStringLiteral("\\b[0-9]+(\\.[0-9]+)?([eE][+-]?[0-9]+)?\\b"), m_numberFormat);
+    
+    // Strings
+    addRule(QStringLiteral("\"[^\"]*\""), m_stringFormat);
+    addRule(QStringLiteral("'[^']*'"), m_stringFormat);
+    addRule(QStringLiteral("`[^`]*`"), m_stringFormat);
+    
+    // Comments
+    addRule(QStringLiteral("//.*"), m_commentFormat);
+    m_commentStartExpression = QRegularExpression(QStringLiteral("/\\*"));
+    m_commentEndExpression = QRegularExpression(QStringLiteral("\\*/"));
+}

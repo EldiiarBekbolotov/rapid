@@ -3,6 +3,13 @@
 #include "settings.h"
 #include "application.h"
 
+#include <QAction>
+#include <QKeySequence>
+#include <QMenu>
+#include <QToolBar>
+#include <QDebug>
+#include <QIcon>
+
 #include <QFile>
 #include <QFileInfo>
 #include <QMessageBox>
@@ -38,6 +45,13 @@
 #include <QDir>
 #include <QSettings>
 #include <QMenuBar>
+#include <QDesktopServices>
+#include <QProcess>
+#include <QButtonGroup>
+#include <QRadioButton>
+#include <QDialogButtonBox>
+#include <QGroupBox>
+#include <QMap>
 #include <QMenu>
 #include <QFontDialog>
 #include <QStyleFactory>
@@ -73,12 +87,19 @@ MainWindow::MainWindow(QWidget *parent)
     , m_aboutAction(nullptr)
     , m_currentFolder()
     , m_isPreviewVisible(true)
-    , m_isFileBrowserVisible(true)
+    , m_isFullScreen(false)
     , m_wasMenuBarVisible(true)
+    , m_wasToolBarVisible(true)
     , m_wasStatusBarVisible(true)
+    , m_tempFiles()
     , m_statusLabel(new QLabel(this))
 {
-    setWindowTitle(tr("Qt Web Editor"));
+    // Set application name and window title
+    QCoreApplication::setApplicationName("Rapid");
+    QCoreApplication::setApplicationVersion("1.0.0");
+    QCoreApplication::setOrganizationName("Rapid");
+    
+    setWindowTitle(tr("Rapid"));
     setMinimumSize(800, 600);
     
     // Setup UI
@@ -98,6 +119,12 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     saveSettings();
+    
+    // Clean up temporary files
+    for (const QString &file : qAsConst(m_tempFiles)) {
+        QFile::remove(file);
+    }
+    m_tempFiles.clear();
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
@@ -117,14 +144,14 @@ void MainWindow::closeEvent(QCloseEvent *event)
 void MainWindow::setupActions()
 {
     // File actions
-    m_newFileAction = new QAction(QIcon(":/icons/document-new.svg"), tr("&New"), this);
+    m_newFileAction = new QAction(tr("&New"), this);
     m_newFileAction->setShortcut(QKeySequence::New);
     
-    m_openFileAction = new QAction(QIcon(":/icons/document-open.svg"), tr("&Open File..."), this);
+    m_openFileAction = new QAction(tr("&Open..."), this);
     m_openFileAction->setShortcut(QKeySequence::Open);
     
-    m_openFolderAction = new QAction(QIcon(":/icons/folder-open.svg"), tr("Open &Folder..."), this);
-    m_saveAction = new QAction(QIcon(":/icons/document-save.svg"), tr("&Save"), this);
+    m_openFolderAction = new QAction(tr("Open &Folder..."), this);
+    m_saveAction = new QAction(tr("&Save"), this);
     m_saveAction->setShortcut(QKeySequence::Save);
     
     m_saveAsAction = new QAction(tr("Save &As..."), this);
@@ -140,16 +167,16 @@ void MainWindow::setupActions()
     m_togglePreviewAction = new QAction(tr("&Preview"), this);
     m_togglePreviewAction->setCheckable(true);
     m_togglePreviewAction->setChecked(m_isPreviewVisible);
-    m_togglePreviewAction->setShortcut(Qt::CTRL | Qt::Key_P);
+    m_togglePreviewAction->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_P));
     
     m_toggleFileBrowserAction = new QAction(tr("&File Browser"), this);
     m_toggleFileBrowserAction->setCheckable(true);
     m_toggleFileBrowserAction->setChecked(m_isFileBrowserVisible);
-    m_toggleFileBrowserAction->setShortcut(Qt::CTRL | Qt::Key_B);
+    m_toggleFileBrowserAction->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_B));
     
     m_fullScreenAction = new QAction(tr("Full Screen"), this);
     m_fullScreenAction->setCheckable(true);
-    m_fullScreenAction->setShortcut(Qt::Key_F11);
+    m_fullScreenAction->setShortcut(QKeySequence(Qt::Key_F11));
     
     // Preferences
     m_preferencesAction = new QAction(tr("Preferences..."), this);
@@ -199,6 +226,14 @@ void MainWindow::setupActions()
     m_fontMenu->addSeparator();
     m_fontMenu->addAction(m_resetFontSizeAction);
     
+    // Run action (using text instead of icon since we don't have the icon)
+    m_runAction = new QAction(tr("&Run"), this);
+    m_runAction->setShortcut(Qt::CTRL | Qt::Key_R);
+    
+    // Menu bar and toolbar are always visible
+    menuBar()->show();
+    setupToolBar();  // Ensure toolbar is created and visible
+    
     // Help actions
     m_aboutAction = new QAction(tr("&About"), this);
     
@@ -245,17 +280,12 @@ void MainWindow::setupActions()
     
     // View menu
     QMenu *viewMenu = menuBar()->addMenu(tr("&View"));
-    viewMenu->addAction(m_toggleFileBrowserAction);
-    viewMenu->addAction(m_togglePreviewAction);
-    viewMenu->addSeparator();
-    viewMenu->addAction(m_fullScreenAction);
-    viewMenu->addSeparator();
-    
-    // Add theme submenu
     viewMenu->addMenu(m_themeMenu);
-    
-    // Add font submenu
     viewMenu->addMenu(m_fontMenu);
+    
+    // Run menu
+    QMenu *runMenu = menuBar()->addMenu(tr("&Run"));
+    runMenu->addAction(m_runAction);
     
     // Help menu
     QMenu *helpMenu = menuBar()->addMenu(tr("&Help"));
@@ -298,6 +328,9 @@ void MainWindow::setupActions()
         m_fileBrowser->setVisible(visible);
     });
     connect(m_fullScreenAction, &QAction::toggled, this, &MainWindow::toggleFullScreen);
+    
+    // Connect run action
+    connect(m_runAction, &QAction::triggered, this, &MainWindow::runInBrowser);
     
     // Theme actions
     connect(m_lightThemeAction, &QAction::triggered, this, [this]() {
@@ -374,6 +407,12 @@ void MainWindow::setupToolBar()
     // Separator
     toolBar->addSeparator();
     
+    // Run action
+    toolBar->addAction(m_runAction);
+    
+    // Separator
+    toolBar->addSeparator();
+    
     // View actions
     toolBar->addAction(m_toggleFileBrowserAction);
     toolBar->addAction(m_togglePreviewAction);
@@ -419,6 +458,13 @@ void MainWindow::setupDockWidgets()
     m_fileBrowser->sortByColumn(0, Qt::AscendingOrder);
     m_fileBrowser->setHeaderHidden(true);
     
+    // Set minimum width for file browser
+    m_fileBrowser->setMinimumWidth(150);
+    
+    // Set minimum width for preview and file browser
+    m_webView->setMinimumWidth(200);
+    m_fileBrowser->setMinimumWidth(200);
+    
     // Set up main splitter
     m_mainSplitter->addWidget(m_fileBrowser);
     m_mainSplitter->addWidget(m_tabWidget);
@@ -429,9 +475,16 @@ void MainWindow::setupDockWidgets()
     m_mainSplitter->setStretchFactor(1, 3);
     m_mainSplitter->setStretchFactor(2, 2);
     
-    // Set initial sizes
+    // Set initial sizes with minimum widths
     QList<int> sizes = {200, 400, 200};
     m_mainSplitter->setSizes(sizes);
+    
+    // Set splitter properties
+    m_mainSplitter->setHandleWidth(8);
+    m_mainSplitter->setChildrenCollapsible(false);
+    
+    // Enable auto-saving of splitter state
+    m_mainSplitter->setObjectName("mainSplitter");
     
     setCentralWidget(m_mainSplitter);
     
@@ -439,6 +492,24 @@ void MainWindow::setupDockWidgets()
     m_tabWidget->setTabsClosable(true);
     m_tabWidget->setDocumentMode(true);
     m_tabWidget->setMovable(true);
+    
+    // Configure web view for better preview
+    m_webView->setContextMenuPolicy(Qt::NoContextMenu);
+    m_webView->page()->setWebChannel(&m_webChannel);
+    
+    // Enable JavaScript and other web features
+    QWebEngineSettings *settings = m_webView->settings();
+    settings->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
+    settings->setAttribute(QWebEngineSettings::LocalStorageEnabled, true);
+    settings->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
+    settings->setAttribute(QWebEngineSettings::ErrorPageEnabled, true);
+    settings->setAttribute(QWebEngineSettings::PluginsEnabled, true);
+    
+    // Ensure the file browser and preview are visible by default
+    m_fileBrowser->show();
+    m_webView->show();
+    m_isFileBrowserVisible = true;
+    m_isPreviewVisible = true;
 }
 
 void MainWindow::setupStatusBar()
@@ -888,13 +959,13 @@ void MainWindow::toggleFullScreen()
                 setGeometry(normalGeometry);
             }
         }
-        menuBar()->show();
-        statusBar()->show();
-        m_fullScreenAction->setChecked(false);
         
-        // Restore toolbars and dock widgets visibility
-        if (m_toolBar) m_toolBar->show();
+        // Restore window state
+        menuBar()->setVisible(m_wasMenuBarVisible);
+        statusBar()->setVisible(m_wasStatusBarVisible);
+        if (m_toolBar) m_toolBar->setVisible(m_wasToolBarVisible);
         if (m_fileBrowserDock && m_isFileBrowserVisible) m_fileBrowserDock->show();
+        m_fullScreenAction->setChecked(false);
         
     } else {
         // Entering fullscreen
@@ -904,6 +975,7 @@ void MainWindow::toggleFullScreen()
         // Save current window state
         m_wasMenuBarVisible = menuBar()->isVisible();
         m_wasStatusBarVisible = statusBar()->isVisible();
+        m_wasToolBarVisible = m_toolBar && m_toolBar->isVisible();
         
         // Hide UI elements
         menuBar()->hide();
@@ -918,6 +990,16 @@ void MainWindow::toggleFullScreen()
     
     // Update the UI
     update();
+}
+
+void MainWindow::toggleMenuBar()
+{
+    // Menu bar is always visible, no toggling
+}
+
+void MainWindow::toggleToolBar()
+{
+    // Toolbar is always visible, no toggling
 }
 
 // This method is a duplicate and has been removed. Using the implementation at the end of the file.
@@ -1046,60 +1128,61 @@ void MainWindow::showAbout()
         tr("<h2>Qt Web Editor</h2>"
            "<p>Version 1.0.0</p>"
            "<p>A simple web development editor built with Qt</p>"
-           "<p>© 2023 Your Company</p>"));
+           "<p> 2023 Your Company</p>"));
 }
 
 void MainWindow::updatePreview()
 {
-    auto editor = currentEditor();
-    if (!editor || !m_webView) {
+    if (!m_webView) return;
+    
+    EditorWidget *editor = currentEditor();
+    if (!editor) return;
+    
+    QString filePath = editor->filePath();
+    QString content = editor->toPlainText();
+    
+    // Always use a temporary file to ensure proper resource loading
+    QTemporaryFile tempFile(QDir::tempPath() + "/rapid_preview_XXXXXX.html");
+    if (!tempFile.open()) {
+        qWarning() << "Failed to create temporary file for preview";
         return;
     }
     
-    QString filePath = editor->filePath();
-    if (filePath.endsWith(".html", Qt::CaseInsensitive) || 
-        filePath.endsWith(".htm", Qt::CaseInsensitive)) {
-        
-        // For HTML files, load the file directly
-        m_webView->setUrl(QUrl::fromLocalFile(filePath));
-    } else if (filePath.endsWith(".css", Qt::CaseInsensitive)) {
+    QFileInfo fileInfo(filePath);
+    QString suffix = fileInfo.suffix().toLower();
+    
+    // Create appropriate content based on file type
+    QString html;
+    if (suffix == "html" || suffix == "htm") {
+        // For HTML files, use the content directly
+        html = content;
+    } else if (suffix == "css") {
         // For CSS files, create a simple HTML wrapper
-        QString html = QString(
+        html = QString(
             "<!DOCTYPE html>\n"
             "<html>\n"
             "<head>\n"
-            "<meta charset=\"UTF-8\">\n"
-            "<title>%1</title>\n"
-            "<style>%2</style>\n"
+            "    <meta charset=\"UTF-8\">\n"
+            "    <title>CSS Preview</title>\n"
+            "    <style>\n%1\n    </style>\n"
             "</head>\n"
             "<body>\n"
-            "<h1>%1</h1>\n"
-            "<p>This is a preview of your CSS file.</p>\n"
+            "    <h1>CSS Preview</h1>\n"
+            "    <p>This is a preview of your CSS. The actual effect will be visible when used with HTML.</p>\n"
+            "    <div class=\"example\">Example Element</div>\n"
+            "    <div id=\"test\">Test Div</div>\n"
             "</body>\n"
             "</html>"
-        ).arg(QFileInfo(filePath).fileName(), editor->toPlainText());
-        
-        m_webView->setHtml(html, QUrl::fromLocalFile(filePath));
-    } else if (filePath.endsWith(".js", Qt::CaseInsensitive)) {
-        // For JS files, create a simple HTML wrapper
-        QString html = QString(
+        ).arg(content);
+    } else if (suffix == "js") {
+        // For JavaScript files, create a simple HTML wrapper
+        html = QString(
             "<!DOCTYPE html>\n"
             "<html>\n"
             "<head>\n"
-            "<meta charset=\"UTF-8\">\n"
-            "<title>%1</title>\n"
-            "<script>\n"
-            "// JavaScript preview\n"
-            "document.addEventListener('DOMContentLoaded', function() {\n"
-            "    var output = document.getElementById('output');\n"
-            "    try {\n"
-            "        %2\n"
-            "        output.innerHTML = 'JavaScript executed successfully.';\n"
-            "    } catch (e) {\n"
-            "        output.innerHTML = 'Error: ' + e.message;\n"
-            "    }\n"
-            "});\n"
-            "</script>\n"
+            "    <meta charset=\"UTF-8\">\n"
+            "    <title>JavaScript Preview</title>\n"
+            "    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>\n"
             "</head>\n"
             "<body>\n"
             "<h1>%1</h1>\n"
@@ -1246,6 +1329,7 @@ void MainWindow::createNewEditorTab(const QString &filePath)
     });
     
     connect(editor, &EditorWidget::textChanged, this, &MainWindow::updatePreview);
+    connect(editor, &EditorWidget::contentChanged, this, &MainWindow::updatePreview);
     
     // Add tab
     QString tabText = filePath.isEmpty() ? "Untitled" : QFileInfo(filePath).fileName();
@@ -1255,5 +1339,156 @@ void MainWindow::createNewEditorTab(const QString &filePath)
     // Set file path if provided
     if (!filePath.isEmpty()) {
         editor->setFilePath(filePath);
+    }
+}
+
+void MainWindow::runInBrowser()
+{
+    EditorWidget *editor = currentEditor();
+    if (!editor) {
+        QMessageBox::information(this, tr("No Active Editor"), tr("No active editor to run."));
+        return;
+    }
+    
+    // Check if the file is saved
+    if (editor->filePath().isEmpty()) {
+        QMessageBox::information(this, tr("File Not Saved"), 
+                               tr("Please save the file before running it in a browser."));
+        return;
+    }
+    
+    // Check if the file is an HTML file
+    if (!editor->filePath().endsWith(".html", Qt::CaseInsensitive) && 
+        !editor->filePath().endsWith(".htm", Qt::CaseInsensitive)) {
+        QMessageBox::information(this, tr("Not an HTML File"), 
+                               tr("This file is not an HTML file and cannot be opened in a browser."));
+        return;
+    }
+    
+    // Ask user if they want to save changes
+    if (editor->document()->isModified()) {
+        QMessageBox::StandardButton reply;
+        reply = QMessageBox::question(this, tr("Save Changes"), 
+                                    tr("The document has been modified. Do you want to save your changes?"),
+                                    QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+        
+        if (reply == QMessageBox::Save) {
+            saveFile();
+            // If save was cancelled
+            if (editor->document()->isModified()) {
+                return;
+            }
+        } else if (reply == QMessageBox::Cancel) {
+            return;
+        }
+    }
+    
+    // Show browser selection dialog
+    showBrowserSelectionDialog();
+}
+
+void MainWindow::runInDefaultBrowser()
+{
+    EditorWidget *editor = currentEditor();
+    if (!editor) return;
+    
+    QUrl fileUrl = QUrl::fromLocalFile(editor->filePath());
+    bool success = QDesktopServices::openUrl(fileUrl);
+    
+    if (!success) {
+        QMessageBox::critical(this, tr("Error"), 
+                            tr("Could not open the file in the default browser. "
+                               "Please make sure you have a default browser set up."));
+    }
+}
+
+void MainWindow::runInSpecificBrowser(const QString &browserPath)
+{
+    EditorWidget *editor = currentEditor();
+    if (!editor) return;
+    
+    QProcess *process = new QProcess(this);
+    QString fileUrl = QUrl::fromLocalFile(editor->filePath()).toString();
+    
+    // Connect to handle process finish
+    connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+            [process](int exitCode, QProcess::ExitStatus exitStatus) {
+        process->deleteLater();
+    });
+    
+    // Start the browser with the file
+    process->start(browserPath, QStringList() << fileUrl);
+    
+    if (!process->waitForStarted()) {
+        QMessageBox::critical(nullptr, tr("Error"), 
+                            tr("Could not start the specified browser."));
+    }
+}
+
+void MainWindow::showBrowserSelectionDialog()
+{
+    QDialog dialog(this);
+    dialog.setWindowTitle(tr("Select Browser"));
+    
+    QVBoxLayout *layout = new QVBoxLayout(&dialog);
+    
+    // Default browser option
+    QRadioButton *defaultBrowser = new QRadioButton(tr("Default Browser"), &dialog);
+    defaultBrowser->setChecked(true);
+    
+    // Other browsers
+    QGroupBox *browserGroup = new QGroupBox(tr("Installed Browsers"), &dialog);
+    QVBoxLayout *browserLayout = new QVBoxLayout(browserGroup);
+    
+    // Common browser paths on macOS
+    QStringList commonBrowsers = {
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "/Applications/Firefox.app/Contents/MacOS/firefox",
+        "/Applications/Safari.app/Contents/MacOS/Safari",
+        "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+        "/Applications/Opera.app/Contents/MacOS/Opera",
+        "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+    };
+    
+    QButtonGroup *browserGroupButtons = new QButtonGroup(&dialog);
+    QRadioButton *defaultBrowserBtn = new QRadioButton(tr("System Default"), browserGroup);
+    browserGroupButtons->addButton(defaultBrowserBtn, -1);
+    browserLayout->addWidget(defaultBrowserBtn);
+    
+    QMap<int, QString> browserPaths;
+    int id = 0;
+    for (const QString &browserPath : commonBrowsers) {
+        if (QFile::exists(browserPath)) {
+            QRadioButton *browserBtn = new QRadioButton(QFileInfo(browserPath).baseName(), browserGroup);
+            browserGroupButtons->addButton(browserBtn, id);
+            browserLayout->addWidget(browserBtn);
+            browserPaths[id] = browserPath;
+            id++;
+        }
+    }
+    
+    // Buttons
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, 
+                                                   Qt::Horizontal, &dialog);
+    
+    layout->addWidget(new QLabel(tr("Select a browser to run the HTML file:")));
+    layout->addWidget(defaultBrowser);
+    layout->addWidget(browserGroup);
+    layout->addWidget(buttons);
+    
+    connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+    
+    if (dialog.exec() == QDialog::Accepted) {
+        if (defaultBrowser->isChecked()) {
+            runInDefaultBrowser();
+        } else {
+            int selectedId = browserGroupButtons->checkedId();
+            if (selectedId >= 0 && browserPaths.contains(selectedId)) {
+                runInSpecificBrowser(browserPaths[selectedId]);
+            } else {
+                runInDefaultBrowser();
+            }
+        }
     }
 }
