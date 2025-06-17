@@ -162,17 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named QtWebEditor
+# Target rules for targets named Rapid
 
 # Build rule for target.
-QtWebEditor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QtWebEditor
-.PHONY : QtWebEditor
+Rapid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Rapid
+.PHONY : Rapid
 
 # fast build rule for target.
-QtWebEditor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/build
-.PHONY : QtWebEditor/fast
+Rapid/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/build
+.PHONY : Rapid/fast
 
 #=============================================================================
 # Target rules for targets named run
@@ -188,85 +188,85 @@ run/fast:
 .PHONY : run/fast
 
 #=============================================================================
-# Target rules for targets named QtWebEditor_autogen_timestamp_deps
+# Target rules for targets named Rapid_autogen_timestamp_deps
 
 # Build rule for target.
-QtWebEditor_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QtWebEditor_autogen_timestamp_deps
-.PHONY : QtWebEditor_autogen_timestamp_deps
+Rapid_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Rapid_autogen_timestamp_deps
+.PHONY : Rapid_autogen_timestamp_deps
 
 # fast build rule for target.
-QtWebEditor_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor_autogen_timestamp_deps.dir/build.make CMakeFiles/QtWebEditor_autogen_timestamp_deps.dir/build
-.PHONY : QtWebEditor_autogen_timestamp_deps/fast
+Rapid_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid_autogen_timestamp_deps.dir/build.make CMakeFiles/Rapid_autogen_timestamp_deps.dir/build
+.PHONY : Rapid_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named QtWebEditor_autogen
+# Target rules for targets named Rapid_autogen
 
 # Build rule for target.
-QtWebEditor_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QtWebEditor_autogen
-.PHONY : QtWebEditor_autogen
+Rapid_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Rapid_autogen
+.PHONY : Rapid_autogen
 
 # fast build rule for target.
-QtWebEditor_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor_autogen.dir/build.make CMakeFiles/QtWebEditor_autogen.dir/build
-.PHONY : QtWebEditor_autogen/fast
+Rapid_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid_autogen.dir/build.make CMakeFiles/Rapid_autogen.dir/build
+.PHONY : Rapid_autogen/fast
 
-QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.o: QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.o
-.PHONY : QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.o
-
-# target to build an object file
-QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.o
-.PHONY : QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.o
-
-QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.i: QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.i
-.PHONY : QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.i
-
-# target to preprocess a source file
-QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.i
-.PHONY : QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.i
-
-QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.s: QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.s
-.PHONY : QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.s
-
-# target to generate assembly for a file
-QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.s
-.PHONY : QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.cpp.s
-
-QtWebEditor_autogen/mocs_compilation.o: QtWebEditor_autogen/mocs_compilation.cpp.o
-.PHONY : QtWebEditor_autogen/mocs_compilation.o
+Rapid_autogen/3YJK5W5UP7/qrc_resources.o: Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.o
+.PHONY : Rapid_autogen/3YJK5W5UP7/qrc_resources.o
 
 # target to build an object file
-QtWebEditor_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.o
-.PHONY : QtWebEditor_autogen/mocs_compilation.cpp.o
+Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.o
+.PHONY : Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.o
 
-QtWebEditor_autogen/mocs_compilation.i: QtWebEditor_autogen/mocs_compilation.cpp.i
-.PHONY : QtWebEditor_autogen/mocs_compilation.i
+Rapid_autogen/3YJK5W5UP7/qrc_resources.i: Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.i
+.PHONY : Rapid_autogen/3YJK5W5UP7/qrc_resources.i
 
 # target to preprocess a source file
-QtWebEditor_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.i
-.PHONY : QtWebEditor_autogen/mocs_compilation.cpp.i
+Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.i
+.PHONY : Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.i
 
-QtWebEditor_autogen/mocs_compilation.s: QtWebEditor_autogen/mocs_compilation.cpp.s
-.PHONY : QtWebEditor_autogen/mocs_compilation.s
+Rapid_autogen/3YJK5W5UP7/qrc_resources.s: Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.s
+.PHONY : Rapid_autogen/3YJK5W5UP7/qrc_resources.s
 
 # target to generate assembly for a file
-QtWebEditor_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/QtWebEditor_autogen/mocs_compilation.cpp.s
-.PHONY : QtWebEditor_autogen/mocs_compilation.cpp.s
+Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.s
+.PHONY : Rapid_autogen/3YJK5W5UP7/qrc_resources.cpp.s
+
+Rapid_autogen/mocs_compilation.o: Rapid_autogen/mocs_compilation.cpp.o
+.PHONY : Rapid_autogen/mocs_compilation.o
+
+# target to build an object file
+Rapid_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/Rapid_autogen/mocs_compilation.cpp.o
+.PHONY : Rapid_autogen/mocs_compilation.cpp.o
+
+Rapid_autogen/mocs_compilation.i: Rapid_autogen/mocs_compilation.cpp.i
+.PHONY : Rapid_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Rapid_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/Rapid_autogen/mocs_compilation.cpp.i
+.PHONY : Rapid_autogen/mocs_compilation.cpp.i
+
+Rapid_autogen/mocs_compilation.s: Rapid_autogen/mocs_compilation.cpp.s
+.PHONY : Rapid_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Rapid_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/Rapid_autogen/mocs_compilation.cpp.s
+.PHONY : Rapid_autogen/mocs_compilation.cpp.s
 
 src/core/application.o: src/core/application.cpp.o
 .PHONY : src/core/application.o
 
 # target to build an object file
 src/core/application.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/application.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/application.cpp.o
 .PHONY : src/core/application.cpp.o
 
 src/core/application.i: src/core/application.cpp.i
@@ -274,7 +274,7 @@ src/core/application.i: src/core/application.cpp.i
 
 # target to preprocess a source file
 src/core/application.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/application.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/application.cpp.i
 .PHONY : src/core/application.cpp.i
 
 src/core/application.s: src/core/application.cpp.s
@@ -282,7 +282,7 @@ src/core/application.s: src/core/application.cpp.s
 
 # target to generate assembly for a file
 src/core/application.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/application.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/application.cpp.s
 .PHONY : src/core/application.cpp.s
 
 src/core/editorwidget.o: src/core/editorwidget.cpp.o
@@ -290,7 +290,7 @@ src/core/editorwidget.o: src/core/editorwidget.cpp.o
 
 # target to build an object file
 src/core/editorwidget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/editorwidget.cpp.o
 .PHONY : src/core/editorwidget.cpp.o
 
 src/core/editorwidget.i: src/core/editorwidget.cpp.i
@@ -298,7 +298,7 @@ src/core/editorwidget.i: src/core/editorwidget.cpp.i
 
 # target to preprocess a source file
 src/core/editorwidget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/editorwidget.cpp.i
 .PHONY : src/core/editorwidget.cpp.i
 
 src/core/editorwidget.s: src/core/editorwidget.cpp.s
@@ -306,39 +306,63 @@ src/core/editorwidget.s: src/core/editorwidget.cpp.s
 
 # target to generate assembly for a file
 src/core/editorwidget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/editorwidget.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/editorwidget.cpp.s
 .PHONY : src/core/editorwidget.cpp.s
 
-src/core/filebrowser.o: src/core/filebrowser.cpp.o
-.PHONY : src/core/filebrowser.o
+src/core/fileexplorer.o: src/core/fileexplorer.cpp.o
+.PHONY : src/core/fileexplorer.o
 
 # target to build an object file
-src/core/filebrowser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/filebrowser.cpp.o
-.PHONY : src/core/filebrowser.cpp.o
+src/core/fileexplorer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/fileexplorer.cpp.o
+.PHONY : src/core/fileexplorer.cpp.o
 
-src/core/filebrowser.i: src/core/filebrowser.cpp.i
-.PHONY : src/core/filebrowser.i
+src/core/fileexplorer.i: src/core/fileexplorer.cpp.i
+.PHONY : src/core/fileexplorer.i
 
 # target to preprocess a source file
-src/core/filebrowser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/filebrowser.cpp.i
-.PHONY : src/core/filebrowser.cpp.i
+src/core/fileexplorer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/fileexplorer.cpp.i
+.PHONY : src/core/fileexplorer.cpp.i
 
-src/core/filebrowser.s: src/core/filebrowser.cpp.s
-.PHONY : src/core/filebrowser.s
+src/core/fileexplorer.s: src/core/fileexplorer.cpp.s
+.PHONY : src/core/fileexplorer.s
 
 # target to generate assembly for a file
-src/core/filebrowser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/filebrowser.cpp.s
-.PHONY : src/core/filebrowser.cpp.s
+src/core/fileexplorer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/fileexplorer.cpp.s
+.PHONY : src/core/fileexplorer.cpp.s
+
+src/core/filesystemmodel.o: src/core/filesystemmodel.cpp.o
+.PHONY : src/core/filesystemmodel.o
+
+# target to build an object file
+src/core/filesystemmodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/filesystemmodel.cpp.o
+.PHONY : src/core/filesystemmodel.cpp.o
+
+src/core/filesystemmodel.i: src/core/filesystemmodel.cpp.i
+.PHONY : src/core/filesystemmodel.i
+
+# target to preprocess a source file
+src/core/filesystemmodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/filesystemmodel.cpp.i
+.PHONY : src/core/filesystemmodel.cpp.i
+
+src/core/filesystemmodel.s: src/core/filesystemmodel.cpp.s
+.PHONY : src/core/filesystemmodel.s
+
+# target to generate assembly for a file
+src/core/filesystemmodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/filesystemmodel.cpp.s
+.PHONY : src/core/filesystemmodel.cpp.s
 
 src/core/mainwindow.o: src/core/mainwindow.cpp.o
 .PHONY : src/core/mainwindow.o
 
 # target to build an object file
 src/core/mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/mainwindow.cpp.o
 .PHONY : src/core/mainwindow.cpp.o
 
 src/core/mainwindow.i: src/core/mainwindow.cpp.i
@@ -346,7 +370,7 @@ src/core/mainwindow.i: src/core/mainwindow.cpp.i
 
 # target to preprocess a source file
 src/core/mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/mainwindow.cpp.i
 .PHONY : src/core/mainwindow.cpp.i
 
 src/core/mainwindow.s: src/core/mainwindow.cpp.s
@@ -354,7 +378,7 @@ src/core/mainwindow.s: src/core/mainwindow.cpp.s
 
 # target to generate assembly for a file
 src/core/mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/mainwindow.cpp.s
 .PHONY : src/core/mainwindow.cpp.s
 
 src/core/settings.o: src/core/settings.cpp.o
@@ -362,7 +386,7 @@ src/core/settings.o: src/core/settings.cpp.o
 
 # target to build an object file
 src/core/settings.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/settings.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/settings.cpp.o
 .PHONY : src/core/settings.cpp.o
 
 src/core/settings.i: src/core/settings.cpp.i
@@ -370,7 +394,7 @@ src/core/settings.i: src/core/settings.cpp.i
 
 # target to preprocess a source file
 src/core/settings.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/settings.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/settings.cpp.i
 .PHONY : src/core/settings.cpp.i
 
 src/core/settings.s: src/core/settings.cpp.s
@@ -378,7 +402,7 @@ src/core/settings.s: src/core/settings.cpp.s
 
 # target to generate assembly for a file
 src/core/settings.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/core/settings.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/core/settings.cpp.s
 .PHONY : src/core/settings.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -386,7 +410,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -394,7 +418,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -402,7 +426,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/utils/syntaxhighlighter.o: src/utils/syntaxhighlighter.cpp.o
@@ -410,7 +434,7 @@ src/utils/syntaxhighlighter.o: src/utils/syntaxhighlighter.cpp.o
 
 # target to build an object file
 src/utils/syntaxhighlighter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/utils/syntaxhighlighter.cpp.o
 .PHONY : src/utils/syntaxhighlighter.cpp.o
 
 src/utils/syntaxhighlighter.i: src/utils/syntaxhighlighter.cpp.i
@@ -418,7 +442,7 @@ src/utils/syntaxhighlighter.i: src/utils/syntaxhighlighter.cpp.i
 
 # target to preprocess a source file
 src/utils/syntaxhighlighter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/utils/syntaxhighlighter.cpp.i
 .PHONY : src/utils/syntaxhighlighter.cpp.i
 
 src/utils/syntaxhighlighter.s: src/utils/syntaxhighlighter.cpp.s
@@ -426,7 +450,7 @@ src/utils/syntaxhighlighter.s: src/utils/syntaxhighlighter.cpp.s
 
 # target to generate assembly for a file
 src/utils/syntaxhighlighter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtWebEditor.dir/build.make CMakeFiles/QtWebEditor.dir/src/utils/syntaxhighlighter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rapid.dir/build.make CMakeFiles/Rapid.dir/src/utils/syntaxhighlighter.cpp.s
 .PHONY : src/utils/syntaxhighlighter.cpp.s
 
 # Help Target
@@ -441,25 +465,28 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... QtWebEditor_autogen"
-	@echo "... QtWebEditor_autogen_timestamp_deps"
+	@echo "... Rapid_autogen"
+	@echo "... Rapid_autogen_timestamp_deps"
 	@echo "... run"
-	@echo "... QtWebEditor"
-	@echo "... QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.o"
-	@echo "... QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.i"
-	@echo "... QtWebEditor_autogen/3YJK5W5UP7/qrc_resources.s"
-	@echo "... QtWebEditor_autogen/mocs_compilation.o"
-	@echo "... QtWebEditor_autogen/mocs_compilation.i"
-	@echo "... QtWebEditor_autogen/mocs_compilation.s"
+	@echo "... Rapid"
+	@echo "... Rapid_autogen/3YJK5W5UP7/qrc_resources.o"
+	@echo "... Rapid_autogen/3YJK5W5UP7/qrc_resources.i"
+	@echo "... Rapid_autogen/3YJK5W5UP7/qrc_resources.s"
+	@echo "... Rapid_autogen/mocs_compilation.o"
+	@echo "... Rapid_autogen/mocs_compilation.i"
+	@echo "... Rapid_autogen/mocs_compilation.s"
 	@echo "... src/core/application.o"
 	@echo "... src/core/application.i"
 	@echo "... src/core/application.s"
 	@echo "... src/core/editorwidget.o"
 	@echo "... src/core/editorwidget.i"
 	@echo "... src/core/editorwidget.s"
-	@echo "... src/core/filebrowser.o"
-	@echo "... src/core/filebrowser.i"
-	@echo "... src/core/filebrowser.s"
+	@echo "... src/core/fileexplorer.o"
+	@echo "... src/core/fileexplorer.i"
+	@echo "... src/core/fileexplorer.s"
+	@echo "... src/core/filesystemmodel.o"
+	@echo "... src/core/filesystemmodel.i"
+	@echo "... src/core/filesystemmodel.s"
 	@echo "... src/core/mainwindow.o"
 	@echo "... src/core/mainwindow.i"
 	@echo "... src/core/mainwindow.s"

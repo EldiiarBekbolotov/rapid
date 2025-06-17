@@ -38,24 +38,13 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES
-    "/Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor-1.0.0"
-    "/Users/eldiiar/rapid/rapid/qt_web_editor/build/QtWebEditor"
-    )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QtWebEditor-1.0.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QtWebEditor"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      execute_process(COMMAND /usr/bin/install_name_tool
-        -delete_rpath "/opt/homebrew/lib"
-        "${file}")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" -u -r "${file}")
-      endif()
-    endif()
-  endforeach()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/Users/eldiiar/rapid/rapid/qt_web_editor/build/Rapid.app" USE_SOURCE_PERMISSIONS)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./Rapid.app/Contents/MacOS/Rapid" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./Rapid.app/Contents/MacOS/Rapid")
+    execute_process(COMMAND /usr/bin/install_name_tool
+      -delete_rpath "/opt/homebrew/lib"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./Rapid.app/Contents/MacOS/Rapid")
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

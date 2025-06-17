@@ -176,7 +176,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=QtWebEditor
+CMAKE_PROJECT_NAME:STATIC=Rapid
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.0.0
@@ -442,17 +442,17 @@ Qt6Widgets_DIR:PATH=/opt/homebrew/lib/cmake/Qt6Widgets
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=/opt/homebrew/lib/cmake/Qt6
 
-//Value Computed by CMake
-QtWebEditor_BINARY_DIR:STATIC=/Users/eldiiar/rapid/rapid/qt_web_editor/build
-
-//Value Computed by CMake
-QtWebEditor_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-QtWebEditor_SOURCE_DIR:STATIC=/Users/eldiiar/rapid/rapid/qt_web_editor
-
 //Path to a program.
 RSVG_CONVERT_EXECUTABLE:FILEPATH=RSVG_CONVERT_EXECUTABLE-NOTFOUND
+
+//Value Computed by CMake
+Rapid_BINARY_DIR:STATIC=/Users/eldiiar/rapid/rapid/qt_web_editor/build
+
+//Value Computed by CMake
+Rapid_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Rapid_SOURCE_DIR:STATIC=/Users/eldiiar/rapid/rapid/qt_web_editor
 
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND

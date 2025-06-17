@@ -1,4 +1,4 @@
-/Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/QtWebEditor.dir
+/Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/Rapid.dir
 /Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/run.dir
 /Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/edit_cache.dir
 /Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/rebuild_cache.dir
@@ -6,5 +6,5 @@
 /Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/install.dir
 /Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/install/local.dir
 /Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/install/strip.dir
-/Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/QtWebEditor_autogen_timestamp_deps.dir
-/Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/QtWebEditor_autogen.dir
+/Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/Rapid_autogen_timestamp_deps.dir
+/Users/eldiiar/rapid/rapid/qt_web_editor/build/CMakeFiles/Rapid_autogen.dir
