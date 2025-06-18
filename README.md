@@ -1,6 +1,9 @@
 # Rapid (qt_web_editor)
 
 A lightweight web development text editor built with C++ and Qt.
+<img width="1074" alt="Screenshot 2025-06-17 at 7 41 39 PM" src="https://github.com/user-attachments/assets/58efed19-102e-4f39-9857-b778185f80ff" />
+
+
 
 ## Quick Start (Tested on macOS)
 
