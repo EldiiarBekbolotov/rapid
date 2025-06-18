@@ -1,4 +1,4 @@
-# Rapid
+# Rapid (qt_web_editor)
 
 A lightweight web development text editor built with C++ and Qt.
 
