@@ -1,7 +1,22 @@
+/**
+ * @file syntaxhighlighter.cpp
+ * @brief Implementation of the SyntaxHighlighter class.
+ * 
+ * This file contains the implementation of syntax highlighting functionality
+ * for various programming languages in the editor.
+ */
+
 #include "syntaxhighlighter.h"
 #include <QDebug>
 #include <QRegularExpression>
 
+/**
+ * @brief Constructs a SyntaxHighlighter with the given parent document.
+ * 
+ * Initializes text formats for different syntax elements with default styles.
+ * 
+ * @param parent The parent QTextDocument that will be highlighted.
+ */
 SyntaxHighlighter::SyntaxHighlighter(QTextDocument *parent)
     : QSyntaxHighlighter(parent)
 {
@@ -24,6 +39,14 @@ SyntaxHighlighter::SyntaxHighlighter(QTextDocument *parent)
     m_functionFormat.setFontItalic(true);
 }
 
+/**
+ * @brief Sets the programming language for syntax highlighting.
+ * 
+ * Configures the highlighter with the appropriate rules for the specified language
+ * and triggers rehighlighting of the document.
+ * 
+ * @param language The language to set (e.g., "html", "css", "javascript").
+ */
 void SyntaxHighlighter::setLanguage(const QString &language)
 {
     m_language = language.toLower();
@@ -40,6 +63,15 @@ void SyntaxHighlighter::setLanguage(const QString &language)
     rehighlight();
 }
 
+/**
+ * @brief Highlights the given text block according to the current syntax rules.
+ * 
+ * This method is called by Qt's syntax highlighting system for each block of text
+ * that needs to be highlighted. It applies all registered highlighting rules
+ * and handles multi-line comments.
+ * 
+ * @param text The text block to be highlighted.
+ */
 void SyntaxHighlighter::highlightBlock(const QString &text)
 {
     // Apply syntax highlighting rules
@@ -76,6 +108,15 @@ void SyntaxHighlighter::highlightBlock(const QString &text)
     }
 }
 
+/**
+ * @brief Adds a new highlighting rule with the given pattern and format.
+ * 
+ * Creates a new highlighting rule that will be applied to all text matching
+ * the specified regular expression pattern.
+ * 
+ * @param pattern The regular expression pattern to match.
+ * @param format The text format to apply to matching text.
+ */
 void SyntaxHighlighter::addRule(const QString &pattern, const QTextCharFormat &format)
 {
     HighlightingRule rule;
@@ -84,6 +125,15 @@ void SyntaxHighlighter::addRule(const QString &pattern, const QTextCharFormat &f
     m_rules.append(rule);
 }
 
+/**
+ * @brief Adds multiple keywords that share the same text format.
+ * 
+ * Creates highlighting rules for each keyword in the list, ensuring they are
+ * matched as whole words only.
+ * 
+ * @param keywords List of keywords to highlight.
+ * @param format The text format to apply to all keywords.
+ */
 void SyntaxHighlighter::addKeywords(const QStringList &keywords, const QTextCharFormat &format)
 {
     for (const QString &keyword : keywords) {
@@ -91,6 +141,16 @@ void SyntaxHighlighter::addKeywords(const QStringList &keywords, const QTextChar
     }
 }
 
+/**
+ * @brief Sets up highlighting rules for HTML documents.
+ * 
+ * Configures syntax highlighting rules specific to HTML, including:
+ * - Tags
+ * - Attributes
+ * - Attribute values
+ * - Comments
+ * - DOCTYPE declarations
+ */
 void SyntaxHighlighter::setupHtmlRules()
 {
     // HTML tags
@@ -116,6 +176,16 @@ void SyntaxHighlighter::setupHtmlRules()
     addRule("<!DOCTYPE[^>]*>", m_keywordFormat);
 }
 
+/**
+ * @brief Sets up highlighting rules for CSS stylesheets.
+ * 
+ * Configures syntax highlighting rules specific to CSS, including:
+ * - Properties
+ * - Values
+ * - Selectors
+ * - At-rules
+ * - Comments
+ */
 void SyntaxHighlighter::setupCssRules()
 {
     // CSS properties
@@ -144,6 +214,16 @@ void SyntaxHighlighter::setupCssRules()
     addRule(QStringLiteral("'[^']*'"), m_stringFormat);
 }
 
+/**
+ * @brief Sets up highlighting rules for JavaScript code.
+ * 
+ * Configures syntax highlighting rules specific to JavaScript, including:
+ * - Keywords (if, else, function, etc.)
+ * - Built-in objects and functions
+ * - Numbers
+ * - Strings
+ * - Comments (both single and multi-line)
+ */
 void SyntaxHighlighter::setupJsRules()
 {
     // JavaScript keywords

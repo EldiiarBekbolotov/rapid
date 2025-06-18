@@ -1,10 +1,18 @@
+/**
+ * @file editorwidget.cpp
+ * @brief Implementation of the EditorWidget class.
+ * 
+ * This file contains the implementation of the EditorWidget class which provides
+ * a code editing widget with line numbers, syntax highlighting, and file I/O capabilities.
+ */
+
 #include "editorwidget.h"
 #include "../utils/syntaxhighlighter.h"
 #include "application.h"
 #include "settings.h"
 
+#include <QDir>
 #include <QFileInfo>
-
 #include <QPainter>
 #include <QTextBlock>
 #include <QTextStream>
@@ -16,6 +24,14 @@
 #include <QRegularExpression>
 #include <QStringConverter>
 
+/**
+ * @brief Constructs an EditorWidget with the given parent.
+ * 
+ * Initializes the editor with default settings, sets up the line number area,
+ * and configures the auto-update timer for content changes.
+ * 
+ * @param parent The parent widget.
+ */
 EditorWidget::EditorWidget(QWidget *parent)
     : QPlainTextEdit(parent)
     , m_lineNumberArea(new LineNumberArea(this))
@@ -50,49 +66,75 @@ EditorWidget::EditorWidget(QWidget *parent)
     });
 }
 
+/**
+ * @brief Destroys the EditorWidget and cleans up resources.
+ * 
+ * Ensures proper cleanup of the line number area and other resources.
+ */
 EditorWidget::~EditorWidget()
 {
     delete m_lineNumberArea;
 }
 
+/**
+ * @brief Initializes the editor's appearance and basic settings.
+ * 
+ * Configures the editor's frame style, scroll bars, document margins,
+ * and viewport margins to accommodate the line number area.
+ */
 void EditorWidget::setupEditor()
 {
-    // Set up the editor
+    // Set up the editor's frame and scroll bars
     setFrameStyle(QFrame::NoFrame);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     
-    // Set up the document
+    // Configure the document
     QTextDocument *doc = document();
     doc->setDocumentMargin(0);
     
-    // Set up the viewport margins to make room for line numbers
+    // Adjust viewport margins to make room for line numbers
     setViewportMargins(lineNumberAreaWidth(), 0, 0, 0);
 }
 
+/**
+ * @brief Sets up signal-slot connections for the editor.
+ * 
+ * Establishes connections between editor events and their corresponding
+ * handler methods to manage document changes, cursor movements, and UI updates.
+ */
 void EditorWidget::setupConnections()
 {
-    // Connect document changes
+    // Connect document modification state changes
     connect(document(), &QTextDocument::modificationChanged, 
             this, &EditorWidget::modificationChanged);
     
-    // Connect cursor position changes
+    // Update current line highlight when cursor moves
     connect(this, &EditorWidget::cursorPositionChanged, 
             this, &EditorWidget::highlightCurrentLine);
     
-    // Connect text changes
+    // Update extra selections (like search results) when text changes
     connect(this, &EditorWidget::textChanged, 
             this, &EditorWidget::updateExtraSelections);
     
-    // Connect block count changes
+    // Adjust line number area width when block count changes
     connect(document(), &QTextDocument::blockCountChanged, 
             this, &EditorWidget::updateLineNumberAreaWidth);
     
-    // Connect update request
+    // Update line number area when scrolled or resized
     connect(this, &EditorWidget::updateRequest, 
             this, &EditorWidget::updateLineNumberArea);
 }
 
+/**
+ * @brief Loads content from a file into the editor.
+ * 
+ * Attempts to open and read the specified file, loading its contents into the editor.
+ * Sets up appropriate syntax highlighting based on the file extension.
+ * 
+ * @param filePath Path to the file to load.
+ * @return true if the file was loaded successfully, false otherwise.
+ */
 bool EditorWidget::load(const QString &filePath)
 {
     if (filePath.isEmpty()) {
@@ -128,101 +170,198 @@ bool EditorWidget::load(const QString &filePath)
     return true;
 }
 
+/**
+ * @brief Saves the current content to the current file.
+ * 
+ * If no file is currently associated with the editor, does nothing.
+ * 
+ * @return true if the save was successful, false otherwise.
+ * @see saveAs()
+ */
 bool EditorWidget::save()
 {
     if (m_filePath.isEmpty()) {
         return false;
     }
-    
     return saveAs(m_filePath);
 }
 
+/**
+ * @brief Saves the current content to the specified file.
+ * 
+ * Saves the editor's content to the given file path and updates the editor's
+ * state accordingly. Handles file I/O errors and provides user feedback.
+ * 
+ * @param filePath The path where to save the file.
+ * @return true if the save was successful, false otherwise.
+ */
 bool EditorWidget::saveAs(const QString &filePath)
 {
     if (filePath.isEmpty()) {
         return false;
     }
-    
+
     QFile file(filePath);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, tr("Error"), 
+                           tr("Could not save file %1: %2")
+                           .arg(QDir::toNativeSeparators(filePath), file.errorString()));
         return false;
     }
-    
+
+    // Write content to file with UTF-8 encoding
     QTextStream out(&file);
     out.setEncoding(QStringConverter::Utf8);
     out << toPlainText();
-    
-    bool success = file.flush();
     file.close();
+
+    // Update the file path and mark as unmodified
+    setFilePath(filePath);
+    document()->setModified(false);
     
-    if (success) {
-        setFilePath(filePath);
-        document()->setModified(false);
-        return true;
-    }
-    
-    return false;
+    return true;
 }
 
+/**
+ * @brief Sets the file path associated with the editor.
+ * 
+ * Updates the editor's state with the new file path and name, and adjusts
+ * syntax highlighting based on the file's extension.
+ * 
+ * @param filePath The new file path to associate with this editor.
+ */
 void EditorWidget::setFilePath(const QString &filePath)
 {
     if (m_filePath != filePath) {
         m_filePath = filePath;
         m_fileName = QFileInfo(filePath).fileName();
+        emit filePathChanged(m_filePath);
+        emit fileNameChanged(m_fileName);
         
-        // Update syntax highlighting based on file extension
+        // Configure syntax highlighting based on file extension
         setSyntaxForFile(filePath);
-        
-        emit filePathChanged(filePath);
     }
 }
 
+/**
+ * @brief Configures syntax highlighting based on the file extension.
+ * 
+ * Creates or updates the syntax highlighter with rules appropriate for the
+ * file type indicated by the given file path's extension.
+ * 
+ * @param filePath The file path used to determine the syntax rules.
+ */
 void EditorWidget::setSyntaxForFile(const QString &filePath)
 {
-    // Remove existing highlighter if any
-    if (m_highlighter) {
-        m_highlighter->deleteLater();
-        m_highlighter = nullptr;
-    }
-    
+    // Clear existing highlighter if no file is specified
     if (filePath.isEmpty()) {
+        if (m_highlighter) {
+            m_highlighter->deleteLater();
+            m_highlighter = nullptr;
+        }
         return;
     }
     
-    // Create a new syntax highlighter
-    m_highlighter = new SyntaxHighlighter(document());
-    
-    // Set the appropriate language based on file extension
     QFileInfo fileInfo(filePath);
     QString suffix = fileInfo.suffix().toLower();
     
-    if (suffix == "html" || suffix == "htm") {
+    // Create or update syntax highlighter
+    if (!m_highlighter) {
+        m_highlighter = new SyntaxHighlighter(document());
+    }
+    
+    // Set syntax based on file extension
+    if (suffix == "cpp" || suffix == "h" || suffix == "hpp" || suffix == "cxx" || suffix == "cc") {
+        m_highlighter->setLanguage("cpp");
+    } else if (suffix == "js") {
+        m_highlighter->setLanguage("javascript");
+    } else if (suffix == "html" || suffix == "htm") {
         m_highlighter->setLanguage("html");
     } else if (suffix == "css") {
         m_highlighter->setLanguage("css");
-    } else if (suffix == "js") {
-        m_highlighter->setLanguage("javascript");
+    } else {
+        // Default to no syntax highlighting
+        m_highlighter->setLanguage("");
     }
-    // Add more file extensions as needed
 }
 
+/**
+ * @brief Updates the width of the line number area.
+ * 
+ * Called when the number of blocks in the document changes to ensure the
+ * line number area has sufficient width to display all line numbers.
+ * 
+ * @param newBlockCount The new number of blocks (unused parameter).
+ */
 void EditorWidget::updateLineNumberAreaWidth(int /* newBlockCount */)
 {
+    // Adjust viewport margins to accommodate the line number area
     setViewportMargins(lineNumberAreaWidth(), 0, 0, 0);
 }
 
+/**
+ * @brief Highlights the current line in the editor.
+ * 
+ * Applies a subtle background highlight to the line containing the cursor
+ * to improve text editing visibility. The highlight is only applied when
+ * the editor is not in read-only mode.
+ */
 void EditorWidget::highlightCurrentLine()
 {
     QList<QTextEdit::ExtraSelection> extraSelections;
-    
+
     if (!isReadOnly()) {
         QTextEdit::ExtraSelection selection;
-        
-        QColor lineColor = QColor(QRgb(0xE8F2FE));
-        if (Application::instance()->settings()->theme() == Settings::Theme::Dark) {
-            lineColor = QColor(QRgb(0x2A2A2A));
-        }
-        
+        // Use a subtle yellow highlight that works in both light and dark themes
+        QColor lineColor = QColor(Qt::yellow).lighter(160);
+        selection.format.setBackground(lineColor);
+        selection.format.setProperty(QTextFormat::FullWidthSelection, true);
+        selection.cursor = textCursor();
+        selection.cursor.clearSelection();
+        extraSelections.append(selection);
+    }
+
+    setExtraSelections(extraSelections);
+}
+
+/**
+ * @brief Updates the line number area when the editor is scrolled or resized.
+ * 
+ * Ensures the line number area remains synchronized with the editor's content
+ * during scrolling or resizing operations.
+ * 
+ * @param rect The area of the editor that needs updating.
+ * @param dy The amount of vertical scrolling that occurred (0 if no scrolling).
+ */
+void EditorWidget::updateLineNumberArea(const QRect &rect, int dy)
+{
+    if (dy) {
+        m_lineNumberArea->scroll(0, dy);
+    } else {
+        // If not scrolling, just update the line number area
+        m_lineNumberArea->update(0, rect.y(), m_lineNumberArea->width(), rect.height());
+    }
+
+    // Update the viewport margins if needed
+    if (rect.contains(viewport()->rect())) {
+        updateLineNumberAreaWidth(0);
+    }
+}
+
+/**
+ * @brief Updates the extra selections in the editor.
+ * 
+ * This method is responsible for applying extra text formatting such as
+ * current line highlighting and search result highlighting.
+ */
+void EditorWidget::updateExtraSelections()
+{
+    QList<QTextEdit::ExtraSelection> extraSelections;
+    
+    // Highlight current line
+    if (!isReadOnly()) {
+        QTextEdit::ExtraSelection selection;
+        QColor lineColor = QColor(Qt::yellow).lighter(160);
         selection.format.setBackground(lineColor);
         selection.format.setProperty(QTextFormat::FullWidthSelection, true);
         selection.cursor = textCursor();
@@ -230,37 +369,36 @@ void EditorWidget::highlightCurrentLine()
         extraSelections.append(selection);
     }
     
+    // Apply the extra selections
     setExtraSelections(extraSelections);
 }
 
-void EditorWidget::updateLineNumberArea(const QRect &rect, int dy)
-{
-    if (dy) {
-        m_lineNumberArea->scroll(0, dy);
-    } else {
-        m_lineNumberArea->update(0, rect.y(), m_lineNumberArea->width(), rect.height());
-    }
-    
-    if (rect.contains(viewport()->rect())) {
-        updateLineNumberAreaWidth(0);
-    }
-}
-
-void EditorWidget::updateExtraSelections()
-{
-    // This can be used for additional syntax highlighting, like matching brackets, etc.
-    // For now, we'll just update the current line highlight
-    highlightCurrentLine();
-}
-
+/**
+ * @brief Handles resize events for the editor widget.
+ * 
+ * Overrides the base class implementation to ensure the line number area
+ * is properly resized along with the editor.
+ * 
+ * @param event The resize event containing size information.
+ */
 void EditorWidget::resizeEvent(QResizeEvent *event)
 {
+    // Call base class implementation first
     QPlainTextEdit::resizeEvent(event);
     
+    // Update line number area geometry to match new editor size
     QRect cr = contentsRect();
     m_lineNumberArea->setGeometry(QRect(cr.left(), cr.top(), lineNumberAreaWidth(), cr.height()));
 }
 
+/**
+ * @brief Handles key press events for the editor widget.
+ * 
+ * Provides custom handling for certain keys, such as Tab, Shift+Tab, Enter,
+ * and Backspace, to implement features like auto-indentation and line wrapping.
+ * 
+ * @param e The key event containing the pressed key information.
+ */
 void EditorWidget::keyPressEvent(QKeyEvent *e)
 {
     // Handle tab key for indentation
@@ -439,8 +577,18 @@ void EditorWidget::keyPressEvent(QKeyEvent *e)
     QPlainTextEdit::keyPressEvent(e);
 }
 
+/**
+ * @brief Handles painting of the line number area.
+ * 
+ * Renders line numbers in the line number area, ensuring they align with
+ * the corresponding lines in the editor. Only visible line numbers are drawn
+ * for performance reasons.
+ * 
+ * @param event The paint event containing the area to be painted.
+ */
 void EditorWidget::lineNumberAreaPaintEvent(QPaintEvent *event)
 {
+    // Set up painter with line number area background
     QPainter painter(m_lineNumberArea);
     painter.fillRect(event->rect(), QColor(240, 240, 240));
     
@@ -448,50 +596,58 @@ void EditorWidget::lineNumberAreaPaintEvent(QPaintEvent *event)
         painter.fillRect(event->rect(), QColor(45, 45, 45));
     }
     
+    // Get the first visible block and its geometry
     QTextBlock block = firstVisibleBlock();
     int blockNumber = block.blockNumber();
-    int top = (int)blockBoundingGeometry(block).translated(contentOffset()).top();
-    int bottom = top + (int)blockBoundingRect(block).height();
+    int top = (int) blockBoundingGeometry(block).translated(contentOffset()).top();
+    int bottom = top + (int) blockBoundingRect(block).height();
     
+    // Use the same font as the editor for consistency
     QFont font = this->font();
-    font.setPointSize(font.pointSize() - 1);
     painter.setFont(font);
     
-    QColor textColor = palette().text().color();
-    if (Application::instance()->settings()->theme() == Settings::Theme::Dark) {
-        textColor = QColor(150, 150, 150);
-    }
-    
-    painter.setPen(textColor);
-    
+    // Draw line numbers for all visible blocks
     while (block.isValid() && top <= event->rect().bottom()) {
         if (block.isVisible() && bottom >= event->rect().top()) {
+            // Convert to 1-based line numbers for display
             QString number = QString::number(blockNumber + 1);
-            painter.drawText(0, top, m_lineNumberArea->width() - 5, fontMetrics().height(),
-                            Qt::AlignRight, number);
+            painter.setPen(Qt::black);
+            // Draw the line number right-aligned with some right padding
+            painter.drawText(0, top, m_lineNumberArea->width() - 3, fontMetrics().height(),
+                           Qt::AlignRight, number);
         }
         
+        // Move to next block
         block = block.next();
         top = bottom;
-        bottom = top + (int)blockBoundingRect(block).height();
+        bottom = top + (int) blockBoundingRect(block).height();
         ++blockNumber;
     }
 }
 
+/**
+ * @brief Calculates the required width for the line number area.
+ * 
+ * Determines the necessary width to display all line numbers based on
+ * the current font metrics and the number of lines in the document.
+ * 
+ * @return The calculated width in pixels for the line number area.
+ */
 int EditorWidget::lineNumberAreaWidth() const
 {
     if (!Application::instance()->settings()->lineNumbers()) {
         return 0;
     }
     
+    // Calculate number of digits needed for the highest line number
     int digits = 1;
     int max = qMax(1, blockCount());
-    
     while (max >= 10) {
         max /= 10;
         ++digits;
     }
     
+    // Calculate width needed for the digits plus some padding
     int space = 13 + fontMetrics().horizontalAdvance(QLatin1Char('9')) * digits;
     
     return space;

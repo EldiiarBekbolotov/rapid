@@ -1,3 +1,12 @@
+/**
+ * @file mainwindow.h
+ * @brief Declaration of the MainWindow class.
+ * 
+ * This file contains the MainWindow class which serves as the main application
+ * window for the Qt Web Editor, providing the user interface and coordinating
+ * between different components like the editor, file browser, and preview.
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -33,12 +42,28 @@ class EditorWidget;
 class QLabel;
 class QWebEngineView;
 
+/**
+ * @brief The MainWindow class represents the main application window.
+ * 
+ * This class manages the main user interface, including the menu bar, toolbars,
+ * editor tabs, file browser, and web preview. It coordinates between different
+ * components and handles user interactions.
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /**
+     * @brief Constructs a MainWindow with the given parent.
+     * 
+     * @param parent The parent widget.
+     */
     explicit MainWindow(QWidget *parent = nullptr);
+    
+    /**
+     * @brief Destroys the MainWindow.
+     */
     ~MainWindow();
     
     // Disable copy constructor and assignment operator
@@ -46,59 +71,104 @@ public:
     MainWindow& operator=(const MainWindow&) = delete;
 
 protected:
+    /**
+     * @brief Handles the window close event.
+     * 
+     * Prompts the user to save any unsaved changes before closing.
+     * 
+     * @param event The close event.
+     */
     void closeEvent(QCloseEvent *event) override;
 
 private slots:
+    /** @name File Operations
+     *  Methods handling file operations.
+     */
+    ///@{
     void newFile();
     void openFile();
     void openFolder();
     void saveFile();
     void saveFileAs();
     void closeTab(int index);
+    void openFileInEditor(const QString &filePath);
+    void updateRecentFilesMenu(const QStringList &recentFiles);
+    ///@}
+    
+    /** @name Tab Management
+     *  Methods for managing editor tabs.
+     */
+    ///@{
     void currentTabChanged(int index);
     void fileDoubleClicked(const QModelIndex &index);
+    ///@}
+    
+    /** @name UI Updates
+     *  Methods for updating the user interface.
+     */
+    ///@{
     void updateWindowTitle();
-    void showAbout();
     void updatePreview();
     void updateUiForTheme();
     void updateUiForFont(const QFont &font);
+    ///@}
+    
+    /** @name Application Actions
+     *  Methods for application-level actions.
+     */
+    ///@{
+    void showAbout();
     void showPreferences();
     void toggleFullScreen();
-    void openFileInEditor(const QString &filePath);
-    void updateRecentFilesMenu(const QStringList &recentFiles);
+    void toggleMenuBar();
+    void toggleToolBar();
+    ///@}
+    
+    /** @name Browser Preview
+     *  Methods for managing browser preview functionality.
+     */
+    ///@{
     void runInBrowser();
     void runInDefaultBrowser();
     void runInSpecificBrowser(const QString &browserPath);
     void showBrowserSelectionDialog();
-    void toggleMenuBar();
-    void toggleToolBar();
+    ///@}
 
 private:
+    /** @name Initialization Methods
+     *  Methods for setting up the main window components.
+     */
+    ///@{
     void setupActions();
     void setupToolBar();
     void setupDockWidgets();
     void setupStatusBar();
     void applyThemeAndFontSettings();
+    ///@}
     
     // UI Components
-    QMenu *m_fileMenu = nullptr;
-    QToolBar *m_toolBar = nullptr;
-    QDockWidget *m_fileBrowserDock = nullptr;
-    QTabWidget *m_tabWidget = nullptr;
-    QSplitter *m_mainSplitter = nullptr;
-    QFileSystemModel *m_fileSystemModel = nullptr;
-    QTreeView *m_fileBrowser = nullptr;
-    QWebEngineView *m_webView = nullptr;
-    QWebChannel m_webChannel;
+    QMenu *m_fileMenu = nullptr;              /**< The File menu in the menu bar. */
+    QToolBar *m_toolBar = nullptr;            /**< The main toolbar. */
+    QDockWidget *m_fileBrowserDock = nullptr; /**< Dock widget for the file browser. */
+    QTabWidget *m_tabWidget = nullptr;        /**< Widget for managing editor tabs. */
+    QSplitter *m_mainSplitter = nullptr;      /**< Main splitter for resizable panels. */
     
-    // Actions
-    QAction *m_newFileAction = nullptr;
-    QAction *m_openFileAction = nullptr;
-    QAction *m_openFolderAction = nullptr;
-    QAction *m_saveAction = nullptr;
-    QAction *m_saveAsAction = nullptr;
-    QAction *m_closeTabAction = nullptr;
-    QAction *m_exitAction = nullptr;
+    // File System
+    QFileSystemModel *m_fileSystemModel = nullptr;  /**< Model for the file system. */
+    QTreeView *m_fileBrowser = nullptr;             /**< Tree view for file system navigation. */
+    
+    // Web Preview
+    QWebEngineView *m_webView = nullptr;      /**< Web view for previewing content. */
+    QWebChannel m_webChannel;                 /**< Channel for communication with web content. */
+    
+    // File Actions
+    QAction *m_newFileAction = nullptr;       /**< Action for creating a new file. */
+    QAction *m_openFileAction = nullptr;      /**< Action for opening a file. */
+    QAction *m_openFolderAction = nullptr;    /**< Action for opening a folder. */
+    QAction *m_saveAction = nullptr;          /**< Action for saving the current file. */
+    QAction *m_saveAsAction = nullptr;        /**< Action for saving the current file with a new name. */
+    QAction *m_closeTabAction = nullptr;      /**< Action for closing the current tab. */
+    QAction *m_exitAction = nullptr;          /**< Action for exiting the application. */
     QAction *m_togglePreviewAction = nullptr;
     QAction *m_toggleFileBrowserAction = nullptr;
     QAction *m_fullScreenAction = nullptr;

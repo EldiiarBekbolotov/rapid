@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="256" height="256" rx="40" fill="#2196F3"/>
-  <path d="M64 64H192V192H64V64Z" fill="#BBDEFB"/>
-  <path d="M64 64H192V85.3333H64V64Z" fill="#1976D2"/>
-  <path d="M74.6667 96H181.333V117.333H74.6667V96Z" fill="#1976D2"/>
-  <path d="M74.6667 128H149.333V149.333H74.6667V128Z" fill="#1976D2"/>
-  <path d="M74.6667 160H128V181.333H74.6667V160Z" fill="#1976D2"/>
-</svg>

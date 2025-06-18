@@ -1,3 +1,11 @@
+/**
+ * @file filebrowser.cpp
+ * @brief Implementation of the FileBrowser class.
+ * 
+ * This file contains the implementation of the file system browser widget
+ * that allows users to navigate and manipulate files and directories.
+ */
+
 #include "filebrowser.h"
 #include <QFileSystemModel>
 #include <QHeaderView>
@@ -10,6 +18,14 @@
 #include <QUrl>
 #include <QDebug>
 
+/**
+ * @brief Constructs a FileBrowser with the given parent.
+ * 
+ * Initializes the file system model, sets up the view properties, and
+ * connects the necessary signals and slots.
+ * 
+ * @param parent The parent widget.
+ */
 FileBrowser::FileBrowser(QWidget *parent)
     : QTreeView(parent)
     , m_model(new QFileSystemModel(this))
@@ -40,11 +56,22 @@ FileBrowser::FileBrowser(QWidget *parent)
     connect(this, &FileBrowser::doubleClicked, this, &FileBrowser::onDoubleClicked);
 }
 
+/**
+ * @brief Destroys the FileBrowser and cleans up resources.
+ */
 FileBrowser::~FileBrowser()
 {
     delete m_contextMenu;
 }
 
+/**
+ * @brief Sets the root directory to be displayed in the browser.
+ * 
+ * If the specified path is valid, updates the view to show the contents
+ * of that directory and emits the rootPathChanged signal.
+ * 
+ * @param path The file system path to set as root.
+ */
 void FileBrowser::setRootPath(const QString &path)
 {
     QModelIndex index = m_model->index(path);
@@ -54,11 +81,23 @@ void FileBrowser::setRootPath(const QString &path)
     }
 }
 
+/**
+ * @brief Gets the current directory path.
+ * 
+ * @return The current directory path as a string.
+ */
 QString FileBrowser::currentPath() const
 {
     return m_model->filePath(rootIndex());
 }
 
+/**
+ * @brief Handles context menu events for the file browser.
+ * 
+ * Shows a context menu with appropriate actions based on the selected item.
+ * 
+ * @param event The context menu event.
+ */
 void FileBrowser::contextMenuEvent(QContextMenuEvent *event)
 {
     QModelIndex index = indexAt(event->pos());
@@ -72,6 +111,14 @@ void FileBrowser::contextMenuEvent(QContextMenuEvent *event)
     m_contextMenu->exec(event->globalPos());
 }
 
+/**
+ * @brief Handles double-click events on items in the browser.
+ * 
+ * If the double-clicked item is a file, emits the fileDoubleClicked signal
+ * with the file's path.
+ * 
+ * @param index The model index of the clicked item.
+ */
 void FileBrowser::onDoubleClicked(const QModelIndex &index)
 {
     if (m_model->fileInfo(index).isFile()) {
@@ -79,6 +126,12 @@ void FileBrowser::onDoubleClicked(const QModelIndex &index)
     }
 }
 
+/**
+ * @brief Creates a new file in the current directory.
+ * 
+ * Shows an input dialog to get the file name, then creates an empty file
+ * with that name in the current directory.
+ */
 void FileBrowser::createNewFile()
 {
     bool ok;
@@ -108,6 +161,12 @@ void FileBrowser::createNewFile()
     }
 }
 
+/**
+ * @brief Creates a new subdirectory in the current directory.
+ * 
+ * Shows an input dialog to get the directory name, then creates a new
+ * subdirectory with that name in the current directory.
+ */
 void FileBrowser::createNewFolder()
 {
     bool ok;
@@ -128,6 +187,12 @@ void FileBrowser::createNewFolder()
     }
 }
 
+/**
+ * @brief Initiates renaming of the currently selected item.
+ * 
+ * If a single item is selected, puts the item into edit mode to allow
+ * the user to rename it.
+ */
 void FileBrowser::rename()
 {
     QModelIndex index = currentIndex();
@@ -164,6 +229,12 @@ void FileBrowser::rename()
     }
 }
 
+/**
+ * @brief Deletes the currently selected items.
+ * 
+ * Shows a confirmation dialog, then deletes all selected files and
+ * directories recursively if confirmed.
+ */
 void FileBrowser::remove()
 {
     QModelIndex index = currentIndex();
@@ -201,6 +272,12 @@ void FileBrowser::remove()
     }
 }
 
+/**
+ * @brief Opens the system file explorer at the location of the selected item.
+ * 
+ * Uses the platform-specific method to open the system's file explorer
+ * with the selected file or directory highlighted.
+ */
 void FileBrowser::showInExplorer()
 {
     QModelIndex index = currentIndex();
@@ -221,6 +298,12 @@ void FileBrowser::showInExplorer()
     QProcess::startDetached("osascript", args);
 }
 
+/**
+ * @brief Initializes the actions used in the context menu.
+ * 
+ * Creates and configures all QAction objects with their respective
+ * shortcuts, icons, and connections.
+ */
 void FileBrowser::setupActions()
 {
     m_newFileAction = new QAction(tr("New File"), this);
@@ -244,6 +327,11 @@ void FileBrowser::setupActions()
     connect(m_showInExplorerAction, &QAction::triggered, this, &FileBrowser::showInExplorer);
 }
 
+/**
+ * @brief Sets up the context menu with all available actions.
+ * 
+ * Adds all the actions to the context menu in the appropriate order.
+ */
 void FileBrowser::setupMenu()
 {
     m_contextMenu->addAction(m_newFileAction);
@@ -255,6 +343,12 @@ void FileBrowser::setupMenu()
     m_contextMenu->addAction(m_showInExplorerAction);
 }
 
+/**
+ * @brief Gets the file system path for a given model index.
+ * 
+ * @param index The model index to get the path for.
+ * @return The corresponding file system path.
+ */
 QString FileBrowser::filePath(const QModelIndex &index) const
 {
     return m_model->filePath(index);

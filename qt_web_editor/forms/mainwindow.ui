@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qt Web Editor</string>
+   <string>Rapid</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">

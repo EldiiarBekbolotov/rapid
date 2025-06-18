@@ -1,9 +1,28 @@
+/**
+ * @file main.cpp
+ * @brief Main entry point for the Rapid Qt Web Editor application.
+ * 
+ * This file contains the main() function which serves as the entry point
+ * for the application. It initializes the application, sets up error handling,
+ * and starts the event loop.
+ */
+
 #include "core/application.h"
 #include <QApplication>
 #include <QDebug>
 #include <QMessageBox>
 #include <QFontDatabase>
 
+/**
+ * @brief Main entry point of the application.
+ * 
+ * Initializes the Qt application, sets up the main window, and starts the
+ * event loop. Also handles any uncaught exceptions and displays error messages.
+ * 
+ * @param argc Number of command-line arguments.
+ * @param argv Array of command-line arguments.
+ * @return int Application exit code (0 for success, non-zero for errors).
+ */
 int main(int argc, char *argv[]) {
     try {
         // Initialize the application

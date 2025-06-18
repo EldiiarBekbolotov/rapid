@@ -1,3 +1,11 @@
+/**
+ * @file mainwindow.cpp
+ * @brief Implementation of the MainWindow class.
+ * 
+ * This file contains the implementation of the main application window,
+ * including UI setup, menu and toolbar configuration, file operations,
+ * and integration with the editor and preview components.
+ */
 #include "mainwindow.h"
 #include "editorwidget.h"
 #include "settings.h"
@@ -58,6 +66,14 @@
 #include <QShortcut>
 #include <QActionGroup>
 
+/**
+ * @brief Constructs a MainWindow with the given parent.
+ * 
+ * Initializes the main window UI components, sets up the application state,
+ * and restores settings from the previous session.
+ * 
+ * @param parent The parent widget.
+ */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , m_toolBar(nullptr)
@@ -116,6 +132,11 @@ MainWindow::MainWindow(QWidget *parent)
     createNewEditorTab();
 }
 
+/**
+ * @brief Destroys the MainWindow.
+ * 
+ * Saves the current application state and cleans up resources.
+ */
 MainWindow::~MainWindow()
 {
     saveSettings();
@@ -127,6 +148,14 @@ MainWindow::~MainWindow()
     m_tempFiles.clear();
 }
 
+/**
+ * @brief Handles the close event for the main window.
+ * 
+ * Checks for unsaved changes in any open editor tabs and prompts the user to save
+ * before closing the application. If there are unsaved changes, the event is ignored.
+ * 
+ * @param event The close event.
+ */
 void MainWindow::closeEvent(QCloseEvent *event)
 {
     // Check for unsaved changes
@@ -141,6 +170,12 @@ void MainWindow::closeEvent(QCloseEvent *event)
     event->accept();
 }
 
+/**
+ * @brief Sets up all actions for the main window.
+ * 
+ * Creates and configures menu and toolbar actions, including keyboard shortcuts
+ * and connections to their respective slots.
+ */
 void MainWindow::setupActions()
 {
     // File actions
@@ -372,6 +407,11 @@ void MainWindow::setupActions()
     connect(m_aboutAction, &QAction::triggered, this, &MainWindow::showAbout);
 }
 
+/**
+ * @brief Sets up the main toolbar.
+ * 
+ * Creates and populates the main toolbar with commonly used actions.
+ */
 void MainWindow::setupToolBar()
 {
     QToolBar *toolBar = addToolBar(tr("Main Toolbar"));
@@ -440,6 +480,12 @@ void MainWindow::setupToolBar()
     });
 }
 
+/**
+ * @brief Sets up the dock widgets.
+ * 
+ * Configures the file browser and preview dock widgets, including their
+ * initial positions and visibility states.
+ */
 void MainWindow::setupDockWidgets()
 {
     // Set up file browser
@@ -512,6 +558,11 @@ void MainWindow::setupDockWidgets()
     m_isPreviewVisible = true;
 }
 
+/**
+ * @brief Sets up the status bar.
+ * 
+ * Configures the status bar with permanent and temporary message areas.
+ */
 void MainWindow::setupStatusBar()
 {
     statusBar()->addPermanentWidget(m_statusLabel);
@@ -1124,11 +1175,11 @@ void MainWindow::closeTab(int index)
 
 void MainWindow::showAbout()
 {
-    QMessageBox::about(this, tr("About Qt Web Editor"),
-        tr("<h2>Qt Web Editor</h2>"
+    QMessageBox::about(this, tr("About Rapid"),
+        tr("<h2>Rapid</h2>"
            "<p>Version 1.0.0</p>"
-           "<p>A simple web development editor built with Qt</p>"
-           "<p> 2023 Your Company</p>"));
+           "<p>A beginner-friendly web development editor built with C++ and Qt.</p>"
+           "<p> 2025 Eldiiar Bekbolotov</p>"));
 }
 
 void MainWindow::updatePreview()

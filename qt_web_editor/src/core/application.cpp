@@ -1,3 +1,11 @@
+/**
+ * @file application.cpp
+ * @brief Implementation of the Application class.
+ * 
+ * This file contains the implementation of the Application class which serves as the
+ * central controller for the application, managing initialization, theming, and global settings.
+ */
+
 #include "application.h"
 #include "mainwindow.h"
 #include "settings.h"
@@ -8,14 +16,23 @@
 #include <QDir>
 #include <QStandardPaths>
 
+// Initialize static member
 Application *Application::s_instance = nullptr;
 
+/**
+ * @brief Constructs the Application instance.
+ * 
+ * Initializes the application with default settings and sets up the application metadata.
+ * 
+ * @param argc Number of command-line arguments.
+ * @param argv Array of command-line arguments.
+ */
 Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
     , m_settings(new Settings(this))
     , m_applicationName("Rapid")
     , m_organizationName("Rapid")
-    , m_organizationDomain("eldiiarbekbolotov.github.io/rapid")
+    , m_organizationDomain("rapideditor.dev")
 {
     s_instance = this;
     
@@ -43,6 +60,14 @@ Application::Application(int &argc, char **argv)
     connect(m_settings.data(), &Settings::themeChanged, this, &Application::onThemeChanged);
 }
 
+/**
+ * @brief Handles theme changes by loading the appropriate stylesheet.
+ * 
+ * This slot is called whenever the application's theme is changed. It loads
+ * the corresponding stylesheet and applies it to the application.
+ * 
+ * @param theme The new theme to apply.
+ */
 void Application::onThemeChanged(Settings::Theme theme)
 {
     QString themePath;
@@ -60,30 +85,51 @@ void Application::onThemeChanged(Settings::Theme theme)
     loadStyleSheet(themePath);
 }
 
+/**
+ * @brief Destroys the Application instance.
+ * 
+ * Cleans up resources and resets the singleton instance pointer.
+ */
 Application::~Application()
 {
     s_instance = nullptr;
 }
 
+/**
+ * @brief Initializes the application components.
+ * 
+ * This method completes the initialization of the application by:
+ * 1. Loading application settings
+ * 2. Applying the saved theme and font
+ * 3. Creating and showing the main window
+ */
 void Application::initialize()
 {
-    // Initialize settings
+    // Initialize settings from persistent storage
     m_settings->load();
     
-    // Apply saved theme
+    // Apply the saved theme
     onThemeChanged(m_settings->theme());
     
-    // Apply saved font
+    // Apply the saved font if one exists
     QFont savedFont = m_settings->font();
     if (savedFont != QFont()) {
         setApplicationFont(savedFont);
     }
     
-    // Create and show main window
+    // Create and show the main application window
     m_mainWindow.reset(new MainWindow);
     m_mainWindow->show();
 }
 
+/**
+ * @brief Sets the application's visual style.
+ * 
+ * Applies the specified style to the application if it's available.
+ * Logs a warning if the requested style is not found.
+ * 
+ * @param style Name of the style to apply (e.g., "Fusion", "Windows").
+ */
 void Application::setApplicationStyle(const QString &style)
 {
     if (QStyleFactory::keys().contains(style, Qt::CaseInsensitive)) {
@@ -116,11 +162,22 @@ void Application::loadStyleSheet(const QString &path)
     file.close();
 }
 
+/**
+ * @brief Returns the singleton instance of the Application.
+ * 
+ * @return Pointer to the Application instance.
+ * @warning This will return nullptr if called before the Application is constructed.
+ */
 Application *Application::instance()
 {
     return s_instance;
 }
 
+/**
+ * @brief Provides access to the application settings.
+ * 
+ * @return Pointer to the Settings instance.
+ */
 Settings *Application::settings() const
 {
     return m_settings.data();

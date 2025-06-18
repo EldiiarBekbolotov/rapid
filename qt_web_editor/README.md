@@ -1,59 +1,80 @@
-# Qt Web Editor
+# Rapid
 
-A lightweight web development text editor built with Qt, inspired by Brackets.
+A lightweight web development text editor built with C++ and Qt.
+
+## Quick Start (Tested on macOS)
+
+1. **Navigate to the project directory**:
+   ```bash
+   cd /path/to/rapid/qt_web_editor
+   ```
+
+2. **Clean previous build (if any)**:
+   ```bash
+   rm -rf build
+   ```
+
+3. **Create build directory and run CMake**:
+   ```bash
+   mkdir -p build
+   cd build
+   cmake ..
+   ```
+
+4. **Build the project**:
+   ```bash
+   cmake --build .
+   ```
+
+5. **Run the application**:
+   ```bash
+   ./QtWebEditor-1.0.0
+   ```
 
 ## Features
 
-- Cross-platform (Windows, macOS, Linux)
+- Cross-platform
 - File and folder browser
-- Syntax highlighting for HTML, CSS, JavaScript, and more
+- Syntax highlighting for HTML, CSS, JavaScript
 - Tabbed interface for multiple files
 - Real-time preview for HTML files
 - Light and dark themes
-- Customizable editor settings
+- and more...
 
-## Requirements
+## Prerequisites
 
-- Qt 5.15 or later (or Qt 6.0 or later)
-- CMake 3.16 or later
-- C++17 compatible compiler
+- Qt 6.x (tested with Qt 6.5.0)
+- CMake 3.16+
+- C++17 compatible compiler (tested with Apple Clang 17.0.0)
 
-## Building
+## Project Structure
 
-### Linux/macOS
+- `src/` - Source code
+- `resources/` - Icons and other resources
+- `forms/` - UI definition files
+- `cmake/` - CMake configuration files
 
-```bash
-mkdir -p build
-cd build
-cmake ..
-cmake --build .
-```
+## Building for Other Platforms
+
+### Linux
+
+Same as macOS instructions above. Make sure Qt development packages are installed.
 
 ### Windows
 
-```cmd
-mkdir build
-cd build
-cmake .. -G "Visual Studio 16 2019" -A x64
-cmake --build . --config Release
-```
-
-## Running
-
-After building, the executable will be in the `build` directory:
-
-```bash
-./QtWebEditor
-```
+1. Open "x64 Native Tools Command Prompt for VS 2022"
+2. Navigate to the project directory
+3. Run:
+   ```cmd
+   mkdir build
+   cd build
+   cmake .. -G "Visual Studio 17 2022" -A x64
+   cmake --build . --config Release
+   ```
+4. Run `QtWebEditor-1.0.0.exe` from the build directory
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Screenshots
-
-*(Screenshots will be added later)*
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+© 2025 [Eldiiar Bekbolotov](https://github.com/eldiiarbekbolotov) | [Rapid](https://github.com/eldiiarbekbolotov/rapid)
