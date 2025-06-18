@@ -77,4 +77,4 @@ Same as macOS instructions above. Make sure Qt development packages are installe
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-© 2025 [Eldiiar Bekbolotov](https://github.com/eldiiarbekbolotov) | [Rapid](https://github.com/eldiiarbekbolotov/rapid)
+Author: [Eldiiar Bekbolotov](https://github.com/eldiiarbekbolotov) 
