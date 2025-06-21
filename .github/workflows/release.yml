@@ -38,43 +38,68 @@ jobs:
       with:
         fetch-depth: 0
     
-    - name: Set up Qt
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
-        aqtversion: '2.2.0'
         version: '6.5.0'
         host: ${{ matrix.qt_host }}
         target: 'desktop'
         arch: ${{ matrix.qt_arch }}
         modules: 'qtwebengine'
-        setup-python: true
+        setup-python: false  # We already set up Python
+        aqtversion: '3.1.7'  # Specify a valid aqtinstall version
+        py7zrversion: '0.20.8'  # Explicitly specify py7zr version
+        extra: '--autodesktop'  # Add any extra aqtinstall arguments
     
     - name: Make scripts executable
-      if: runner.os != 'Windows'
-      run: chmod +x scripts/*.sh
+      run: |
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          # On Windows, ensure execution policy allows script execution
+          powershell -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force"
+        else
+          # On Unix-like systems, make scripts executable
+          chmod +x scripts/*.sh
+        fi
     
     - name: Create build directory
       run: |
-        mkdir -p build/${{ matrix.os }}
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          mkdir -p build/windows-latest
+        elif [ "${{ runner.os }}" = "Linux" ]; then
+          mkdir -p build/ubuntu-latest
+        else
+          mkdir -p build/macos-latest
+        fi
         
     - name: Build
-      working-directory: .
+      working-directory: ./qt_web_editor
       run: |
         if [ "${{ runner.os }}" = "Windows" ]; then
-          powershell -Command "& { $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; & '.\${{ matrix.build_script }}' }"
+          # On Windows, use PowerShell with error handling
+          $scriptName = [System.IO.Path]::GetFileName('${{ matrix.build_script }}')
+          powershell -Command "& { $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; & '..\scripts\$scriptName' }"
         else
-          chmod +x ./${{ matrix.build_script }}
-          ./${{ matrix.build_script }}
+          # On Unix-like systems, make script executable and run it
+          chmod +x ../${{ matrix.build_script }}
+          ../${{ matrix.build_script }}
         fi
     
     - name: Package
-      working-directory: .
+      working-directory: ./qt_web_editor
       run: |
         if [ "${{ runner.os }}" = "Windows" ]; then
-          powershell -Command "& { $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; & '.\${{ matrix.package_script }}' }"
+          # On Windows, use PowerShell with error handling
+          $scriptName = [System.IO.Path]::GetFileName('${{ matrix.package_script }}')
+          powershell -Command "& { $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; & '..\scripts\$scriptName' }"
         else
-          chmod +x ./${{ matrix.package_script }}
-          ./${{ matrix.package_script }}
+          # On Unix-like systems, make script executable and run it
+          chmod +x ../${{ matrix.package_script }}
+          ../${{ matrix.package_script }}
         fi
     
     - name: Package (Windows)
