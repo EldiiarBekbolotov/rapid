@@ -53,8 +53,8 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
-        python -m aqt install-qt windows desktop $env:QT_VERSION msvc2019_64
-        $qtPath = "C:\\Qt\\$env:QT_VERSION\\msvc2019_64\\lib\\cmake"
+        python -m aqt install-qt windows desktop $env:QT_VERSION msvc2022_64 -m qtwebengine
+        $qtPath = "C:\\Qt\\$env:QT_VERSION\\msvc2022_64\\lib\\cmake"
         Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
 
     - name: Configure and build (Linux/macOS)
