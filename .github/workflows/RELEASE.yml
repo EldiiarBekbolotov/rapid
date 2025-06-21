@@ -28,7 +28,7 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install Python dependencies
+    - name: Install Python deps
       run: |
         python -m pip install --upgrade pip
         python -m pip install aqtinstall py7zr
@@ -45,7 +45,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libglu1-mesa-dev
-        python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtbase
         python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtwebengine
         echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
 
@@ -54,11 +53,8 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
-        python -m pip install --upgrade pip
-        python -m pip install aqtinstall py7zr
-        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase
-        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtwebengine
-        $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
+        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2022_64 -m qtwebengine
+        $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2022_64\\lib\\cmake"
         Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
 
     - name: Configure and build (Linux/macOS)
@@ -87,17 +83,6 @@ jobs:
         $jobs = $Env:NUMBER_OF_PROCESSORS
         cmake --build . --config Release -- /m:$jobs
 
-    - name: Package macOS .app as .dmg
-      if: runner.os == 'macOS'
-      run: |
-        APP_PATH=$(find ${{ env.BUILD_DIR }} -name "*.app" | head -n1)
-        if [ -z "$APP_PATH" ]; then
-          echo "No .app found in build directory"
-          exit 1
-        fi
-        echo "Found app: $APP_PATH"
-        create-dmg --volname "MyApp" --window-size 500 300 --icon-size 128 --app-drop-link 375 150 "${APP_PATH}" "${{ env.BUILD_DIR }}/MyApp.dmg"
-
     - name: Upload artifacts
       if: always()
       uses: actions/upload-artifact@v4
@@ -106,5 +91,4 @@ jobs:
         path: |
           ${{ env.BUILD_DIR }}/*
           ${{ env.BUILD_DIR }}/bin/*
-
         retention-days: 1
