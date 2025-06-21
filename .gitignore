@@ -1,0 +1,100 @@
+# Build directories
+build/
+packages/
+
+# Qt Creator files
+*.pro.user
+*.pro.user.*
+
+# macOS specific
+.DS_Store
+
+# Executables
+*.app
+*.dmg
+*.msi
+
+# Debug files
+*.debug
+*.pdb
+
+# Release files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Qt related
+moc_*.cpp
+*.moc
+qrc_*.cpp
+ui_*.h
+*.qrc.depends
+*.qrc
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-*
+
+# Dependency directories
+node_modules/
+
+# Logs
+*.log
+
+# Local environment files
+.env
+.env.local
+
+# Executables (if any)
+*.exe
+*.app
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+*.cmake
+Makefile
+*.xcodeproj/
+*.xcodeproj/*.pbxuser
+*.xcodeproj/*.mode1v3
+*.xcodeproj/*.mode2v3
+*.xcodeproj/*.perspective*
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+.xcuserdata/
+
+# Build output directory
+bin/
+lib/
+
+# Package files
+*.dmg
+*.msi
+*.deb
+*.rpm
+
+# Temporary files
+*.swp
+*~
+*.bak
+*.backup
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Qt Creator specific
+*.user
+*.user.*
+
+# QMake generated files
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+
+# Qt Creator build directory
+build-*
