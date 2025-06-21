@@ -104,7 +104,10 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install setuptools wheel "py7zr==${{ env.PY7ZR_VERSION }}"
+        # Install py7zr with version constraint
+        python -m pip install "py7zr==${{ env.PY7ZR_VERSION }}"
+        # Install other dependencies
+        python -m pip install setuptools wheel
     
     - name: Install Qt
       id: install_qt
@@ -117,7 +120,7 @@ jobs:
         modules: 'qtwebengine'
         setup-python: false
         aqtversion: ${{ env.AQT_VERSION }}
-        py7zrversion: ${{ env.PY7ZR_VERSION }}
+        py7zrversion: '==${{ env.PY7ZR_VERSION }}'  # Add == prefix for version spec
         extra: '--autodesktop'
     
     - name: Verify Qt Installation
@@ -215,13 +218,15 @@ jobs:
         if-no-files-found: error
         compression-level: 9
     
+    - name: Set success status
+      if: success()
+      run: echo "Build completed successfully for ${{ matrix.os }} (${{ matrix.qt_arch }})"
+      shell: bash
+    
   release:
     name: Create Release
     needs: build
-    if: |
-      startsWith(github.ref, 'refs/tags/') && 
-      (needs.build.result == 'success' || 
-      (contains(needs.build.result, 'success') && !contains(needs.build.result, 'failure')))
+    if: startsWith(github.ref, 'refs/tags/') && needs.build.result == 'success'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
