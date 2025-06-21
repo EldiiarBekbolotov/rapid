@@ -33,6 +33,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install aqtinstall py7zr
 
+    # ---------- macOS ----------
     - name: Install Qt on macOS
       if: runner.os == 'macOS'
       run: |
@@ -40,14 +41,16 @@ jobs:
         brew install qt@6 create-dmg
         echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
 
+    # ---------- Ubuntu ----------
     - name: Install Qt on Ubuntu
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libglu1-mesa-dev
-        python -m aqt install-qt linux desktop $QT_VERSION gcc_64 -m qtbase qtwebengine
-        echo "CMAKE_PREFIX_PATH=$HOME/Qt/$QT_VERSION/gcc_64/lib/cmake" >> $GITHUB_ENV
+        python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtbase qtwebengine
+        echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
 
+    # ---------- Windows ----------
     - name: Install Qt on Windows
       if: runner.os == 'Windows'
       shell: pwsh
@@ -57,26 +60,24 @@ jobs:
         $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
         Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
 
+    # ---------- Build (Linux/macOS) ----------
     - name: Configure and build (Linux/macOS)
       if: runner.os != 'Windows'
       run: |
-        mkdir -p $BUILD_DIR
-        cd $BUILD_DIR
-        cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
-        cmake --build . --config Release -- -j$(nproc || sysctl -n hw.ncpu)
+        echo "CMAKE_PREFIX_PATH: $CMAKE_PREFIX_PATH"
+        mkdir -p ${{ env.BUILD_DIR }}
+        cd ${{ env.BUILD_DIR }}
 
-    - name: Create macOS DMG
-      if: runner.os == 'macOS'
-      run: |
-        cd $BUILD_DIR
-        APP_PATH=$(find . -name "*.app" | head -n 1)
-        echo "App found at: $APP_PATH"
-        mkdir -p dmg
-        create-dmg --volname "Rapid" \
-          --window-size 600 400 \
-          --app-drop-link 450 185 \
-          dmg/Rapid.dmg "$APP_PATH"
+        if command -v nproc >/dev/null; then
+          JOBS=$(nproc)
+        else
+          JOBS=$(sysctl -n hw.ncpu)
+        fi
 
+        cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"
+        cmake --build . --config Release -- -j$JOBS
+
+    # ---------- Build (Windows) ----------
     - name: Configure and build (Windows)
       if: runner.os == 'Windows'
       shell: pwsh
@@ -86,7 +87,28 @@ jobs:
         cmake $Env:GITHUB_WORKSPACE\qt_web_editor -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$Env:CMAKE_PREFIX_PATH
         cmake --build . --config Release -- /m:$Env:NUMBER_OF_PROCESSORS
 
-    - name: Upload Linux/Windows Artifacts
+    # ---------- Create DMG (macOS) ----------
+    - name: Create macOS DMG (styled)
+      if: runner.os == 'macOS'
+      run: |
+        cd ${{ env.BUILD_DIR }}
+
+        APP_NAME=$(ls *.app | head -n 1)
+        echo "App found at: $APP_NAME"
+
+        mkdir -p dmg
+        timeout 90 create-dmg \
+          --volname "Rapid" \
+          --window-size 600 400 \
+          --icon "$APP_NAME" 150 185 \
+          --app-drop-link 450 185 \
+          --hide-extension \
+          --no-internet-enable \
+          "dmg/Rapid.dmg" \
+          "$APP_NAME"
+
+    # ---------- Upload Artifacts ----------
+    - name: Upload Linux & Windows build
       if: runner.os != 'macOS'
       uses: actions/upload-artifact@v4
       with:
@@ -94,7 +116,7 @@ jobs:
         path: |
           ${{ env.BUILD_DIR }}/*
           ${{ env.BUILD_DIR }}/bin/*
-        retention-days: 7
+        retention-days: 5
 
     - name: Upload macOS DMG
       if: runner.os == 'macOS'
@@ -102,4 +124,4 @@ jobs:
       with:
         name: macos-dmg
         path: ${{ env.BUILD_DIR }}/dmg/Rapid.dmg
-        retention-days: 7
+        retention-days: 5
