@@ -1,28 +1,23 @@
 cmake_minimum_required(VERSION 3.16)
 project(QtWebEditor VERSION 1.0.0 LANGUAGES CXX)
 
-# Set application properties
 set(APP_NAME "Rapid")
 set(APP_DESCRIPTION "A lightweight web development text editor")
 set(APP_ORGANIZATION "Rapid")
 set(APP_DOMAIN "eldiiarbekbolotov.github.io.rapid")
 
-# Set C++ standard and automoc/autorcc/autouic
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-# Find Qt packages - Qt6 preferred, fallback to Qt5 if needed
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets WebEngineWidgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets WebEngineWidgets REQUIRED)
+# Force QT_VERSION_MAJOR (6)
+string(SUBSTRING "${Qt6_VERSION}" 0 1 QT_VERSION_MAJOR)
 
-# Include CMake modules if any
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
-include(SetAppIcon)
+# Find Qt packages explicitly with exact names and REQUIRED
+find_package(Qt6 COMPONENTS Widgets WebEngineWidgets REQUIRED)
 
-# Source files
 set(SOURCES
     src/main.cpp
     src/core/application.cpp
@@ -33,7 +28,6 @@ set(SOURCES
     src/utils/syntaxhighlighter.cpp
 )
 
-# Headers
 set(HEADERS
     src/core/application.h
     src/core/mainwindow.h
@@ -43,88 +37,79 @@ set(HEADERS
     src/utils/syntaxhighlighter.h
 )
 
-# UI Forms
 set(FORMS
     forms/mainwindow.ui
 )
 
-# Resources
 set(RESOURCES
     resources/resources.qrc
 )
 
-# Create executable with MACOSX_BUNDLE on Apple to produce .app bundle
-if(APPLE)
-    add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${SOURCES} ${HEADERS} ${FORMS} ${RESOURCES})
-else()
-    add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${FORMS} ${RESOURCES})
-endif()
+# This creates a macOS .app bundle automatically when APPLE is detected
+add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${SOURCES} ${HEADERS} ${FORMS} ${RESOURCES})
 
-# Link Qt libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE
-    Qt${QT_VERSION_MAJOR}::Widgets
-    Qt${QT_VERSION_MAJOR}::WebEngineWidgets
+    Qt6::Widgets
+    Qt6::WebEngineWidgets
 )
 
-# macOS bundle properties and icon
+# Set macOS bundle properties if on Apple
 if(APPLE)
     set_target_properties(${PROJECT_NAME} PROPERTIES
-        OUTPUT_NAME ${APP_NAME}
         MACOSX_BUNDLE_BUNDLE_NAME ${APP_NAME}
         MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
         MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION}
         MACOSX_BUNDLE_COPYRIGHT "Copyright © 2025 ${APP_ORGANIZATION}"
         MACOSX_BUNDLE_INFO_STRING "${APP_DESCRIPTION}"
-        MACOSX_BUNDLE_GUI_IDENTIFIER "${APP_DOMAIN}"
+        MACOSX_BUNDLE_GUI_IDENTIFIER "${APP_DOMAIN}.${APP_ORGANIZATION}"
+        MACOSX_BUNDLE_ICON_FILE app-icon.icns
     )
 
-    # Icon generation from SVG (if icon tools present)
+    # Set the icon (assumes you generate app-icon.icns and put in build dir)
     set(ICON_SVG "${CMAKE_SOURCE_DIR}/resources/icons/app-icon.svg")
     set(ICON_ICNS "${CMAKE_CURRENT_BINARY_DIR}/app-icon.icns")
 
-    function(generate_icns_from_svg SVG_FILE ICNS_FILE)
-        find_program(RSVG_CONVERT_EXECUTABLE rsvg-convert)
-        find_program(ICONUTIL_EXECUTABLE iconutil)
+    # Simple icon generation if rsvg-convert and iconutil are available
+    find_program(RSVG_CONVERT_EXECUTABLE rsvg-convert)
+    find_program(ICONUTIL_EXECUTABLE iconutil)
 
-        if(RSVG_CONVERT_EXECUTABLE AND ICONUTIL_EXECUTABLE)
-            set(ICONSET_DIR "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset")
-            file(MAKE_DIRECTORY ${ICONSET_DIR})
+    if(RSVG_CONVERT_EXECUTABLE AND ICONUTIL_EXECUTABLE)
+        file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset")
 
-            set(ICON_SIZES "16 32 64 128 256 512 1024")
-            foreach(SIZE ${ICON_SIZES})
-                set(OUTPUT_FILE "${ICONSET_DIR}/icon_${SIZE}x${SIZE}.png")
-                add_custom_command(
-                    OUTPUT ${OUTPUT_FILE}
-                    COMMAND ${RSVG_CONVERT_EXECUTABLE} -w ${SIZE} -h ${SIZE} ${SVG_FILE} -o ${OUTPUT_FILE}
-                    DEPENDS ${SVG_FILE}
-                    COMMENT "Generating ${SIZE}x${SIZE} icon"
-                )
-                list(APPEND GENERATED_PNGS ${OUTPUT_FILE})
-            endforeach()
-
+        foreach(size 16 32 64 128 256 512 1024)
             add_custom_command(
-                OUTPUT ${ICNS_FILE}
-                COMMAND ${ICONUTIL_EXECUTABLE} -c icns -o ${ICNS_FILE} ${ICONSET_DIR}
-                DEPENDS ${GENERATED_PNGS}
-                COMMENT "Generating .icns file"
+                OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_${size}x${size}.png"
+                COMMAND ${RSVG_CONVERT_EXECUTABLE} -w ${size} -h ${size} ${ICON_SVG} -o "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_${size}x${size}.png"
+                DEPENDS ${ICON_SVG}
             )
-        else()
-            message(WARNING "rsvg-convert or iconutil not found. Using default icon.")
-        endif()
-    endfunction()
+        endforeach()
 
-    generate_icns_from_svg(${ICON_SVG} ${ICON_ICNS})
-
-    set_source_files_properties(${ICON_ICNS} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
-    set(RESOURCES ${RESOURCES} ${ICON_ICNS})
-
-    set_target_properties(${PROJECT_NAME} PROPERTIES
-        MACOSX_BUNDLE_ICON_FILE app-icon.icns
-        RESOURCE "${ICON_ICNS}"
-    )
+        add_custom_command(
+            OUTPUT ${ICON_ICNS}
+            COMMAND ${ICONUTIL_EXECUTABLE} -c icns -o ${ICON_ICNS} "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset"
+            DEPENDS
+                "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_16x16.png"
+                "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_32x32.png"
+                "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_64x64.png"
+                "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_128x128.png"
+                "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_256x256.png"
+                "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_512x512.png"
+                "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.iconset/icon_1024x1024.png"
+        )
+        add_custom_target(GenerateIcons ALL DEPENDS ${ICON_ICNS})
+        add_dependencies(${PROJECT_NAME} GenerateIcons)
+        set_source_files_properties(${ICON_ICNS} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
+        target_sources(${PROJECT_NAME} PRIVATE ${ICON_ICNS})
+    endif()
 endif()
 
-# Installation targets for all platforms
+# Copy resource directory after build
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/resources $<TARGET_FILE_DIR:${PROJECT_NAME}>/resources
+)
+
+# Install rules
 install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION bin
     BUNDLE DESTINATION .
@@ -133,21 +118,6 @@ install(TARGETS ${PROJECT_NAME}
 
 install(DIRECTORY resources/
     DESTINATION resources
-    USE_SOURCE_PERMISSIONS
     FILES_MATCHING PATTERN "*"
     PATTERN "*.qrc" EXCLUDE
-)
-
-# Run target for quick run
-add_custom_target(run
-    COMMAND $<TARGET_FILE:${PROJECT_NAME}>
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-    DEPENDS ${PROJECT_NAME}
-    COMMENT "Running ${PROJECT_NAME}..."
-)
-
-# Copy resources after build to output folder (or bundle Resources on macOS)
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_SOURCE_DIR}/resources $<TARGET_FILE_DIR:${PROJECT_NAME}>/resources
 )

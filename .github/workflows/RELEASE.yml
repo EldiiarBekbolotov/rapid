@@ -40,7 +40,7 @@ jobs:
         brew install qt@6
         echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
 
-    - name: Install create-dmg (macOS)
+    - name: Install create-dmg on macOS
       if: runner.os == 'macOS'
       run: |
         npm install -g create-dmg
@@ -69,7 +69,6 @@ jobs:
     - name: Configure and build (Linux/macOS)
       if: runner.os != 'Windows'
       run: |
-        echo "CMAKE_PREFIX_PATH: $CMAKE_PREFIX_PATH"
         mkdir -p ${{ env.BUILD_DIR }}
         cd ${{ env.BUILD_DIR }}
 
