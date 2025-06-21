@@ -1,4 +1,4 @@
-name: CI
+name: RELEASE
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Debug - Environment
       shell: bash
       run: |
@@ -32,74 +32,77 @@ jobs:
         echo "Event: ${{ github.event_name }}"
         echo "Ref: ${{ github.ref }}"
         echo "Workflow: ${{ github.workflow }}"
-    
+
     - name: Setup Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
-    - name: Install dependencies (Ubuntu & Windows)
+    - name: Install Python dependencies
       shell: bash
-      if: runner.os != 'macOS'
       run: |
         python -m pip install --upgrade pip
         python -m pip install aqtinstall py7zr
 
-    - name: Install Qt (macOS)
+    - name: Install Qt on macOS
       if: runner.os == 'macOS'
       run: |
         brew update
         brew install qt@6
+        echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
 
-    - name: Set CMAKE_PREFIX_PATH (macOS)
-      if: runner.os == 'macOS'
-      run: echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
-
-    - name: Install Qt (Ubuntu)
+    - name: Install Qt on Ubuntu
       if: runner.os == 'Linux'
-      shell: bash
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libglu1-mesa-dev
-        python -m pip install --upgrade pip
-        python -m pip install aqtinstall py7zr
-        # Install Qt using aqtinstall
         python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtwebengine
         echo "$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_PATH
         echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
 
-    - name: Install Qt (Windows)
+    - name: Install Qt on Windows
       if: runner.os == 'Windows'
-      shell: bash
+      shell: pwsh
       run: |
         choco install -y 7zip
-        python -m pip install --upgrade pip
-        python -m pip install aqtinstall py7zr
-        python -m aqt install-qt windows desktop ${{ env.QT_VERSION }} msvc2019_64 -m qtwebengine
-        echo "C:\\Qt\\${{ env.QT_VERSION }}\\msvc2019_64\\lib\\cmake" >> $GITHUB_PATH
-        echo "CMAKE_PREFIX_PATH=C:\\Qt\\${{ env.QT_VERSION }}\\msvc2019_64\\lib\\cmake" >> $GITHUB_ENV
+        python -m aqt install-qt windows desktop $env:QT_VERSION msvc2019_64 -m qtwebengine
+        $qtPath = "C:\\Qt\\$env:QT_VERSION\\msvc2019_64\\lib\\cmake"
+        Add-Content -Path $Env:GITHUB_PATH -Value $qtPath
+        Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
 
-    - name: Configure and build
+    - name: Configure and build (Linux/macOS)
+      if: runner.os != 'Windows'
       shell: bash
       run: |
         echo "Current PATH: $PATH"
         echo "CMAKE_PREFIX_PATH: $CMAKE_PREFIX_PATH"
-
+        
         mkdir -p ${{ env.BUILD_DIR }}
         cd ${{ env.BUILD_DIR }}
-
+        
         cmake $GITHUB_WORKSPACE/qt_web_editor \
           -DCMAKE_BUILD_TYPE=Release \
           -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
-
-        # Use nproc on Linux/macOS, fallback on Windows to number of processors env var
-        if [[ "$(uname)" == "Linux" || "$(uname)" == "Darwin" ]]; then
-          JOBS=$(nproc)
-        else
-          JOBS=$env:NUMBER_OF_PROCESSORS
-        fi
-
+        
+        JOBS=$(nproc)
         cmake --build . --config Release -- -j$JOBS
+
+    - name: Configure and build (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      run: |
+        Write-Host "Current PATH: $Env:PATH"
+        Write-Host "CMAKE_PREFIX_PATH: $Env:CMAKE_PREFIX_PATH"
+        
+        New-Item -ItemType Directory -Path $Env:BUILD_DIR -Force | Out-Null
+        Set-Location $Env:BUILD_DIR
+        
+        cmake $Env:GITHUB_WORKSPACE\qt_web_editor `
+          -DCMAKE_BUILD_TYPE=Release `
+          -DCMAKE_PREFIX_PATH=$Env:CMAKE_PREFIX_PATH
+        
+        $jobs = $Env:NUMBER_OF_PROCESSORS
+        cmake --build . --config Release -- /m:$jobs
 
     - name: Upload artifacts
       if: always()
