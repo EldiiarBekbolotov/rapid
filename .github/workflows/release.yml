@@ -12,6 +12,8 @@ env:
   QT_VERSION: '6.5.0'
   AQT_VERSION: '3.1.7'
   PY7ZR_VERSION: '0.20.8'
+  BUILD_DIR: build/${{ runner.os }}
+  PACKAGE_DIR: packages
 
 jobs:
   build:
@@ -104,19 +106,14 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install setuptools wheel
+        python -m pip install setuptools wheel "py7zr==${{ env.PY7ZR_VERSION }}"
+        python -m pip install aqtinstall==${{ env.AQT_VERSION }}
     
     - name: Install Qt
       id: install_qt
-      uses: jurplel/install-qt-action@v3
-      with:
-        version: ${{ env.QT_VERSION }}
-        host: ${{ matrix.qt_host }}
-        target: ${{ matrix.target }}
-        arch: ${{ matrix.qt_arch }}
-        modules: 'qtwebengine'
-        setup-python: false
-        extra: '--autodesktop'
+      run: |
+        python -m aqt install-qt ${{ matrix.qt_host }} desktop ${{ env.QT_VERSION }} ${{ matrix.qt_arch }} -m qtwebengine --autodesktop
+      shell: bash
     
     - name: Verify Qt Installation
       run: |
@@ -156,15 +153,10 @@ jobs:
           chmod +x scripts/*.sh
         fi
     
-    - name: Create build directory
+    - name: Create build directories
       run: |
-        if [ "${{ runner.os }}" = "Windows" ]; then
-          mkdir -p build/windows-latest
-        elif [ "${{ runner.os }}" = "Linux" ]; then
-          mkdir -p build/ubuntu-latest
-        else
-          mkdir -p build/macos-latest
-        fi
+        mkdir -p ${{ env.BUILD_DIR }}
+        mkdir -p ${{ env.PACKAGE_DIR }}
         
     - name: Build
       working-directory: ./qt_web_editor
@@ -204,11 +196,8 @@ jobs:
       with:
         name: ${{ matrix.artifact_name }}-${{ github.run_id }}
         path: |
-          ${{ github.workspace }}/packages/**/*
-          ${{ github.workspace }}/build/**/*.wasm
-          ${{ github.workspace }}/build/**/*.js
-          ${{ github.workspace }}/build/**/*.html
-          ${{ github.workspace }}/build/wasm/bin/*
+          ${{ env.PACKAGE_DIR }}/**/*
+          ${{ env.BUILD_DIR }}/**/*.{wasm,js,html}
         retention-days: 5
         if-no-files-found: error
         compression-level: 9
@@ -221,8 +210,19 @@ jobs:
   release:
     name: Create Release
     needs: build
-    if: startsWith(github.ref, 'refs/tags/') && needs.build.result == 'success'
+    if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
+    
+    # Only run if the build job was successful
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            artifact_name: 'Rapid-macOS'
+          - os: windows-latest
+            artifact_name: 'Rapid-Windows'
+          - os: ubuntu-latest
+            artifact_name: 'Rapid-Web'
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -335,14 +335,4 @@ jobs:
           git push -f https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main:gh-pages
         fi
     
-    - name: Create Release
-      if: github.ref_type == 'tag' && runner.os == 'ubuntu-latest'
-      uses: softprops/action-gh-release@v1
-      with:
-        files: |
-          **/*.dmg
-          **/*.msi
-          **/*.zip
-          **/*.tar.gz
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # Release is created by the softprops/action-gh-release@v1 action above
