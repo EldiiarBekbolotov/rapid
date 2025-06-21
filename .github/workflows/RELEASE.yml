@@ -54,9 +54,12 @@ jobs:
             echo "CMAKE_PREFIX_PATH=${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/win64_msvc2019_64/lib/cmake" >> $GITHUB_ENV
             
           elif [[ "${{ runner.os }}" == "macOS" ]]; then
-            # macOS - Install Qt with WebEngine support
-            brew install qt --with-webengine
-            echo "CMAKE_PREFIX_PATH=$(brew --prefix qt)/lib/cmake" >> $GITHUB_ENV
+            # macOS - Install Qt using aqtinstall
+            python -m pip install aqtinstall
+            python -m aqt install-qt mac desktop ${{ env.QT_VERSION }} clang_64 \
+              -m qtwebengine \
+              --outputdir "${{ runner.temp }}/Qt"
+            echo "CMAKE_PREFIX_PATH=${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/clang_64/lib/cmake" >> $GITHUB_ENV
             
           else
             # Linux
