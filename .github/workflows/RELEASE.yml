@@ -10,7 +10,6 @@ on:
 env:
   QT_VERSION: '6.6.3'
   BUILD_DIR: 'build'
-  APP_NAME: 'Rapid'
 
 jobs:
   build:
@@ -29,7 +28,7 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install Python dependencies
+    - name: Install Python deps
       run: |
         python -m pip install --upgrade pip
         python -m pip install aqtinstall py7zr
@@ -38,15 +37,16 @@ jobs:
       if: runner.os == 'macOS'
       run: |
         brew update
-        brew install qt create-dmg
-        echo "CMAKE_PREFIX_PATH=$(brew --prefix qt)/lib/cmake" >> $GITHUB_ENV
+        brew install qt@6 create-dmg
+        echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
 
     - name: Install Qt on Ubuntu
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libglu1-mesa-dev
-        python -m aqt install-qt linux desktop $QT_VERSION gcc_64 -m qtbase,qtwebengine
+        python -m aqt install-qt linux desktop $QT_VERSION gcc_64 -m qtbase
+        python -m aqt install-qt linux desktop $QT_VERSION gcc_64 -m qtwebengine
         echo "CMAKE_PREFIX_PATH=$HOME/Qt/$QT_VERSION/gcc_64/lib/cmake" >> $GITHUB_ENV
 
     - name: Install Qt on Windows
@@ -54,66 +54,66 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
-        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase,qtwebengine
+        python -m pip install --upgrade pip
+        python -m pip install aqtinstall py7zr
+        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase
+        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtwebengine
         $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
-        Add-Content -Path $env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
+        Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
 
-    - name: Build (Linux/macOS)
+    - name: Configure and build (Linux/macOS)
       if: runner.os != 'Windows'
       run: |
         echo "CMAKE_PREFIX_PATH: $CMAKE_PREFIX_PATH"
         mkdir -p $BUILD_DIR
         cd $BUILD_DIR
-        cmake ../qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
-        cmake --build . --config Release --parallel
 
-    - name: Build (Windows)
-      if: runner.os == 'Windows'
-      shell: pwsh
-      run: |
-        New-Item -ItemType Directory -Path $env:BUILD_DIR -Force | Out-Null
-        Set-Location $env:BUILD_DIR
-        cmake ../qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$env:CMAKE_PREFIX_PATH"
-        cmake --build . --config Release -- /m
+        if command -v nproc >/dev/null; then
+          JOBS=$(nproc)
+        else
+          JOBS=$(sysctl -n hw.ncpu)
+        fi
 
-    - name: Package macOS .dmg
+        cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH" -DCMAKE_OSX_ARCHITECTURES=arm64
+        cmake --build . --config Release -- -j$JOBS
+
+    - name: Create macOS DMG
       if: runner.os == 'macOS'
       run: |
         cd $BUILD_DIR
-        APP_PATH=$(find . -type d -name "*.app" | head -n 1)
+        APP_PATH=$(find . -name "*.app" | head -n 1)
         echo "App found at: $APP_PATH"
         mkdir -p dmg
-        create-dmg \
-          --volname "Rapid" \
+        create-dmg --volname "Rapid" \
           --window-size 600 400 \
-          --icon-size 100 \
-          --app-drop-link 400 200 \
+          --app-drop-link 450 185 \
+          --no-internet-enable \
+          --skip-quick-look \
           "dmg/Rapid.dmg" "$APP_PATH"
+
+    - name: Configure and build (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      run: |
+        New-Item -ItemType Directory -Path $Env:BUILD_DIR -Force | Out-Null
+        Set-Location $Env:BUILD_DIR
+        cmake $Env:GITHUB_WORKSPACE\qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$Env:CMAKE_PREFIX_PATH
+        cmake --build . --config Release -- /m:$Env:NUMBER_OF_PROCESSORS
+
+    - name: Upload Linux/Windows Artifacts
+      if: runner.os != 'macOS'
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-${{ matrix.os }}
+        path: |
+          ${{ env.BUILD_DIR }}/*
+          ${{ env.BUILD_DIR }}/bin/*
+        retention-days: 7
 
     - name: Upload macOS DMG
       if: runner.os == 'macOS'
       uses: actions/upload-artifact@v4
       with:
-        name: Rapid-macOS
-        path: build/dmg/Rapid.dmg
-        retention-days: 7
-
-    - name: Upload Windows Build
-      if: runner.os == 'Windows'
-      uses: actions/upload-artifact@v4
-      with:
-        name: Rapid-Windows
-        path: |
-          build\Release\*.exe
-          build\*.exe
-        retention-days: 7
-
-    - name: Upload Ubuntu Build
-      if: runner.os == 'Linux'
-      uses: actions/upload-artifact@v4
-      with:
-        name: Rapid-Ubuntu
-        path: |
-          build/*
-          !**/*.o
+        name: macos-dmg
+        path: ${{ env.BUILD_DIR }}/dmg/Rapid.dmg
         retention-days: 7
