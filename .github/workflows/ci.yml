@@ -7,6 +7,11 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  QT_VERSION: '6.5.0'
+  QT_ARCH: 'wasm_32'
+  BUILD_DIR: 'build'
+
 jobs:
   build:
     name: Build (${{ matrix.os }})
@@ -17,7 +22,18 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
     
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Debug - Environment
+      shell: bash
+      run: |
+        echo "Runner OS: ${{ runner.os }}"
+        echo "Runner temp: ${{ runner.temp }}"
+        echo "Workspace: ${{ github.workspace }}"
+        echo "Event: ${{ github.event_name }}"
+        echo "Ref: ${{ github.ref }}"
+        echo "Workflow: ${{ github.workflow }}"
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -28,37 +44,69 @@ jobs:
       shell: bash
       run: |
         python -m pip install --upgrade pip
-        python -m pip install aqtinstall
+        python -m pip install aqtinstall py7zr
     
     - name: Install Qt
+      id: install_qt
       shell: bash
       run: |
-        # Install Qt
-        python -m aqt install-qt ${{ runner.os }} desktop 6.5.0 wasm_32 -m qtwebengine
+        echo "Installing Qt ${{ env.QT_VERSION }} for ${{ runner.os }}"
         
-        # Add Qt to PATH
+        # Set architecture based on OS
         if [ "${{ runner.os }}" = "macOS" ]; then
-          echo "$HOME/Qt/6.5.0/wasm_32/bin" >> $GITHUB_PATH
+          ARCH="clang_64"
         elif [ "${{ runner.os }}" = "Linux" ]; then
-          echo "$HOME/Qt/6.5.0/wasm_32/bin" >> $GITHUB_PATH
+          ARCH="gcc_64"
           sudo apt-get update
           sudo apt-get install -y build-essential
         else  # Windows
-          echo "C:\\Qt\\6.5.0\\wasm_32\\bin" >> $GITHUB_PATH
+          ARCH="msvc2019_64"
+          choco install -y 7zip
         fi
+        
+        echo "Using architecture: $ARCH"
+        
+        # Install Qt
+        python -m aqt install-qt ${{ runner.os }} desktop ${{ env.QT_VERSION }} $ARCH -m qtwebengine
+        
+        # Set Qt path
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          QT_PATH="C:\\Qt\\${{ env.QT_VERSION }}\\$ARCH"
+        else
+          QT_PATH="$HOME/Qt/${{ env.QT_VERSION }}/$ARCH"
+        fi
+        
+        echo "Qt installation path: $QT_PATH"
+        echo "$QT_PATH/bin" >> $GITHUB_PATH
+        echo "QT_PATH=$QT_PATH" >> $GITHUB_ENV
+        
+        # Verify qmake
+        qmake --version || echo "qmake not found in PATH"
+        which qmake || true
     
     - name: Configure and build
       shell: bash
       run: |
-        mkdir -p build
-        cd build
-        cmake ../../qt_web_editor -DCMAKE_BUILD_TYPE=Release
-        cmake --build . --config Release
+        echo "Current PATH: $PATH"
+        echo "qmake location: $(which qmake || echo 'not found')"
+        
+        mkdir -p ${{ env.BUILD_DIR }}
+        cd ${{ env.BUILD_DIR }}
+        
+        # Configure
+        cmake $GITHUB_WORKSPACE/qt_web_editor \
+          -DCMAKE_BUILD_TYPE=Release \
+          -DCMAKE_PREFIX_PATH="$QT_PATH"
+        
+        # Build
+        cmake --build . --config Release -- -j$(nproc)
 
     - name: Upload artifacts
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: build-${{ matrix.os }}
-        path: build/
+        path: |
+          ${{ env.BUILD_DIR }}/*
+          ${{ env.BUILD_DIR }}/bin/*
         retention-days: 1
