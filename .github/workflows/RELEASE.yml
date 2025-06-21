@@ -45,8 +45,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libglu1-mesa-dev
-        python -m aqt install-qt linux desktop $QT_VERSION gcc_64 -m qtbase
-        python -m aqt install-qt linux desktop $QT_VERSION gcc_64 -m qtwebengine
+        python -m aqt install-qt linux desktop $QT_VERSION gcc_64 -m qtbase qtwebengine
         echo "CMAKE_PREFIX_PATH=$HOME/Qt/$QT_VERSION/gcc_64/lib/cmake" >> $GITHUB_ENV
 
     - name: Install Qt on Windows
@@ -54,28 +53,17 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
-        python -m pip install --upgrade pip
-        python -m pip install aqtinstall py7zr
-        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase
-        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtwebengine
+        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase qtwebengine
         $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
         Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
 
     - name: Configure and build (Linux/macOS)
       if: runner.os != 'Windows'
       run: |
-        echo "CMAKE_PREFIX_PATH: $CMAKE_PREFIX_PATH"
         mkdir -p $BUILD_DIR
         cd $BUILD_DIR
-
-        if command -v nproc >/dev/null; then
-          JOBS=$(nproc)
-        else
-          JOBS=$(sysctl -n hw.ncpu)
-        fi
-
-        cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH" -DCMAKE_OSX_ARCHITECTURES=arm64
-        cmake --build . --config Release -- -j$JOBS
+        cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
+        cmake --build . --config Release -- -j$(nproc || sysctl -n hw.ncpu)
 
     - name: Create macOS DMG
       if: runner.os == 'macOS'
@@ -87,9 +75,7 @@ jobs:
         create-dmg --volname "Rapid" \
           --window-size 600 400 \
           --app-drop-link 450 185 \
-          --no-internet-enable \
-          --skip-quick-look \
-          "dmg/Rapid.dmg" "$APP_PATH"
+          dmg/Rapid.dmg "$APP_PATH"
 
     - name: Configure and build (Windows)
       if: runner.os == 'Windows'
@@ -97,7 +83,7 @@ jobs:
       run: |
         New-Item -ItemType Directory -Path $Env:BUILD_DIR -Force | Out-Null
         Set-Location $Env:BUILD_DIR
-        cmake $Env:GITHUB_WORKSPACE\qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$Env:CMAKE_PREFIX_PATH
+        cmake $Env:GITHUB_WORKSPACE\qt_web_editor -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$Env:CMAKE_PREFIX_PATH
         cmake --build . --config Release -- /m:$Env:NUMBER_OF_PROCESSORS
 
     - name: Upload Linux/Windows Artifacts
