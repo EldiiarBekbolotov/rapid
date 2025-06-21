@@ -45,6 +45,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libglu1-mesa-dev
+        python -m pip install --upgrade pip
+        python -m pip install aqtinstall py7zr
+        python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtbase
         python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtwebengine
         echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
 
@@ -53,10 +56,13 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
-        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2022_64 -m qtwebengine
-        $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2022_64\\lib\\cmake"
+        python -m pip install --upgrade pip
+        python -m pip install aqtinstall py7zr
+        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase
+        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtwebengine
+        $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
         Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
-
+        
     - name: Configure and build (Linux/macOS)
       if: runner.os != 'Windows'
       run: |
