@@ -126,8 +126,14 @@ jobs:
           exit 1
         fi
         
-        # Verify Qt version
-        QT_VERSION_ACTUAL=$(qmake --version | grep -oP '(?<=Using Qt version )\d+\.\d+\.\d+')
+        # Verify Qt version (using sed for cross-platform compatibility)
+        QT_VERSION_ACTUAL=$(qmake --version | sed -n 's/.*Using Qt version \([0-9]\+\.[0-9]\+\.[0-9]\+\).*/\1/p')
+        if [[ -z "$QT_VERSION_ACTUAL" ]]; then
+          echo "❌ Could not determine Qt version from qmake output:"
+          qmake --version
+          exit 1
+        fi
+        
         if [[ "$QT_VERSION_ACTUAL" != "${{ env.QT_VERSION }}"* ]]; then
           echo "❌ Wrong Qt version: $QT_VERSION_ACTUAL (expected ${{ env.QT_VERSION }})"
           exit 1
