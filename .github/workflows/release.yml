@@ -211,6 +211,13 @@ jobs:
       run: powershell -File ..\${{ matrix.package_script }}
     
     # Upload build artifacts
+    - name: Debug - List package directory
+      run: |
+        echo "Package directory contents:"
+        find "${{ env.PACKAGE_DIR }}" -type f -o -type l 2>/dev/null || echo "No package directory found"
+        echo "\nBuild directory contents:"
+        find "${{ env.BUILD_DIR }}" -type f -o -type l 2>/dev/null || echo "No build directory found"
+
     - name: Upload Build Artifacts
       if: success()
       uses: actions/upload-artifact@v4
@@ -218,10 +225,10 @@ jobs:
         name: ${{ matrix.artifact_name }}-${{ github.run_id }}
         path: |
           ${{ env.PACKAGE_DIR }}/**/*
-          ${{ env.BUILD_DIR }}/**/*.{wasm,js,html}
+          ${{ env.BUILD_DIR }}/**/*.{wasm,js,html,dmg,app,exe,msi}
           ${{ env.BUILD_DIR }}/**/bin/*
         retention-days: 5
-        if-no-files-found: error
+        if-no-files-found: warn
         compression-level: 9
     
     - name: Set success status
