@@ -1,127 +1,147 @@
-name: RELEASE
+name: Release Build
 
 on:
   push:
-    branches: [ main ]
-    tags: [ 'v*' ]
+    branches: [main]
+    tags: ['v*']
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
   QT_VERSION: '6.6.3'
-  BUILD_DIR: 'build'
+  BUILD_DIR: build
 
 jobs:
   build:
-    name: Build (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+            qt_arch: gcc_64
+            qt_host: linux
+            qt_target: desktop
+            cache_path: ~/Qt
+          - os: macos-latest
+            qt_arch: clang_64
+            qt_host: mac
+            qt_target: desktop
+            cache_path: ~/Qt
+          - os: windows-latest
+            qt_arch: win64_msvc2019_64
+            qt_host: windows
+            qt_target: desktop
+            cache_path: C:/Qt
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-    - name: Install Python deps
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install aqtinstall py7zr
+      - name: Cache Qt installation
+        uses: actions/cache@v3
+        id: qt-cache
+        with:
+          path: ${{ matrix.cache_path }}
+          key: ${{ runner.os }}-qt-${{ env.QT_VERSION }}
 
-    # ---------- macOS ----------
-    - name: Install Qt on macOS
-      if: runner.os == 'macOS'
-      run: |
-        brew update
-        brew install qt@6 create-dmg
-        echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
+      - name: Install system deps (Linux only)
+        if: runner.os == 'Linux' && steps.qt-cache.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libgl1-mesa-dev libglu1-mesa-dev libxcb-xfixes0
 
-    # ---------- Ubuntu ----------
-    - name: Install Qt on Ubuntu
-      if: runner.os == 'Linux'
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y build-essential libglu1-mesa-dev
-        python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtbase qtwebengine
-        echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
+      - name: Install Qt via aqtinstall
+        if: steps.qt-cache.outputs.cache-hit != 'true'
+        run: |
+          python -m pip install --upgrade pip aqtinstall
+          if [[ "${{ runner.os }}" == "Windows" ]]; then
+            choco install -y 7zip
+          fi
+          python -m aqt install-qt ${{ matrix.qt_host }} ${{ matrix.qt_target }} ${{ env.QT_VERSION }} ${{ matrix.qt_arch }} \
+            -m qtbase qtwebengine qtsvg qttools \
+            --outputdir "${{ matrix.cache_path }}"
+          echo "CMAKE_PREFIX_PATH=${{ matrix.cache_path }}/${{ env.QT_VERSION }}/${{ matrix.qt_arch }}/lib/cmake" >> $GITHUB_ENV
 
-    # ---------- Windows ----------
-    - name: Install Qt on Windows
-      if: runner.os == 'Windows'
-      shell: pwsh
-      run: |
-        choco install -y 7zip
-        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase qtwebengine
-        $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
-        Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
+      - name: Configure CMake
+        run: |
+          mkdir -p ${{ env.BUILD_DIR }}
+          cd ${{ env.BUILD_DIR }}
 
-    # ---------- Build (Linux/macOS) ----------
-    - name: Configure and build (Linux/macOS)
-      if: runner.os != 'Windows'
-      run: |
-        echo "CMAKE_PREFIX_PATH: $CMAKE_PREFIX_PATH"
-        mkdir -p ${{ env.BUILD_DIR }}
-        cd ${{ env.BUILD_DIR }}
+          if [[ "${{ runner.os }}" == "Windows" ]]; then
+            cmake $GITHUB_WORKSPACE/qt_web_editor -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
+          else
+            cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
+          fi
 
-        if command -v nproc >/dev/null; then
-          JOBS=$(nproc)
-        else
-          JOBS=$(sysctl -n hw.ncpu)
-        fi
+      - name: Build
+        run: |
+          cd ${{ env.BUILD_DIR }}
+          if [[ "${{ runner.os }}" == "Windows" ]]; then
+            cmake --build . --config Release -- /m:$NUMBER_OF_PROCESSORS
+          else
+            cmake --build . --config Release -- -j$(nproc 2>/dev/null || sysctl -n hw.ncpu)
+          fi
 
-        cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"
-        cmake --build . --config Release -- -j$JOBS
+      - name: Package macOS DMG
+        if: runner.os == 'macOS'
+        run: |
+          brew install create-dmg
+          cd ${{ env.BUILD_DIR }}
 
-    # ---------- Build (Windows) ----------
-    - name: Configure and build (Windows)
-      if: runner.os == 'Windows'
-      shell: pwsh
-      run: |
-        New-Item -ItemType Directory -Path $Env:BUILD_DIR -Force | Out-Null
-        Set-Location $Env:BUILD_DIR
-        cmake $Env:GITHUB_WORKSPACE\qt_web_editor -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$Env:CMAKE_PREFIX_PATH
-        cmake --build . --config Release -- /m:$Env:NUMBER_OF_PROCESSORS
+          APP_BUNDLE=$(find . -maxdepth 1 -name "*.app" | head -n 1)
+          if [ -z "$APP_BUNDLE" ]; then
+            echo "::error::No .app bundle found"
+            exit 1
+          fi
 
-    # ---------- Create DMG (macOS) ----------
-    - name: Create macOS DMG (styled)
-      if: runner.os == 'macOS'
-      run: |
-        cd ${{ env.BUILD_DIR }}
+          mkdir -p package
+          create-dmg \
+            --volname "Rapid" \
+            --volicon "$GITHUB_WORKSPACE/qt_web_editor/resources/icons/app-icon.icns" \
+            --window-pos 200 120 \
+            --window-size 800 400 \
+            --icon-size 100 \
+            --icon "$(basename "$APP_BUNDLE")" 200 190 \
+            --hide-extension "$(basename "$APP_BUNDLE")" \
+            --app-drop-link 600 185 \
+            --no-internet-enable \
+            "package/Rapid.dmg" \
+            "$APP_BUNDLE"
 
-        APP_NAME=$(ls *.app | head -n 1)
-        echo "App found at: $APP_NAME"
+      - name: Package Windows ZIP
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $buildDir = "${{ env.BUILD_DIR }}"
+          $packageDir = "$buildDir/package"
+          New-Item -ItemType Directory -Path $packageDir -Force | Out-Null
 
-        mkdir -p dmg
-        timeout 90 create-dmg \
-          --volname "Rapid" \
-          --window-size 600 400 \
-          --icon "$APP_NAME" 150 185 \
-          --app-drop-link 450 185 \
-          --hide-extension \
-          --no-internet-enable \
-          "dmg/Rapid.dmg" \
-          "$APP_NAME"
+          Copy-Item "$buildDir/Release/*.exe" -Destination $packageDir
+          Copy-Item "$buildDir/Release/*.dll" -Destination $packageDir -ErrorAction SilentlyContinue
 
-    # ---------- Upload Artifacts ----------
-    - name: Upload Linux & Windows build
-      if: runner.os != 'macOS'
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-${{ matrix.os }}
-        path: |
-          ${{ env.BUILD_DIR }}/*
-          ${{ env.BUILD_DIR }}/bin/*
-        retention-days: 5
+          Compress-Archive -Path "$packageDir/*" -DestinationPath "$buildDir/Rapid-Windows.zip" -Force
 
-    - name: Upload macOS DMG
-      if: runner.os == 'macOS'
-      uses: actions/upload-artifact@v4
-      with:
-        name: macos-dmg
-        path: ${{ env.BUILD_DIR }}/dmg/Rapid.dmg
-        retention-days: 5
+      - name: Package Linux tarball
+        if: runner.os == 'Linux'
+        run: |
+          cd ${{ env.BUILD_DIR }}
+          mkdir -p package/Rapid
+          cp -r bin/* package/Rapid/
+          cd package
+          tar -czvf Rapid-Linux-x86_64.tar.gz Rapid/
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapid-${{ runner.os }}-${{ github.run_id }}
+          path: |
+            ${{ env.BUILD_DIR }}/package/*
+            ${{ env.BUILD_DIR }}/Rapid-*.zip
+            ${{ env.BUILD_DIR }}/*.dmg
+          retention-days: 7
