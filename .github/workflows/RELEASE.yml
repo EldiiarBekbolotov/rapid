@@ -38,69 +38,61 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install dependencies
+    - name: Install dependencies (Ubuntu & Windows)
       shell: bash
+      if: runner.os != 'macOS'
       run: |
         python -m pip install --upgrade pip
         python -m pip install aqtinstall py7zr
 
-    - name: Install Qt
+    - name: Install Qt (macOS)
+      if: runner.os == 'macOS'
+      run: |
+        brew update
+        brew install qt@6
+
+    - name: Set CMAKE_PREFIX_PATH (macOS)
+      if: runner.os == 'macOS'
+      run: echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
+
+    - name: Install Qt (Ubuntu)
+      if: runner.os == 'Linux'
       shell: bash
       run: |
-        echo "Installing Qt ${{ env.QT_VERSION }} for ${{ runner.os }}"
+        sudo apt-get update
+        sudo apt-get install -y build-essential libglu1-mesa-dev
+        python -m pip install --upgrade pip
+        python -m pip install aqtinstall py7zr
+        # Install Qt using aqtinstall
+        python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtwebengine
+        echo "$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_PATH
+        echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
 
-        # Normalize OS name for aqt install-qt (must be lowercase: mac, linux, windows)
-        if [[ "${{ runner.os }}" == "macOS" ]]; then
-          OS_NAME="mac"
-          ARCH="clang_64"
-        elif [[ "${{ runner.os }}" == "Linux" ]]; then
-          OS_NAME="linux"
-          ARCH="gcc_64"
-          sudo apt-get update
-          sudo apt-get install -y build-essential
-        elif [[ "${{ runner.os }}" == "Windows" ]]; then
-          OS_NAME="windows"
-          ARCH="msvc2019_64"
-          choco install -y 7zip
-        else
-          echo "Unsupported OS: ${{ runner.os }}"
-          exit 1
-        fi
-
-        echo "Using architecture: $ARCH"
-
-        # Install Qt
-        python -m aqt install-qt $OS_NAME desktop ${{ env.QT_VERSION }} $ARCH -m qtwebengine
-
-        # Set Qt path
-        if [[ "$OS_NAME" == "windows" ]]; then
-          QT_PATH="C:\\Qt\\${{ env.QT_VERSION }}\\$ARCH"
-        else
-          QT_PATH="$HOME/Qt/${{ env.QT_VERSION }}/$ARCH"
-        fi
-
-        echo "Qt installation path: $QT_PATH"
-        echo "$QT_PATH/bin" >> $GITHUB_PATH
-        echo "QT_PATH=$QT_PATH" >> $GITHUB_ENV
-
-        # Verify qmake
-        qmake --version || echo "qmake not found in PATH"
-        which qmake || true
+    - name: Install Qt (Windows)
+      if: runner.os == 'Windows'
+      shell: bash
+      run: |
+        choco install -y 7zip
+        python -m pip install --upgrade pip
+        python -m pip install aqtinstall py7zr
+        python -m aqt install-qt windows desktop ${{ env.QT_VERSION }} msvc2019_64 -m qtwebengine
+        echo "C:\\Qt\\${{ env.QT_VERSION }}\\msvc2019_64\\lib\\cmake" >> $GITHUB_PATH
+        echo "CMAKE_PREFIX_PATH=C:\\Qt\\${{ env.QT_VERSION }}\\msvc2019_64\\lib\\cmake" >> $GITHUB_ENV
 
     - name: Configure and build
       shell: bash
       run: |
         echo "Current PATH: $PATH"
-        echo "qmake location: $(which qmake || echo 'not found')"
+        echo "CMAKE_PREFIX_PATH: $CMAKE_PREFIX_PATH"
 
         mkdir -p ${{ env.BUILD_DIR }}
         cd ${{ env.BUILD_DIR }}
 
         cmake $GITHUB_WORKSPACE/qt_web_editor \
           -DCMAKE_BUILD_TYPE=Release \
-          -DCMAKE_PREFIX_PATH="$QT_PATH"
+          -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
 
-        # Use nproc on Linux/mac, fallback on Windows to number of processors env
+        # Use nproc on Linux/macOS, fallback on Windows to number of processors env var
         if [[ "$(uname)" == "Linux" || "$(uname)" == "Darwin" ]]; then
           JOBS=$(nproc)
         else
