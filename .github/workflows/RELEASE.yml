@@ -9,7 +9,6 @@ on:
 
 env:
   QT_VERSION: '6.5.0'
-  QT_ARCH: 'wasm_32'
   BUILD_DIR: 'build'
 
 jobs:
@@ -22,8 +21,7 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
     
     - name: Debug - Environment
       shell: bash
@@ -35,71 +33,81 @@ jobs:
         echo "Ref: ${{ github.ref }}"
         echo "Workflow: ${{ github.workflow }}"
     
-    - name: Set up Python
+    - name: Setup Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
-    
+
     - name: Install dependencies
       shell: bash
       run: |
         python -m pip install --upgrade pip
         python -m pip install aqtinstall py7zr
-    
+
     - name: Install Qt
-      id: install_qt
       shell: bash
       run: |
         echo "Installing Qt ${{ env.QT_VERSION }} for ${{ runner.os }}"
-        
-        # Set architecture based on OS
-        if [ "${{ runner.os }}" = "macOS" ]; then
+
+        # Normalize OS name for aqt install-qt (must be lowercase: mac, linux, windows)
+        if [[ "${{ runner.os }}" == "macOS" ]]; then
+          OS_NAME="mac"
           ARCH="clang_64"
-        elif [ "${{ runner.os }}" = "Linux" ]; then
+        elif [[ "${{ runner.os }}" == "Linux" ]]; then
+          OS_NAME="linux"
           ARCH="gcc_64"
           sudo apt-get update
           sudo apt-get install -y build-essential
-        else  # Windows
+        elif [[ "${{ runner.os }}" == "Windows" ]]; then
+          OS_NAME="windows"
           ARCH="msvc2019_64"
           choco install -y 7zip
+        else
+          echo "Unsupported OS: ${{ runner.os }}"
+          exit 1
         fi
-        
+
         echo "Using architecture: $ARCH"
-        
+
         # Install Qt
-        python -m aqt install-qt ${{ runner.os }} desktop ${{ env.QT_VERSION }} $ARCH -m qtwebengine
-        
+        python -m aqt install-qt $OS_NAME desktop ${{ env.QT_VERSION }} $ARCH -m qtwebengine
+
         # Set Qt path
-        if [ "${{ runner.os }}" = "Windows" ]; then
+        if [[ "$OS_NAME" == "windows" ]]; then
           QT_PATH="C:\\Qt\\${{ env.QT_VERSION }}\\$ARCH"
         else
           QT_PATH="$HOME/Qt/${{ env.QT_VERSION }}/$ARCH"
         fi
-        
+
         echo "Qt installation path: $QT_PATH"
         echo "$QT_PATH/bin" >> $GITHUB_PATH
         echo "QT_PATH=$QT_PATH" >> $GITHUB_ENV
-        
+
         # Verify qmake
         qmake --version || echo "qmake not found in PATH"
         which qmake || true
-    
+
     - name: Configure and build
       shell: bash
       run: |
         echo "Current PATH: $PATH"
         echo "qmake location: $(which qmake || echo 'not found')"
-        
+
         mkdir -p ${{ env.BUILD_DIR }}
         cd ${{ env.BUILD_DIR }}
-        
-        # Configure
+
         cmake $GITHUB_WORKSPACE/qt_web_editor \
           -DCMAKE_BUILD_TYPE=Release \
           -DCMAKE_PREFIX_PATH="$QT_PATH"
-        
-        # Build
-        cmake --build . --config Release -- -j$(nproc)
+
+        # Use nproc on Linux/mac, fallback on Windows to number of processors env
+        if [[ "$(uname)" == "Linux" || "$(uname)" == "Darwin" ]]; then
+          JOBS=$(nproc)
+        else
+          JOBS=$env:NUMBER_OF_PROCESSORS
+        fi
+
+        cmake --build . --config Release -- -j$JOBS
 
     - name: Upload artifacts
       if: always()
