@@ -23,7 +23,7 @@ echo "Configuring with Emscripten..."
 emcmake cmake \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake \
-    -DQT_HOST_PATH=/usr/local/Qt-6.5.0 \  # Update this to your Qt installation path
+    -DQT_HOST_PATH=/usr/local/Qt-6.5.0 \
     -DQT_HOST_PATH_CMAKE_DIR=/usr/local/Qt-6.5.0/lib/cmake \
     -DQT_QMAKE_EXECUTABLE=/usr/local/Qt-6.5.0/bin/qmake \
     -DQT_USE_BUNDLED_BUNDLED_Qt6=ON \

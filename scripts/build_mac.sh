@@ -17,7 +17,7 @@ cmake \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
     -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64" \
-    ../../rapid/qt_web_editor
+    ../../qt_web_editor
 
 # Build the project
 echo "Building project..."
