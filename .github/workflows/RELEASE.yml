@@ -54,9 +54,13 @@ jobs:
             echo "CMAKE_PREFIX_PATH=${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/win64_msvc2019_64/lib/cmake" >> $GITHUB_ENV
             
           elif [[ "${{ runner.os }}" == "macOS" ]]; then
-            # macOS - Use Homebrew
+            # macOS - Install Qt with all required components
             brew install qt@6
             echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
+            # Install additional Qt components
+            brew install qt6-webengine
+            brew install qt6-svg
+            brew install qt6-tools
             
           else
             # Linux

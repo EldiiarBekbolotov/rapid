@@ -15,8 +15,20 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 # Find Qt packages
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets WebEngineWidgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets WebEngineWidgets REQUIRED)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets WebEngineCore WebChannel WebSockets Network Svg SvgWidgets)
+
+# Make WebEngineWidgets optional
+find_package(Qt6 COMPONENTS WebEngineWidgets QUIET)
+if (Qt6WebEngineWidgets_FOUND)
+    message(STATUS "Found Qt6WebEngineWidgets")
+    add_definitions(-DHAVE_WEBENGINEWIDGETS)
+else()
+    message(STATUS "Qt6WebEngineWidgets not found - some features may be disabled")
+endif()
+
+if (NOT Qt6_FOUND)
+    message(FATAL_ERROR "Qt6 not found")
+endif()
 
 # Include our CMake modules
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
