@@ -12,8 +12,6 @@ env:
   QT_VERSION: '6.5.0'
   AQT_VERSION: '3.1.7'
   PY7ZR_VERSION: '0.20.8'
-  BUILD_DIR: build/${{ runner.os }}
-  PACKAGE_DIR: packages
 
 jobs:
   build:
@@ -161,8 +159,25 @@ jobs:
     
     - name: Create build directories
       run: |
-        mkdir -p ${{ env.BUILD_DIR }}
-        mkdir -p ${{ env.PACKAGE_DIR }}
+        # Create OS-specific build and package directories
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          BUILD_DIR="build/windows"
+          PACKAGE_DIR="packages/windows"
+        elif [ "${{ runner.os }}" = "Linux" ]; then
+          BUILD_DIR="build/linux"
+          PACKAGE_DIR="packages/linux"
+        else
+          BUILD_DIR="build/macos"
+          PACKAGE_DIR="packages/macos"
+        fi
+        
+        # Create the directories
+        mkdir -p "$BUILD_DIR"
+        mkdir -p "$PACKAGE_DIR"
+        
+        # Set environment variables for subsequent steps
+        echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV
+        echo "PACKAGE_DIR=$PACKAGE_DIR" >> $GITHUB_ENV
         
     - name: Build
       working-directory: ./qt_web_editor
@@ -204,6 +219,7 @@ jobs:
         path: |
           ${{ env.PACKAGE_DIR }}/**/*
           ${{ env.BUILD_DIR }}/**/*.{wasm,js,html}
+          ${{ env.BUILD_DIR }}/**/bin/*
         retention-days: 5
         if-no-files-found: error
         compression-level: 9
