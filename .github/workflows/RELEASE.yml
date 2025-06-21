@@ -40,6 +40,11 @@ jobs:
         brew install qt@6
         echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
 
+    - name: Install create-dmg (macOS)
+      if: runner.os == 'macOS'
+      run: |
+        npm install -g create-dmg
+
     - name: Install Qt on Ubuntu
       if: runner.os == 'Linux'
       run: |
@@ -54,6 +59,8 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
+        python -m pip install --upgrade pip
+        python -m pip install aqtinstall py7zr
         python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase
         python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtwebengine
         $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
@@ -78,13 +85,10 @@ jobs:
     - name: Create macOS DMG
       if: runner.os == 'macOS'
       run: |
-        # Find the first .app bundle produced by the build
         APP_PATH=$(ls ${{ env.BUILD_DIR }}/*.app | head -n 1)
         echo "App bundle found at: $APP_PATH"
-        
-        # Create a dmg named MyApp.dmg inside build/dmg folder
         mkdir -p ${{ env.BUILD_DIR }}/dmg
-        create-dmg --volname "MyApp" --window-size 600 400 --app-drop-link 450 185 "${{ env.BUILD_DIR }}/dmg/MyApp.dmg" "$APP_PATH"
+        create-dmg --volname "Rapid" --window-size 600 400 --app-drop-link 450 185 "${{ env.BUILD_DIR }}/dmg/Rapid.dmg" "$APP_PATH"
 
     - name: Configure and build (Windows)
       if: runner.os == 'Windows'
@@ -111,5 +115,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: macos-dmg
-        path: ${{ env.BUILD_DIR }}/dmg/MyApp.dmg
+        path: ${{ env.BUILD_DIR }}/dmg/Rapid.dmg
         retention-days: 5
