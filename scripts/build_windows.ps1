@@ -6,11 +6,11 @@ $ErrorActionPreference = "Stop"
 
 # Clean previous build
 Write-Host "Cleaning previous build..."
-Remove-Item -Recurse -Force -ErrorAction SilentlyContinue ..\build\windows
+Remove-Item -Recurse -Force -ErrorAction SilentlyContinue ..\..\build\windows
 
 # Create build directory
-New-Item -ItemType Directory -Force -Path ..\build\windows | Out-Null
-Set-Location ..\build\windows
+New-Item -ItemType Directory -Force -Path ..\..\build\windows | Out-Null
+Set-Location ..\..\build\windows
 
 # Find Visual Studio generator
 $generator = "Visual Studio 17 2022"  # Update this to your VS version
@@ -21,7 +21,7 @@ cmake `
     -G "$generator" `
     -A x64 `
     -DCMAKE_BUILD_TYPE=Release `
-    ..\..\qt_web_editor
+    ..\..\rapid\qt_web_editor
 
 # Build the project
 Write-Host "Building project..."

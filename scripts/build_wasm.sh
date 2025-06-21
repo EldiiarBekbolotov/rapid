@@ -12,11 +12,11 @@ fi
 
 # Clean previous build
 echo "Cleaning previous build..."
-rm -rf ../build/wasm
+rm -rf ../../build/wasm
 
 # Create build directory
-mkdir -p ../build/wasm
-cd ../build/wasm
+mkdir -p ../../build/wasm
+cd ../../build/wasm
 
 # Configure with Emscripten
 echo "Configuring with Emscripten..."
@@ -31,7 +31,7 @@ emcmake cmake \
     -DQT_FEATURE_webengine_webchannel=OFF \
     -DQT_FEATURE_webengine_spellchecker=OFF \
     -DQT_FEATURE_webengine_printing_and_pdf=OFF \
-    ../../qt_web_editor
+    ../../rapid/qt_web_editor
 
 # Build the project
 echo "Building project..."

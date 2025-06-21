@@ -4,14 +4,14 @@
 set -e
 
 # Check if we have a built app
-APP_PATH="../build/mac/bin/Rapid.app"
+APP_PATH="../../build/mac/bin/Rapid.app"
 if [ ! -d "$APP_PATH" ]; then
     echo "Error: Application not found at $APP_PATH. Please build the project first."
     exit 1
 fi
 
 # Create packages directory
-PACKAGE_DIR="../packages/mac"
+PACKAGE_DIR="../../packages/mac"
 mkdir -p "$PACKAGE_DIR"
 
 # Get version from CMakeLists.txt

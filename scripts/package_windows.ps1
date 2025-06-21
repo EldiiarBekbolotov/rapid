@@ -11,14 +11,14 @@ if (-not (Get-Command "candle.exe" -ErrorAction SilentlyContinue)) {
 }
 
 # Check if we have a built app
-$APP_PATH = "..\build\windows\bin\Release\Rapid.exe"
+$APP_PATH = "..\..\build\windows\bin\Release\Rapid.exe"
 if (-not (Test-Path $APP_PATH)) {
     Write-Error "Error: Application not found at $APP_PATH. Please build the project first."
     exit 1
 }
 
 # Create packages directory
-$PACKAGE_DIR = "..\packages\windows"
+$PACKAGE_DIR = "..\..\packages\windows"
 New-Item -ItemType Directory -Force -Path $PACKAGE_DIR | Out-Null
 
 # Get version from CMakeLists.txt
