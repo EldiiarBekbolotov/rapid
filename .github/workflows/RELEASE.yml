@@ -45,8 +45,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libglu1-mesa-dev
-        python -m pip install --upgrade pip
-        python -m pip install aqtinstall py7zr
         python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtbase
         python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtwebengine
         echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
@@ -56,13 +54,11 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
-        python -m pip install --upgrade pip
-        python -m pip install aqtinstall py7zr
         python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtbase
         python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2019_64 -m qtwebengine
         $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2019_64\\lib\\cmake"
         Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
-        
+
     - name: Configure and build (Linux/macOS)
       if: runner.os != 'Windows'
       run: |
@@ -79,6 +75,17 @@ jobs:
         cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
         cmake --build . --config Release -- -j$JOBS
 
+    - name: Create macOS DMG
+      if: runner.os == 'macOS'
+      run: |
+        # Find the first .app bundle produced by the build
+        APP_PATH=$(ls ${{ env.BUILD_DIR }}/*.app | head -n 1)
+        echo "App bundle found at: $APP_PATH"
+        
+        # Create a dmg named MyApp.dmg inside build/dmg folder
+        mkdir -p ${{ env.BUILD_DIR }}/dmg
+        create-dmg --volname "MyApp" --window-size 600 400 --app-drop-link 450 185 "${{ env.BUILD_DIR }}/dmg/MyApp.dmg" "$APP_PATH"
+
     - name: Configure and build (Windows)
       if: runner.os == 'Windows'
       shell: pwsh
@@ -89,12 +96,20 @@ jobs:
         $jobs = $Env:NUMBER_OF_PROCESSORS
         cmake --build . --config Release -- /m:$jobs
 
-    - name: Upload artifacts
-      if: always()
+    - name: Upload artifacts (Linux & Windows)
+      if: runner.os != 'macOS'
       uses: actions/upload-artifact@v4
       with:
         name: build-${{ matrix.os }}
         path: |
           ${{ env.BUILD_DIR }}/*
           ${{ env.BUILD_DIR }}/bin/*
-        retention-days: 1
+        retention-days: 5
+
+    - name: Upload artifact (macOS DMG)
+      if: runner.os == 'macOS'
+      uses: actions/upload-artifact@v4
+      with:
+        name: macos-dmg
+        path: ${{ env.BUILD_DIR }}/dmg/MyApp.dmg
+        retention-days: 5
