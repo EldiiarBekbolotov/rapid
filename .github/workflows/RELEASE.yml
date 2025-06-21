@@ -13,7 +13,7 @@ env:
 
 jobs:
   build:
-    name: Build (${{ matrix.os }})
+    name: Build & Package (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -37,14 +37,14 @@ jobs:
       if: runner.os == 'macOS'
       run: |
         brew update
-        brew install qt@6
+        brew install qt@6 create-dmg
         echo "CMAKE_PREFIX_PATH=$(brew --prefix qt@6)/lib/cmake" >> $GITHUB_ENV
 
     - name: Install Qt on Ubuntu
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential libglu1-mesa-dev
+        sudo apt-get install -y build-essential libglu1-mesa-dev zip
         python -m aqt install-qt linux desktop ${{ env.QT_VERSION }} gcc_64 -m qtwebengine
         echo "CMAKE_PREFIX_PATH=$HOME/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
 
@@ -53,8 +53,8 @@ jobs:
       shell: pwsh
       run: |
         choco install -y 7zip
-        python -m aqt install-qt windows desktop $env:QT_VERSION msvc2022_64 -m qtwebengine
-        $qtPath = "C:\\Qt\\$env:QT_VERSION\\msvc2022_64\\lib\\cmake"
+        python -m aqt install-qt windows desktop $env:QT_VERSION win64_msvc2022_64 -m qtwebengine
+        $qtPath = "C:\\Qt\\$env:QT_VERSION\\win64_msvc2022_64\\lib\\cmake"
         Add-Content -Path $Env:GITHUB_ENV -Value "CMAKE_PREFIX_PATH=$qtPath"
 
     - name: Configure and build (Linux/macOS)
@@ -83,12 +83,33 @@ jobs:
         $jobs = $Env:NUMBER_OF_PROCESSORS
         cmake --build . --config Release -- /m:$jobs
 
-    - name: Upload artifacts
+    - name: Package app (macOS)
+      if: runner.os == 'macOS'
+      run: |
+        APP_NAME=$(ls ${{ env.BUILD_DIR }}/*.app | head -n1)
+        create-dmg "$APP_NAME" --overwrite --dmg-title "QtWebEditor" --dmg-window 500 300 \
+          --icon-size 100 --app-drop-link 400 185 QtWebEditor.dmg
+        mkdir -p dist
+        mv QtWebEditor.dmg dist/
+
+    - name: Package app (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        mkdir -p dist
+        zip -r dist/QtWebEditor-linux.zip ${{ env.BUILD_DIR }}
+
+    - name: Package app (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      run: |
+        Compress-Archive -Path "$Env:BUILD_DIR\\*" -DestinationPath "QtWebEditor-windows.zip"
+        mkdir dist
+        Move-Item -Path QtWebEditor-windows.zip -Destination dist
+
+    - name: Upload packaged artifact
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: build-${{ matrix.os }}
-        path: |
-          ${{ env.BUILD_DIR }}/*
-          ${{ env.BUILD_DIR }}/bin/*
-        retention-days: 1
+        name: release-${{ matrix.os }}
+        path: dist/*
+        retention-days: 7
