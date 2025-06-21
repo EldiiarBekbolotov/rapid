@@ -1,54 +1,80 @@
-# Rapid (qt_web_editor)
+# Rapid
 
 A lightweight web development text editor built with C++ and Qt.
-<img width="1074" alt="Screenshot 2025-06-17 at 7 41 39 PM" src="https://github.com/user-attachments/assets/58efed19-102e-4f39-9857-b778185f80ff" />
 
-
-
-## Quick Start (Tested on macOS)
-
-1. **Navigate to the project directory**:
-   ```bash
-   cd /path/to/rapid/qt_web_editor
-   ```
-
-2. **Clean previous build (if any)**:
-   ```bash
-   rm -rf build
-   ```
-
-3. **Create build directory and run CMake**:
-   ```bash
-   mkdir -p build
-   cd build
-   cmake ..
-   ```
-
-4. **Build the project**:
-   ```bash
-   cmake --build .
-   ```
-
-5. **Run the application**:
-   ```bash
-   ./QtWebEditor-1.0.0
-   ```
+![Screenshot](https://github.com/user-attachments/assets/58efed19-102e-4f39-9857-b778185f80ff)
 
 ## Features
 
-- Cross-platform
+- Cross-platform (macOS, Windows, Linux)
 - File and folder browser
 - Syntax highlighting for HTML, CSS, JavaScript
 - Tabbed interface for multiple files
 - Real-time preview for HTML files
 - Light and dark themes
-- and more...
 
-## Prerequisites
+## Building
 
-- Qt 6.x (tested with Qt 6.5.0)
-- CMake 3.16+
-- C++17 compatible compiler (tested with Apple Clang 17.0.0)
+### Prerequisites
+
+- Qt 6.5.0 or later
+- CMake 3.16 or later
+- C++17 compatible compiler
+- Python 3.6+ (for build scripts)
+
+### Using the build script
+
+```bash
+# Make the script executable
+chmod +x scripts/build.sh
+
+# Build the project
+./scripts/build.sh
+```
+   pip install aqtinstall
+   aqt install-qt mac desktop 6.5.0 clang_64 -m qtwebengine
+
+### Manual build
+   # Make scripts executable
+   chmod +x scripts/*.sh
+   
+   # Build the project
+   ./scripts/build.sh
+   
+   # Create a package
+   ./scripts/package.sh
+   ```
+
+### Manual Build
+
+1. **Install dependencies**:
+   - macOS: `brew install qt@6 cmake`
+   - Ubuntu: `sudo apt install qt6-base-dev cmake build-essential`
+   - Windows: Install Qt 6.5.0 and CMake
+
+2. **Configure and build**:
+   ```bash
+   mkdir -p build && cd build
+   cmake -DCMAKE_PREFIX_PATH=/path/to/qt/6.5.0/gcc_64 ..
+   cmake --build . --config Release
+   ```
+
+## GitHub Actions
+
+The project includes GitHub Actions workflows for:
+- Building on push/pull requests
+- Creating releases on tags
+- Cross-platform packaging
+
+To create a new release:
+```bash
+git tag -a v1.0.0 -m "Release v1.0.0"
+git push origin v1.0.0
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Project Structure
 
