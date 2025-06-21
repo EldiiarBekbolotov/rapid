@@ -61,15 +61,18 @@ jobs:
     # WASM-specific setup
     - name: Set up Emscripten (WASM only)
       if: matrix.qt_arch == 'wasm_32'
+      shell: bash
       run: |
         echo "Setting up Emscripten..."
         set -e  # Exit immediately if any command fails
         
-        # Clone and set up Emscripten
-        git clone https://github.com/emscripten-core/emsdk.git ${{ env.EMSDK }} || {
-          echo "❌ Failed to clone Emscripten SDK"
-          exit 1
-        }
+        # Clone and set up Emscripten if not already present
+        if [ ! -d "${{ env.EMSDK }}" ]; then
+          git clone https://github.com/emscripten-core/emsdk.git ${{ env.EMSDK }} || {
+            echo "❌ Failed to clone Emscripten SDK"
+            exit 1
+          }
+        fi
         
         cd ${{ env.EMSDK }}
         
@@ -84,17 +87,22 @@ jobs:
           exit 1
         }
         
-        # Set up environment variables
+        # Source the environment to make emcc available in current shell
+        source ./emsdk_env.sh
+        
+        # Set up environment variables for subsequent steps
         echo "${{ env.EMSDK }}/upstream/emscripten" >> $GITHUB_PATH
         echo "${{ env.EMSDK }}/upstream/bin" >> $GITHUB_PATH
         echo "EMSDK=${{ env.EMSDK }}" >> $GITHUB_ENV
         echo "EMSCRIPTEN=${{ env.EMSDK }}/upstream/emscripten" >> $GITHUB_ENV
         
         # Verify Emscripten installation
+        echo "Checking Emscripten installation..."
         emcc --version || {
           echo "❌ Emscripten not properly installed"
           exit 1
         }
+        echo "✅ Emscripten installed successfully"
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -102,6 +110,7 @@ jobs:
         python-version: '3.11'
     
     - name: Install Python dependencies
+      shell: bash
       run: |
         python -m pip install --upgrade pip
         python -m pip install setuptools wheel "py7zr==${{ env.PY7ZR_VERSION }}"
@@ -109,18 +118,38 @@ jobs:
     
     - name: Install Qt
       id: install_qt
-      run: |
-        python -m aqt install-qt ${{ matrix.qt_host }} desktop ${{ env.QT_VERSION }} ${{ matrix.qt_arch }} -m qtwebengine --autodesktop
       shell: bash
+      run: |
+        # Install Qt
+        python -m aqt install-qt ${{ matrix.qt_host }} desktop ${{ env.QT_VERSION }} ${{ matrix.qt_arch }} -m qtwebengine --autodesktop
+        
+        # Add Qt to PATH
+        if [ "${{ runner.os }}" = "macOS" ]; then
+          QT_PATH="$HOME/Qt/${{ env.QT_VERSION }}/${{ matrix.qt_arch }}"
+        elif [ "${{ runner.os }}" = "Linux" ]; then
+          QT_PATH="$HOME/Qt/${{ env.QT_VERSION }}/${{ matrix.qt_arch }}"
+        else  # Windows
+          QT_PATH="C:\\Qt\\${{ env.QT_VERSION }}\\${{ matrix.qt_arch }}"
+        fi
+        
+        echo "Qt installation path: $QT_PATH"
+        echo "$QT_PATH/bin" >> $GITHUB_PATH
+        echo "QT_PATH=$QT_PATH" >> $GITHUB_ENV
     
     - name: Verify Qt Installation
+      shell: bash
       run: |
         set -e  # Exit on error
+        
+        echo "Current PATH: $PATH"
+        echo "Looking for qmake..."
+        which qmake || true
         
         # Check if qmake exists and is in PATH
         if ! command -v qmake &> /dev/null; then
           echo "❌ qmake not found in PATH"
-          echo "PATH: $PATH"
+          echo "Searching for qmake in Qt installation..."
+          find "$HOME/Qt" -name qmake -type f 2>/dev/null || echo "No qmake found in Qt installation"
           exit 1
         fi
         
@@ -138,6 +167,7 @@ jobs:
         fi
         
         echo "✅ Qt $QT_VERSION_ACTUAL installed successfully"
+        echo "qmake path: $(which qmake)"
         
     # Additional WASM tools
     - name: Install WASM tools
