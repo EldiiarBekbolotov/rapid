@@ -4,24 +4,33 @@
 # Exit on error
 $ErrorActionPreference = "Stop"
 
+# Get the directory of this script
+$scriptPath = $MyInvocation.MyCommand.Path
+$scriptDir = Split-Path -Parent $scriptPath
+$repoRoot = Split-Path -Parent $scriptDir
+$buildDir = Join-Path $repoRoot "build\windows-latest"
+
 # Clean previous build
 Write-Host "Cleaning previous build..."
-Remove-Item -Recurse -Force -ErrorAction SilentlyContinue ..\..\build\windows
+if (Test-Path $buildDir) {
+    Remove-Item -Recurse -Force -Path $buildDir -ErrorAction SilentlyContinue
+}
 
 # Create build directory
-New-Item -ItemType Directory -Force -Path ..\..\build\windows | Out-Null
-Set-Location ..\..\build\windows
+New-Item -ItemType Directory -Force -Path $buildDir | Out-Null
+Set-Location $buildDir
 
 # Find Visual Studio generator
 $generator = "Visual Studio 17 2022"  # Update this to your VS version
 
 # Configure with CMake
 Write-Host "Configuring with CMake..."
+$qtWebEditorPath = Join-Path $repoRoot "qt_web_editor"
 cmake `
     -G "$generator" `
     -A x64 `
     -DCMAKE_BUILD_TYPE=Release `
-    ..\..\rapid\qt_web_editor
+    $qtWebEditorPath
 
 # Build the project
 Write-Host "Building project..."

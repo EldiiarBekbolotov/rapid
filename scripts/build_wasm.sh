@@ -10,13 +10,18 @@ See: https://emscripten.org/docs/getting_started/downloads.html"
     exit 1
 fi
 
+# Get the directory of this script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+BUILD_DIR="$REPO_ROOT/build/ubuntu-latest"
+
 # Clean previous build
 echo "Cleaning previous build..."
-rm -rf ../../build/wasm
+rm -rf "$BUILD_DIR"
 
 # Create build directory
-mkdir -p ../../build/wasm
-cd ../../build/wasm
+mkdir -p "$BUILD_DIR"
+cd "$BUILD_DIR"
 
 # Configure with Emscripten
 echo "Configuring with Emscripten..."
@@ -31,7 +36,7 @@ emcmake cmake \
     -DQT_FEATURE_webengine_webchannel=OFF \
     -DQT_FEATURE_webengine_spellchecker=OFF \
     -DQT_FEATURE_webengine_printing_and_pdf=OFF \
-    ../../rapid/qt_web_editor
+    "$REPO_ROOT/qt_web_editor"
 
 # Build the project
 echo "Building project..."

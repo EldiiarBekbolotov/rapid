@@ -6,9 +6,31 @@ on:
       - 'v*'  # Push events matching v1.0, v20.15.10, etc.
 
 jobs:
-  build-mac:
-    name: Build for macOS
-    runs-on: macos-latest
+  build:
+    name: Build and Release
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            qt_host: mac
+            qt_arch: clang_64
+            build_script: scripts/build_mac.sh
+            package_script: scripts/package_mac.sh
+            artifact_name: Rapid-macOS.dmg
+          - os: windows-latest
+            qt_host: windows
+            qt_arch: win64_msvc2019_64
+            build_script: scripts/build_windows.ps1
+            package_script: scripts/package_windows.ps1
+            artifact_name: Rapid-Windows.msi
+          - os: ubuntu-latest
+            qt_host: linux
+            qt_arch: wasm_32
+            build_script: scripts/build_wasm.sh
+            package_script: ""
+            artifact_name: Rapid-Web
     
     steps:
     - name: Checkout code
@@ -16,91 +38,67 @@ jobs:
       with:
         fetch-depth: 0
     
-    - name: Install dependencies
-      run: |
-        brew install qt@6 cmake
-        echo "$(brew --prefix qt@6)/bin" >> $GITHUB_PATH
+    - name: Set up Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        aqtversion: '2.2.0'
+        version: '6.5.0'
+        host: ${{ matrix.qt_host }}
+        target: 'desktop'
+        arch: ${{ matrix.qt_arch }}
+        modules: 'qtwebengine'
+        setup-python: true
     
-    - name: Build
+    - name: Make scripts executable
+      if: runner.os != 'Windows'
+      run: chmod +x scripts/*.sh
+    
+    - name: Create build directory
       run: |
-        mkdir -p build
-        cd build
-        cmake -DCMAKE_BUILD_TYPE=Release ..
-        cmake --build . --config Release -- -j$(sysctl -n hw.logicalcpu)
+        mkdir -p build/${{ matrix.os }}
+        
+    - name: Build
+      working-directory: .
+      run: |
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          powershell -Command "& { $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; & '.\${{ matrix.build_script }}' }"
+        else
+          chmod +x ./${{ matrix.build_script }}
+          ./${{ matrix.build_script }}
+        fi
     
     - name: Package
+      working-directory: .
       run: |
-        mkdir -p packages/mac
-        cd build
-        cpack -G DragNDrop
-        mv *.dmg ../packages/mac/
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          powershell -Command "& { $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; & '.\${{ matrix.package_script }}' }"
+        else
+          chmod +x ./${{ matrix.package_script }}
+          ./${{ matrix.package_script }}
+        fi
+    
+    - name: Package (Windows)
+      if: matrix.package_script != '' && runner.os == 'Windows'
+      working-directory: ./qt_web_editor
+      run: powershell -File ..\${{ matrix.package_script }}
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Rapid-macOS
-        path: packages/mac/*.dmg
+        name: ${{ matrix.artifact_name }}
+        path: |
+          packages/*/*
+          build/wasm/bin/*
         if-no-files-found: error
-
-  build-windows:
-    name: Build for Windows
-    runs-on: windows-latest
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Install Qt (using aqtinstall)
-      run: |
-        python -m pip install aqtinstall
-        python -m aqt install-qt windows desktop 6.5.0 win64_msvc2019_64 -m qtwebengine
-        echo "C:\\Qt\\6.5.0\\msvc2019_64\\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-    
-    - name: Build
-      run: |
-        mkdir build
-        cd build
-        cmake -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release ..
-        cmake --build . --config Release -- /m:$env:NUMBER_OF_PROCESSORS
-    
-    - name: Package
-      run: |
-        mkdir -p packages/windows
-        cd build
-        cpack -G WIX
-        move *.msi ..\packages\windows\
-    
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: Rapid-Windows
-        path: packages/windows/*.msi
-        if-no-files-found: error
-
-  release:
-    name: Create Release
-    needs: [build-mac, build-windows]
-    runs-on: ubuntu-latest
-    if: github.ref_type == 'tag'
-    
-    steps:
-    - name: Download Mac Artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: Rapid-macOS
-        path: artifacts/mac
-    
-    - name: Download Windows Artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: Rapid-Windows
-        path: artifacts/windows
     
     - name: Create Release
+      if: github.ref_type == 'tag' && runner.os == 'ubuntu-latest'
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          artifacts/mac/*.dmg
-          artifacts/windows/*.msi
+          **/*.dmg
+          **/*.msi
+          **/*.zip
+          **/*.tar.gz
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

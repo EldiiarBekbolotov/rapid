@@ -3,15 +3,20 @@
 # Exit on error
 set -e
 
+# Get the directory of this script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+BUILD_DIR="$REPO_ROOT/build/macos-latest"
+PACKAGE_DIR="$REPO_ROOT/packages/mac"
+
 # Check if we have a built app
-APP_PATH="../../build/mac/bin/Rapid.app"
+APP_PATH="$BUILD_DIR/bin/Rapid.app"
 if [ ! -d "$APP_PATH" ]; then
     echo "Error: Application not found at $APP_PATH. Please build the project first."
     exit 1
 fi
 
 # Create packages directory
-PACKAGE_DIR="../../packages/mac"
 mkdir -p "$PACKAGE_DIR"
 
 # Get version from CMakeLists.txt

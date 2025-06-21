@@ -10,16 +10,22 @@ if (-not (Get-Command "candle.exe" -ErrorAction SilentlyContinue)) {
     exit 1
 }
 
+# Get the directory of this script
+$scriptPath = $MyInvocation.MyCommand.Path
+$scriptDir = Split-Path -Parent $scriptPath
+$repoRoot = Split-Path -Parent $scriptDir
+$buildDir = Join-Path $repoRoot "build\windows-latest"
+$packageDir = Join-Path $repoRoot "packages\windows"
+
 # Check if we have a built app
-$APP_PATH = "..\..\build\windows\bin\Release\Rapid.exe"
-if (-not (Test-Path $APP_PATH)) {
-    Write-Error "Error: Application not found at $APP_PATH. Please build the project first."
+$appPath = Join-Path $buildDir "bin\Release\Rapid.exe"
+if (-not (Test-Path $appPath)) {
+    Write-Error "Error: Application not found at $appPath. Please build the project first."
     exit 1
 }
 
 # Create packages directory
-$PACKAGE_DIR = "..\..\packages\windows"
-New-Item -ItemType Directory -Force -Path $PACKAGE_DIR | Out-Null
+New-Item -ItemType Directory -Force -Path $packageDir | Out-Null
 
 # Get version from CMakeLists.txt
 $VERSION = (Select-String -Path "..\qt_web_editor\CMakeLists.txt" -Pattern 'VERSION ([0-9]+\.[0-9]+\.[0-9]+)').Matches.Groups[1].Value
