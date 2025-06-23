@@ -53,7 +53,7 @@ jobs:
       if: matrix.os == 'windows-latest'
       shell: pwsh
       run: |
-        & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\Rapid.exe
+        & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\QtWebEditor.exe
 
     - name: Bundle on macOS
       if: matrix.os == 'macos-latest'
