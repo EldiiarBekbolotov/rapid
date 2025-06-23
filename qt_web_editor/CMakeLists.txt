@@ -66,7 +66,7 @@ set(RESOURCES
 )
 
 # Create executable
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${FORMS} ${RESOURCES})
+add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${SOURCES} ${HEADERS} ${FORMS} ${RESOURCES})
 
 # Link libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE
