@@ -49,11 +49,16 @@ jobs:
         cd build
         cmake --build . --config Release --parallel
 
+    - name: List build directory contents (Windows)
+      if: matrix.os == 'windows-latest'
+      shell: pwsh
+      run: dir build\Release
+
     - name: Bundle on Windows
       if: matrix.os == 'windows-latest'
       shell: pwsh
       run: |
-        & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\QtWebEditor.exe
+        & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\Release\\Rapid.exe
 
     - name: Bundle on macOS
       if: matrix.os == 'macos-latest'
@@ -64,7 +69,7 @@ jobs:
       run: |
         cd build
         if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-          7z a Rapid-Windows.zip Rapid.exe resources/
+          7z a Rapid-Windows.zip Release\\Rapid.exe resources/
         elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
           mv Rapid.dmg Rapid-macOS.dmg
         fi
