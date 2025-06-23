@@ -7,101 +7,71 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        include:
-          - os: windows-latest
-            qt_arch: win64_msvc2019_64
-          - os: macos-latest
-            qt_arch: clang_64
+  build-windows:
+    name: Build and Release on Windows
+    runs-on: windows-latest
 
     defaults:
       run:
-        shell: bash
+        shell: pwsh
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Qt with AQT
+      - name: Install Qt 6.5.3 using AQT
         uses: jurplel/install-qt-action@v3
         with:
           version: '6.5.3'
           target: 'desktop'
-          arch: ${{ matrix.qt_arch }}
+          arch: win64_msvc2019_64
           modules: 'qtwebengine qtwebchannel qtpositioning qtwebsockets'
 
-      - name: Install Windows dependencies
-        if: matrix.os == 'windows-latest'
-        run: choco install 7zip
+      - name: Install 7zip for packaging
+        run: choco install -y 7zip
 
-      - name: Configure CMake
+      - name: Configure CMake in build folder
         run: |
-          mkdir -p build
+          mkdir build
           cd build
-          cmake ../qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$Qt6_DIR"
+          cmake ../qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$Env:Qt6_DIR"
 
-      - name: Build app
+      - name: Build project
         run: |
           cd build
           cmake --build . --config Release --parallel
 
-      - name: List build directory contents (debug)
-        run: ls -lR build
-
-      - name: Bundle on Windows
-        if: matrix.os == 'windows-latest'
-        shell: pwsh
+      - name: Verify build output files
         run: |
-          # Try common executable paths:
-          $possiblePaths = @(
-            "build\\Rapid.exe",
-            "build\\Release\\Rapid.exe",
-            "build\\x64\\Release\\Rapid.exe"
-          )
-          $exePath = $null
-          foreach ($path in $possiblePaths) {
-            if (Test-Path $path) {
-              $exePath = $path
-              break
-            }
-          }
-          if (-not $exePath) {
-            Write-Error "Could not find Rapid.exe in build folders!"
+          Write-Host "Files in build folder:"
+          Get-ChildItem -Path build -Recurse | Format-Table -AutoSize
+
+      - name: Verify Rapid.exe exists
+        run: |
+          if (-Not (Test-Path -Path build\Rapid.exe)) {
+            Write-Error "ERROR: Rapid.exe not found in build folder! Build likely failed."
             exit 1
+          } else {
+            Write-Host "Rapid.exe found."
           }
-          Write-Host "Found executable at: $exePath"
-          & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release $exePath
 
-      - name: Bundle on macOS
-        if: matrix.os == 'macos-latest'
+      - name: Bundle Qt dependencies using windeployqt
         run: |
-          "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
+          & "$Env:Qt6_DIR\bin\windeployqt.exe" --release build\Rapid.exe
 
-      - name: Package artifacts
+      - name: Package executable and resources into zip
         run: |
           cd build
-          if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-            7z a Rapid-Windows.zip Rapid.exe resources/
-          elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
-            mv Rapid.dmg Rapid-macOS.dmg
-          fi
+          7z a Rapid-Windows.zip Rapid.exe resources/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: rapid-${{ matrix.os }}
-          path: |
-            build/*.zip
-            build/*.dmg
+          name: rapid-windows
+          path: build/Rapid-Windows.zip
 
-      - name: Upload GitHub Release
+      - name: Create GitHub Release asset
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            build/*.zip
-            build/*.dmg
+          files: build/Rapid-Windows.zip
