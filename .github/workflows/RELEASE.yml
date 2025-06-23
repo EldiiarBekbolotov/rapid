@@ -60,14 +60,7 @@ jobs:
     - name: Bundle on macOS
       if: matrix.os == 'macos-latest'
       run: |
-        if [ -d "build/Rapid.app" ]; then
-          "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
-        elif [ -d "build/Release/Rapid.app" ]; then
-          "$Qt6_DIR/bin/macdeployqt" build/Release/Rapid.app -dmg
-        else
-          echo "❌ ERROR: Rapid.app not found"
-          exit 1
-        fi
+        "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
 
     - name: Bundle on Linux
       if: matrix.os == 'ubuntu-latest'
@@ -86,7 +79,7 @@ jobs:
         if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
           7z a Rapid-Windows.zip Rapid.exe resources/
         elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
-          mv *.dmg Rapid-macOS.dmg
+          mv Rapid.dmg Rapid-macOS.dmg
         elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
           mv *.AppImage Rapid-Linux.AppImage
         fi
