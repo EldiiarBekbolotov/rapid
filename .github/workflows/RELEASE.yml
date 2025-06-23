@@ -54,13 +54,20 @@ jobs:
     - name: Bundle on Windows
       if: matrix.os == 'windows-latest'
       run: |
-        "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\QtWebEditor.exe
+        & "${Env:Qt6_DIR}\bin\windeployqt.exe" --release build\Rapid.exe
       shell: pwsh
 
     - name: Bundle on macOS
       if: matrix.os == 'macos-latest'
       run: |
-        "$Qt6_DIR/bin/macdeployqt" build/QtWebEditor.app -dmg
+        if [ -d "build/Rapid.app" ]; then
+          "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
+        elif [ -d "build/Release/Rapid.app" ]; then
+          "$Qt6_DIR/bin/macdeployqt" build/Release/Rapid.app -dmg
+        else
+          echo "❌ ERROR: Rapid.app not found"
+          exit 1
+        fi
 
     - name: Bundle on Linux
       if: matrix.os == 'ubuntu-latest'
@@ -68,7 +75,7 @@ jobs:
         wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage -O linuxdeploy
         chmod +x linuxdeploy
         ./linuxdeploy --appdir AppDir \
-          --executable build/QtWebEditor \
+          --executable build/Rapid \
           --desktop-file qt_web_editor/resources/rapid.desktop \
           --icon-file qt_web_editor/resources/icons/app-icon.png \
           --output appimage || true
@@ -77,9 +84,9 @@ jobs:
       run: |
         cd build
         if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-          7z a Rapid-Windows.zip QtWebEditor.exe resources/
+          7z a Rapid-Windows.zip Rapid.exe resources/
         elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
-          mv QtWebEditor.dmg Rapid-macOS.dmg
+          mv *.dmg Rapid-macOS.dmg
         elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
           mv *.AppImage Rapid-Linux.AppImage
         fi
