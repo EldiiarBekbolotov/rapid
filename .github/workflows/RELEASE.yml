@@ -34,7 +34,7 @@ jobs:
         version: '6.5.3'
         target: 'desktop'
         arch: ${{ matrix.qt_arch }}
-        modules: 'qtwebengine qtwebchannel qtpositioning'
+        modules: 'qtwebengine qtwebchannel qtpositioning qtwebsockets'
 
     - name: Install Linux dependencies
       if: matrix.os == 'ubuntu-latest'
