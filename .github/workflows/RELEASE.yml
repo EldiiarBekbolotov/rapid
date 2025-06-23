@@ -13,8 +13,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-latest
-            qt_arch: gcc_64
           - os: windows-latest
             qt_arch: win64_msvc2019_64
           - os: macos-latest
@@ -36,9 +34,9 @@ jobs:
         arch: ${{ matrix.qt_arch }}
         modules: 'qtwebengine qtwebchannel qtpositioning qtwebsockets'
 
-    - name: Install Linux dependencies
-      if: matrix.os == 'ubuntu-latest'
-      run: sudo apt update && sudo apt install -y libgl1-mesa-dev libxkbcommon-x11-0 build-essential patchelf
+    - name: Install Windows dependencies
+      if: matrix.os == 'windows-latest'
+      run: choco install 7zip
 
     - name: Configure CMake
       run: |
@@ -53,25 +51,14 @@ jobs:
 
     - name: Bundle on Windows
       if: matrix.os == 'windows-latest'
-      run: |
-        & "${Env:Qt6_DIR}\bin\windeployqt.exe" --release build\Rapid.exe
       shell: pwsh
+      run: |
+        & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\Rapid.exe
 
     - name: Bundle on macOS
       if: matrix.os == 'macos-latest'
       run: |
         "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
-
-    - name: Bundle on Linux
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage -O linuxdeploy
-        chmod +x linuxdeploy
-        ./linuxdeploy --appdir AppDir \
-          --executable build/Rapid \
-          --desktop-file qt_web_editor/resources/rapid.desktop \
-          --icon-file qt_web_editor/resources/icons/app-icon.png \
-          --output appimage || true
 
     - name: Package artifacts
       run: |
@@ -80,8 +67,6 @@ jobs:
           7z a Rapid-Windows.zip Rapid.exe resources/
         elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
           mv Rapid.dmg Rapid-macOS.dmg
-        elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
-          mv *.AppImage Rapid-Linux.AppImage
         fi
 
     - name: Upload artifact
@@ -91,7 +76,6 @@ jobs:
         path: |
           build/*.zip
           build/*.dmg
-          build/*.AppImage
 
     - name: Upload GitHub Release
       if: startsWith(github.ref, 'refs/tags/')
@@ -100,4 +84,3 @@ jobs:
         files: |
           build/*.zip
           build/*.dmg
-          build/*.AppImage
