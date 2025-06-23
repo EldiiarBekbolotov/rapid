@@ -49,6 +49,9 @@ jobs:
           cd build
           cmake --build . --config Release --parallel
 
+      - name: Show contents of build (debugging)
+        run: ls -lR build
+
       - name: Bundle on Windows
         if: matrix.os == 'windows-latest'
         shell: pwsh
@@ -60,15 +63,11 @@ jobs:
         run: |
           "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
 
-      - name: Verify build directory contents (for debugging)
-        run: |
-          ls -lR build
-
       - name: Package artifacts
         run: |
           cd build
           if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-            7z a Rapid-Windows.zip Rapid.exe resources/
+            7z a Rapid-Windows.zip Rapid.exe
           elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
             mv Rapid.dmg Rapid-macOS.dmg
           fi
