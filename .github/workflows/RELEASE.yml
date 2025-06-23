@@ -49,14 +49,32 @@ jobs:
           cd build
           cmake --build . --config Release --parallel
 
-      - name: Show contents of build (debugging)
+      - name: List build directory contents (debug)
         run: ls -lR build
 
       - name: Bundle on Windows
         if: matrix.os == 'windows-latest'
         shell: pwsh
         run: |
-          & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\Rapid.exe
+          # Try common executable paths:
+          $possiblePaths = @(
+            "build\\Rapid.exe",
+            "build\\Release\\Rapid.exe",
+            "build\\x64\\Release\\Rapid.exe"
+          )
+          $exePath = $null
+          foreach ($path in $possiblePaths) {
+            if (Test-Path $path) {
+              $exePath = $path
+              break
+            }
+          }
+          if (-not $exePath) {
+            Write-Error "Could not find Rapid.exe in build folders!"
+            exit 1
+          }
+          Write-Host "Found executable at: $exePath"
+          & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release $exePath
 
       - name: Bundle on macOS
         if: matrix.os == 'macos-latest'
@@ -67,7 +85,7 @@ jobs:
         run: |
           cd build
           if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-            7z a Rapid-Windows.zip Rapid.exe
+            7z a Rapid-Windows.zip Rapid.exe resources/
           elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
             mv Rapid.dmg Rapid-macOS.dmg
           fi
