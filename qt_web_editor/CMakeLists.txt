@@ -52,7 +52,6 @@ set(HEADERS
 set(FORMS forms/mainwindow.ui)
 set(RESOURCES resources/resources.qrc)
 
-# Create app bundle on macOS
 add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${SOURCES} ${HEADERS} ${FORMS} ${RESOURCES})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -64,6 +63,14 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt${QT_VERSION_MAJOR}::Svg
     Qt${QT_VERSION_MAJOR}::SvgWidgets
 )
+
+# Find Threads package (pthread on Unix)
+find_package(Threads REQUIRED)
+
+if(NOT MSVC)
+    # Link pthreads only on non-MSVC platforms
+    target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
+endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     OUTPUT_NAME Rapid
