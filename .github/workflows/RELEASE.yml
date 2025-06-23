@@ -5,9 +5,11 @@ on:
     branches: [main]
     tags: ['v*']
 
+
 env:
   QT_VERSION: '6.6.3'
   BUILD_DIR: build
+  ARTIFACT_NAME: Rapid
 
 jobs:
   build:
@@ -20,6 +22,17 @@ jobs:
           - os: ubuntu-22.04
             qt_arch: gcc_64
             qt_host: linux
+            artifact_suffix: Linux
+            
+          - os: macos-13
+            qt_arch: clang_64
+            qt_host: mac
+            artifact_suffix: macOS
+            
+          - os: windows-2022
+            qt_arch: win64_msvc2019_64
+            qt_host: windows
+            artifact_suffix: Windows
             qt_target: desktop
             modules: "qtbase qtwebengine qtsvg qttools"
           - os: macos-13
@@ -70,56 +83,57 @@ jobs:
             echo "CMAKE_PREFIX_PATH=${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/gcc_64/lib/cmake" >> $GITHUB_ENV
           fi
 
-      - name: Build and Package
+      - name: Build
         run: |
           mkdir -p ${{ env.BUILD_DIR }}
           cd ${{ env.BUILD_DIR }}
 
-          # Configure
           if [[ "${{ runner.os }}" == "Windows" ]]; then
-            cmake $GITHUB_WORKSPACE/qt_web_editor -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
+            # Windows build
+            cmake $GITHUB_WORKSPACE/qt_web_editor \
+              -G "Visual Studio 17 2022" \
+              -A x64 \
+              -DCMAKE_BUILD_TYPE=Release \
+              -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
             cmake --build . --config Release -- /m:$NUMBER_OF_PROCESSORS
-            
+          else
+            # macOS and Linux build
+            cmake $GITHUB_WORKSPACE/qt_web_editor \
+              -DCMAKE_BUILD_TYPE=Release \
+              -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
+            if [[ "${{ runner.os }}" == "macOS" ]]; then
+              cmake --build . --config Release -- -j$(sysctl -n hw.ncpu)
+            else
+              cmake --build . --config Release -- -j$(nproc)
+            fi
+          fi
+
+      - name: Package
+        if: success()
+        run: |
+          if [[ "${{ runner.os }}" == "Windows" ]]; then
             # Package Windows
-            mkdir -p package
-            cp Release/*.exe package/
-            cp Release/*.dll package/ 2>/dev/null || true
-            cd package
-            powershell -Command "Compress-Archive -Path * -DestinationPath ../Rapid-Windows.zip -Force"
+            pwsh -File "$GITHUB_WORKSPACE/scripts/package_win.ps1"
             
           elif [[ "${{ runner.os }}" == "macOS" ]]; then
-            cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
-            cmake --build . --config Release -- -j$(sysctl -n hw.ncpu)
-            
             # Package macOS
-            brew install create-dmg
-            APP_BUNDLE=$(find . -maxdepth 1 -name "*.app" | head -n 1)
-            mkdir -p package
-            create-dmg \
-              --volname "Rapid" \
-              --window-size 600 400 \
-              --icon "$(basename "$APP_BUNDLE")" 150 185 \
-              --app-drop-link 450 185 \
-              --no-internet-enable \
-              "package/Rapid.dmg" \
-              "$APP_BUNDLE"
-              
-          else  # Linux
-            cmake $GITHUB_WORKSPACE/qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH"
-            cmake --build . --config Release -- -j$(nproc)
+            chmod +x "$GITHUB_WORKSPACE/scripts/package_mac.sh"
+            "$GITHUB_WORKSPACE/scripts/package_mac.sh"
             
+          else
             # Package Linux
-            mkdir -p package/Rapid
-            cp -r bin/* package/Rapid/
-            cd package
-            tar -czvf Rapid-Linux-x86_64.tar.gz Rapid/
+            chmod +x "$GITHUB_WORKSPACE/scripts/package_linux.sh"
+            "$GITHUB_WORKSPACE/scripts/package_linux.sh"
           fi
 
       - name: Upload Artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: rapid-${{ runner.os }}
+          name: Rapid-${{ matrix.artifact_suffix }}
           path: |
-            ${{ env.BUILD_DIR }}/package/*
+            packages/**/*
             ${{ env.BUILD_DIR }}/Rapid-*
           retention-days: 7
+          if-no-files-found: error
+          compression-level: 9

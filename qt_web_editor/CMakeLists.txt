@@ -15,16 +15,18 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 # Find Qt packages
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets WebEngineCore WebChannel WebSockets Network Svg SvgWidgets)
-
-# Make WebEngineWidgets optional
-find_package(Qt6 COMPONENTS WebEngineWidgets QUIET)
-if (Qt6WebEngineWidgets_FOUND)
-    message(STATUS "Found Qt6WebEngineWidgets")
-    add_definitions(-DHAVE_WEBENGINEWIDGETS)
-else()
-    message(STATUS "Qt6WebEngineWidgets not found - some features may be disabled")
-endif()
+# Find required Qt components
+find_package(Qt6 REQUIRED COMPONENTS 
+    Core 
+    Widgets 
+    WebEngineWidgets 
+    WebEngineCore 
+    WebChannel 
+    WebSockets 
+    Network 
+    Svg 
+    SvgWidgets
+)
 
 if (NOT Qt6_FOUND)
     message(FATAL_ERROR "Qt6 not found")
