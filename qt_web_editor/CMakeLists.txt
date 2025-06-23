@@ -14,8 +14,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-# Find Qt packages
-# Find required Qt components
+# Find Qt packages with all required components
 find_package(Qt6 REQUIRED COMPONENTS 
     Core 
     Widgets 
@@ -28,9 +27,8 @@ find_package(Qt6 REQUIRED COMPONENTS
     SvgWidgets
 )
 
-if (NOT Qt6_FOUND)
-    message(FATAL_ERROR "Qt6 not found")
-endif()
+message(STATUS "Found all required Qt6 components, including WebEngineWidgets")
+add_definitions(-DHAVE_WEBENGINEWIDGETS)
 
 # Include our CMake modules
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
