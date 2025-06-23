@@ -12,7 +12,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            qt_arch: gcc_64
+          - os: windows-latest
+            qt_arch: win64_msvc2019_64
+          - os: macos-latest
+            qt_arch: clang_64
 
     defaults:
       run:
@@ -22,15 +28,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Install Qt 6.6.3 with AQT
+    - name: Install Qt with AQT
       uses: jurplel/install-qt-action@v3
       with:
         version: '6.6.3'
         target: 'desktop'
+        arch: ${{ matrix.qt_arch }}
         modules: 'qtwebengine'
-        arch: ${{ matrix.os == 'windows-latest' && 'win64_msvc2019_64' || matrix.os == 'macos-latest' && 'macos' || 'gcc_64' }}
 
-    - name: Install Linux dependencies
+    - name: Install dependencies (Linux)
       if: matrix.os == 'ubuntu-latest'
       run: sudo apt update && sudo apt install -y libgl1-mesa-dev libxkbcommon-x11-0 build-essential patchelf
 
