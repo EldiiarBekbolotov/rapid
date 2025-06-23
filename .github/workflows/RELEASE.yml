@@ -55,6 +55,11 @@ jobs:
         run: |
           & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\Rapid.exe
 
+      - name: Bundle on macOS
+        if: matrix.os == 'macos-latest'
+        run: |
+          "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
+
       - name: Verify build directory contents (for debugging)
         run: |
           ls -lR build
@@ -67,11 +72,6 @@ jobs:
           elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
             mv Rapid.dmg Rapid-macOS.dmg
           fi
-
-      - name: Bundle on macOS
-        if: matrix.os == 'macos-latest'
-        run: |
-          "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
