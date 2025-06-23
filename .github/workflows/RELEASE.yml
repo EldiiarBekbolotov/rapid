@@ -22,15 +22,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Install Qt 6.9.0 with AQT
+    - name: Install Qt 6.6.3 with AQT
       uses: jurplel/install-qt-action@v3
       with:
-        version: '6.9.0'
+        version: '6.6.3'
         target: 'desktop'
         modules: 'qtwebengine'
         arch: ${{ matrix.os == 'windows-latest' && 'win64_msvc2019_64' || matrix.os == 'macos-latest' && 'macos' || 'gcc_64' }}
 
-    - name: Install dependencies (Linux only)
+    - name: Install Linux dependencies
       if: matrix.os == 'ubuntu-latest'
       run: sudo apt update && sudo apt install -y libgl1-mesa-dev libxkbcommon-x11-0 build-essential patchelf
 
@@ -78,7 +78,7 @@ jobs:
           mv *.AppImage Rapid-Linux.AppImage
         fi
 
-    - name: Upload GitHub artifact
+    - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: rapid-${{ matrix.os }}
@@ -87,7 +87,7 @@ jobs:
           build/*.dmg
           build/*.AppImage
 
-    - name: Upload GitHub Release asset
+    - name: Upload GitHub Release
       if: startsWith(github.ref, 'refs/tags/')
       uses: softprops/action-gh-release@v2
       with:
