@@ -1,4 +1,4 @@
-name: Build and Release Rapid
+name: Build and Release Rapid (Windows only)
 
 on:
   push:
@@ -7,91 +7,59 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        include:
-          - os: windows-latest
-            qt_arch: win64_msvc2019_64
-          - os: macos-latest
-            qt_arch: clang_64
-
-    defaults:
-      run:
-        shell: bash
+  build-windows:
+    name: Build on Windows
+    runs-on: windows-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Install Qt with AQT
-        uses: jurplel/install-qt-action@v3
-        with:
-          version: '6.5.3'
-          target: 'desktop'
-          arch: ${{ matrix.qt_arch }}
-          modules: 'qtwebengine qtwebchannel qtpositioning qtwebsockets'
+    - name: Install Qt with AQT
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: '6.5.3'
+        target: 'desktop'
+        arch: win64_msvc2019_64
+        modules: 'qtwebengine qtwebchannel qtpositioning qtwebsockets'
 
-      - name: Install Windows dependencies
-        if: matrix.os == 'windows-latest'
-        run: choco install 7zip
+    - name: Install 7zip
+      run: choco install 7zip
 
-      - name: Configure CMake
-        run: |
-          mkdir -p build
-          cd build
-          cmake ../qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$Qt6_DIR"
+    - name: Configure CMake
+      run: |
+        mkdir -p build
+        cd build
+        cmake ../qt_web_editor -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$Env:Qt6_DIR"
 
-      - name: Build app
-        run: |
-          cd build
-          cmake --build . --config Release --parallel
+    - name: Build app
+      run: |
+        cd build
+        cmake --build . --config Release --parallel
 
-      - name: Check Windows build output
-        if: matrix.os == 'windows-latest'
-        shell: pwsh
-        run: |
-          if (-Not (Test-Path -Path build\Release\Rapid.exe)) {
-            Write-Error "ERROR: Rapid.exe not found in build\\Release folder! Build likely failed."
-            exit 1
-          } else {
-            Write-Host "Rapid.exe found."
-          }
+    - name: Bundle Qt dependencies with windeployqt
+      shell: pwsh
+      run: |
+        cd build/Release
+        & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release Rapid.exe
 
-      - name: Bundle on Windows
-        if: matrix.os == 'windows-latest'
-        shell: pwsh
-        run: |
-          & "${Env:Qt6_DIR}\\bin\\windeployqt.exe" --release build\\Release\\Rapid.exe
+    - name: Verify build/Release folder contents
+      run: |
+        dir build\Release
 
-      - name: Bundle on macOS
-        if: matrix.os == 'macos-latest'
-        run: |
-          "$Qt6_DIR/bin/macdeployqt" build/Rapid.app -dmg
+    - name: Package artifacts
+      run: |
+        cd build/Release
+        7z a Rapid-Windows.zip * 
 
-      - name: Package artifacts
-        run: |
-          cd build
-          if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-            7z a Rapid-Windows.zip Release/Rapid.exe Release/resources/
-          elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
-            mv Rapid.dmg Rapid-macOS.dmg
-          fi
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: rapid-windows
+        path: build/Release/Rapid-Windows.zip
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: rapid-${{ matrix.os }}
-          path: |
-            build/*.zip
-            build/*.dmg
-
-      - name: Upload GitHub Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
-        with:
-          files: |
-            build/*.zip
-            build/*.dmg
+    - name: Create GitHub Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v2
+      with:
+        files: build/Release/Rapid-Windows.zip
