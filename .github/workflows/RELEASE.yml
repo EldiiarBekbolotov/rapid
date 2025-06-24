@@ -75,7 +75,7 @@ jobs:
         run: |
           cd build
           if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-            7z a Rapid-Windows.zip Release/Rapid.exe resources/
+            7z a Rapid-Windows.zip Release/Rapid.exe Release/resources/
           elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
             mv Rapid.dmg Rapid-macOS.dmg
           fi
